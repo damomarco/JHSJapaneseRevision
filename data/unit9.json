@@ -1,0 +1,428 @@
+
+{
+  "contentItems": [
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity/Event",
+      "Japanese": "えいが",
+      "Hiragana": "えいが",
+      "Romaji": "eiga",
+      "English": "movie"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Places",
+      "Japanese": "うみ",
+      "Hiragana": "うみ",
+      "Romaji": "umi",
+      "English": "beach"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Places",
+      "Japanese": "がっこう",
+      "Hiragana": "がっこう",
+      "Romaji": "gakkou",
+      "English": "school"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Places",
+      "Japanese": "まち",
+      "Hiragana": "まち",
+      "Romaji": "machi",
+      "English": "town"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Places",
+      "Japanese": "デパート",
+      "Hiragana": "デパート",
+      "Romaji": "depaato",
+      "English": "department store"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Places",
+      "Japanese": "レストラン",
+      "Hiragana": "レストラン",
+      "Romaji": "resutoran",
+      "English": "restaurant"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity/Event",
+      "Japanese": "コンサート",
+      "Hiragana": "コンサート",
+      "Romaji": "konsaato",
+      "English": "concert"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity/Event",
+      "Japanese": "ピクニック",
+      "Hiragana": "ピクニック",
+      "Romaji": "pikunikku",
+      "English": "picnic"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity/Event",
+      "Japanese": "パーティー",
+      "Hiragana": "パーティー",
+      "Romaji": "paatii",
+      "English": "party"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity/Event",
+      "Japanese": "しあい",
+      "Hiragana": "しあい",
+      "Romaji": "shiai",
+      "English": "game/match"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Places",
+      "Japanese": "うち",
+      "Hiragana": "うち",
+      "Romaji": "uchi",
+      "English": "home/house"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity/Event",
+      "Japanese": "かいもの",
+      "Hiragana": "かいもの",
+      "Romaji": "kaimono",
+      "English": "shopping"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity/Event",
+      "Japanese": "キャンプ",
+      "Hiragana": "キャンプ",
+      "Romaji": "kyanpu",
+      "English": "camp"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity/Event",
+      "Japanese": "えんそく",
+      "Hiragana": "えんそく",
+      "Romaji": "ensoku",
+      "English": "excursion"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity/Event",
+      "Japanese": "フットボールのしあい",
+      "Hiragana": "フットボールのしあい",
+      "Romaji": "futtobooru no shiai",
+      "English": "football game"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity/Event",
+      "Japanese": "やきゅうのしあい",
+      "Hiragana": "やきゅうのしあい",
+      "Romaji": "yakyuu no shiai",
+      "English": "baseball game"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Places",
+      "Japanese": "おばあさんのうち",
+      "Hiragana": "おばあさんのうち",
+      "Romaji": "obaasan no uchi",
+      "English": "grandmother's house"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Places",
+      "Japanese": "ともだちのうち",
+      "Hiragana": "ともだちのうち",
+      "Romaji": "tomodachi no uchi",
+      "English": "(a) friend's house"
+    },
+    {
+      "Unit": 9,
+      "Category": "Grammar",
+      "SubCategory": "Question",
+      "Japanese": "どこに行きますか。",
+      "Hiragana": "どこにいきますか。",
+      "Romaji": "doko ni ikimasu ka.",
+      "English": "Where are you going?"
+    },
+    {
+      "Unit": 9,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "PLACE/ACTIVITYに行きます。",
+      "Hiragana": "PLACE/ACTIVITYにいきます。",
+      "Romaji": "PLACE/ACTIVITY ni ikimasu.",
+      "English": "I'm going (to the) PLACE/ACTIVITY."
+    },
+    {
+      "Unit": 9,
+      "Category": "Grammar",
+      "SubCategory": "Question",
+      "Japanese": "だれと行きますか。",
+      "Hiragana": "だれといきますか。",
+      "Romaji": "dare to ikimasu ka.",
+      "English": "Who are (you) going with?"
+    },
+    {
+      "Unit": 9,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "PERSON(s)と行きます。",
+      "Hiragana": "PERSON(s)といきます。",
+      "Romaji": "PERSON(s) to ikimasu.",
+      "English": "(I'm) going with PERSON(s)."
+    },
+    {
+      "Unit": 9,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "ジンボーと行きます。",
+      "Hiragana": "ジンボーといきます。",
+      "Romaji": "Jimbo- to ikimasu.",
+      "English": "(I) am going with Jimbo."
+    },
+    {
+      "Unit": 9,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "かぞくと行きます。",
+      "Hiragana": "かぞくといきます。",
+      "Romaji": "kazoku to ikimasu.",
+      "English": "(I) am going with (my) family."
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "うみに行きます、それからえいがに行きます。",
+      "Hiragana": "うみにいきます、それからえいがにいきます。",
+      "Romaji": "umi ni ikimasu, sorekara eiga ni ikimasu.",
+      "English": "(I) am going to (the) beach, later I will go to (see a) movie."
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "そうですか、じゃあ、だれと行きますか。",
+      "Hiragana": "そうですか、じゃあ、だれといきますか。",
+      "Romaji": "sou desu ka, jaa, dare to ikimasu ka.",
+      "English": "I see, well, who are (you) going with?"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "たかこさんと行きます、でもゆみこさんと行きたい。",
+      "Hiragana": "たかこさんといきます、でもゆみこさんといきたい。",
+      "Romaji": "Takako-san to ikimasu, demo Yumiko-san to ikitai.",
+      "English": "(I) am going with Takako, but (I) want to go with Yumiko."
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Transport",
+      "Japanese": "ひこうき",
+      "Hiragana": "ひこうき",
+      "Romaji": "hikouki",
+      "English": "airplane"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Transport",
+      "Japanese": "バス",
+      "Hiragana": "バス",
+      "Romaji": "basu",
+      "English": "bus"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Transport",
+      "Japanese": "自転車",
+      "Hiragana": "じてんしゃ",
+      "Romaji": "jitensha",
+      "English": "bicycle"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Transport",
+      "Japanese": "電車",
+      "Hiragana": "でんしゃ",
+      "Romaji": "densha",
+      "English": "train"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Transport",
+      "Japanese": "タクシー",
+      "Hiragana": "タクシー",
+      "Romaji": "takushii",
+      "English": "taxi"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Transport",
+      "Japanese": "新幹線",
+      "Hiragana": "しんかんせん",
+      "Romaji": "shinkansen",
+      "English": "bullet train"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Transport",
+      "Japanese": "フェリー",
+      "Hiragana": "フェリー",
+      "Romaji": "ferii",
+      "English": "ferry"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Transport",
+      "Japanese": "スクーター",
+      "Hiragana": "スクーター",
+      "Romaji": "sukuutaa",
+      "English": "scooter"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Transport",
+      "Japanese": "車",
+      "Hiragana": "くるま",
+      "Romaji": "kuruma",
+      "English": "car"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Transport",
+      "Japanese": "あるいて",
+      "Hiragana": "あるいて",
+      "Romaji": "aruite",
+      "English": "on foot (walk)"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Transport",
+      "Japanese": "ふね",
+      "Hiragana": "ふね",
+      "Romaji": "fune",
+      "English": "ship"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Transport",
+      "Japanese": "ヨット",
+      "Hiragana": "ヨット",
+      "Romaji": "yotto",
+      "English": "yacht"
+    },
+    {
+      "Unit": 9,
+      "Category": "Grammar",
+      "SubCategory": "Question",
+      "Japanese": "なんで行きますか。",
+      "Hiragana": "なんでいきますか。",
+      "Romaji": "nande ikimasu ka.",
+      "English": "By what means are you getting there? / How are you getting there?"
+    },
+    {
+      "Unit": 9,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "TRANSPORTで行きます。",
+      "Hiragana": "TRANSPORTでいきます。",
+      "Romaji": "TRANSPORT de ikimasu.",
+      "English": "I am going (by) TRANSPORT."
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Time",
+      "Japanese": "しゅうまつ",
+      "Hiragana": "しゅうまつ",
+      "Romaji": "shuumatsu",
+      "English": "weekend"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Time",
+      "Japanese": "休み",
+      "Hiragana": "やすみ",
+      "Romaji": "yasumi",
+      "English": "holiday/break/rest"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Time",
+      "Japanese": "金曜日",
+      "Hiragana": "きんようび",
+      "Romaji": "kinyoubi",
+      "English": "Friday"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Event",
+      "Japanese": "たんじょうび",
+      "Hiragana": "たんじょうび",
+      "Romaji": "tanjoubi",
+      "English": "birthday"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Present)",
+      "Japanese": "行きます",
+      "Hiragana": "いきます",
+      "Romaji": "ikimasu",
+      "English": "go"
+    },
+    {
+      "Unit": 9,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Negative)",
+      "Japanese": "行きません",
+      "Hiragana": "いきません",
+      "Romaji": "ikimasen",
+      "English": "don't go"
+    }
+  ]
+}

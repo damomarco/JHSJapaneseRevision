@@ -1,0 +1,527 @@
+
+{
+  "contentItems": [
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Present)",
+      "Japanese": "たべます",
+      "Hiragana": "たべます",
+      "Romaji": "tabemasu",
+      "English": "eat"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Present)",
+      "Japanese": "のみます",
+      "Hiragana": "のみます",
+      "Romaji": "nomimasu",
+      "English": "drink"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Present)",
+      "Japanese": "よみます",
+      "Hiragana": "よみます",
+      "Romaji": "yomimasu",
+      "English": "read"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Present)",
+      "Japanese": "かいます",
+      "Hiragana": "かいます",
+      "Romaji": "kaimasu",
+      "English": "buy"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Present)",
+      "Japanese": "みます",
+      "Hiragana": "みます",
+      "Romaji": "mimasu",
+      "English": "watch (look at)"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Present)",
+      "Japanese": "とります",
+      "Hiragana": "とります",
+      "Romaji": "torimasu",
+      "English": "take"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Present)",
+      "Japanese": "ききます",
+      "Hiragana": "ききます",
+      "Romaji": "kikimasu",
+      "English": "listen"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Present)",
+      "Japanese": "します",
+      "Hiragana": "します",
+      "Romaji": "shimasu",
+      "English": "do"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Present)",
+      "Japanese": "いきます",
+      "Hiragana": "いきます",
+      "Romaji": "ikimasu",
+      "English": "go"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Present)",
+      "Japanese": "あいます",
+      "Hiragana": "あいます",
+      "Romaji": "aimasu",
+      "English": "meet"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Present)",
+      "Japanese": "ねます",
+      "Hiragana": "ねます",
+      "Romaji": "nemasu",
+      "English": "sleep"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Present)",
+      "Japanese": "つくります",
+      "Hiragana": "つくります",
+      "Romaji": "tsukurimasu",
+      "English": "make"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Present)",
+      "Japanese": "かきます",
+      "Hiragana": "かきます",
+      "Romaji": "kakimasu",
+      "English": "write"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (do)",
+      "Japanese": "でんわ",
+      "Hiragana": "でんわ",
+      "Romaji": "denwa",
+      "English": "phone"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (do)",
+      "Japanese": "れんしゅう",
+      "Hiragana": "れんしゅう",
+      "Romaji": "renshuu",
+      "English": "practice"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (do)",
+      "Japanese": "べんきょう",
+      "Hiragana": "べんきょう",
+      "Romaji": "benkyou",
+      "English": "study"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (do)",
+      "Japanese": "しゅくだい",
+      "Hiragana": "しゅくだい",
+      "Romaji": "shukudai",
+      "English": "homework"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (do)",
+      "Japanese": "パーティー",
+      "Hiragana": "パーティー",
+      "Romaji": "paatii",
+      "English": "party"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (do)",
+      "Japanese": "カラオケ",
+      "Hiragana": "カラオケ",
+      "Romaji": "karaoke",
+      "English": "karaoke"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (do)",
+      "Japanese": "チャット",
+      "Hiragana": "チャット",
+      "Romaji": "chatto",
+      "English": "chat (online)"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (do)",
+      "Japanese": "かいもの",
+      "Hiragana": "かいもの",
+      "Romaji": "kaimono",
+      "English": "shopping"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (do)",
+      "Japanese": "ピアノのれんしゅう",
+      "Hiragana": "ピアノのれんしゅう",
+      "Romaji": "piano no renshuu",
+      "English": "piano practice"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (do)",
+      "Japanese": "バンドのれんしゅう",
+      "Hiragana": "バンドのれんしゅう",
+      "Romaji": "bando no renshuu",
+      "English": "band practice"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (do)",
+      "Japanese": "日本語のべんきょう",
+      "Hiragana": "にほんごのべんきょう",
+      "Romaji": "nihongo no benkyou",
+      "English": "Japanese study"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (listen)",
+      "Japanese": "ラジオ",
+      "Hiragana": "ラジオ",
+      "Romaji": "rajio",
+      "English": "radio"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (listen)",
+      "Japanese": "おんがく",
+      "Hiragana": "おんがく",
+      "Romaji": "ongaku",
+      "English": "music"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (write)",
+      "Japanese": "てがみ",
+      "Hiragana": "てがみ",
+      "Romaji": "tegami",
+      "English": "letter"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (write)",
+      "Japanese": "にっき",
+      "Hiragana": "にっき",
+      "Romaji": "nikki",
+      "English": "diary"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (write)",
+      "Japanese": "さくぶん",
+      "Hiragana": "さくぶん",
+      "Romaji": "sakubun",
+      "English": "essay/composition"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (read)",
+      "Japanese": "本",
+      "Hiragana": "ほん",
+      "Romaji": "hon",
+      "English": "book"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (read)",
+      "Japanese": "ざっし",
+      "Hiragana": "ざっし",
+      "Romaji": "zasshi",
+      "English": "magazine"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (read)",
+      "Japanese": "まんが",
+      "Hiragana": "まんが",
+      "Romaji": "manga",
+      "English": "manga"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (read)",
+      "Japanese": "メール",
+      "Hiragana": "メール",
+      "Romaji": "meeru",
+      "English": "email"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (read)",
+      "Japanese": "じしょ",
+      "Hiragana": "じしょ",
+      "Romaji": "jisho",
+      "English": "dictionary"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (read)",
+      "Japanese": "イーブック",
+      "Hiragana": "イーブック",
+      "Romaji": "iibukku",
+      "English": "ebook"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (take)",
+      "Japanese": "しゃしん",
+      "Hiragana": "しゃしん",
+      "Romaji": "shashin",
+      "English": "photo"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (take)",
+      "Japanese": "ビデオ",
+      "Hiragana": "ビデオ",
+      "Romaji": "bideo",
+      "English": "video"
+    },
+    {
+      "Unit": 10,
+      "Category": "Grammar",
+      "SubCategory": "Question",
+      "Japanese": "なにをしますか。",
+      "Hiragana": "なにをしますか。",
+      "Romaji": "nani o shimasu ka.",
+      "English": "What will/do (you) do?"
+    },
+    {
+      "Unit": 10,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "ITEM (object)をVERB。",
+      "Hiragana": "ITEM (object)をVERB。",
+      "Romaji": "ITEM (object) o VERB.",
+      "English": "I (will) VERB ITEM."
+    },
+    {
+      "Unit": 10,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "PERSONにVERB。",
+      "Hiragana": "PERSONにVERB。",
+      "Romaji": "PERSON ni VERB.",
+      "English": "I (will) VERB PERSON."
+    },
+    {
+      "Unit": 10,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "PLACEにVERB。",
+      "Hiragana": "PLACEにVERB。",
+      "Romaji": "PLACE ni VERB.",
+      "English": "I (will) VERB PLACE."
+    },
+    {
+      "Unit": 10,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "VERB。",
+      "Hiragana": "VERB。",
+      "Romaji": "VERB.",
+      "English": "VERB."
+    },
+    {
+      "Unit": 10,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "すしをたべます。",
+      "Hiragana": "すしをたべます。",
+      "Romaji": "sushi o tabemasu.",
+      "English": "I (will) eat sushi."
+    },
+    {
+      "Unit": 10,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "ともだちにあいます。",
+      "Hiragana": "ともだちにあいます。",
+      "Romaji": "tomodachi ni aimasu.",
+      "English": "I (will) meet (my) friend(s)."
+    },
+    {
+      "Unit": 10,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "うちにいきます。",
+      "Hiragana": "うちにいきます。",
+      "Romaji": "uchi ni ikimasu.",
+      "English": "I (will) go home."
+    },
+    {
+      "Unit": 10,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "ねます。",
+      "Hiragana": "ねます。",
+      "Romaji": "nemasu.",
+      "English": "Sleep."
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (buy)",
+      "Japanese": "カメラ",
+      "Hiragana": "カメラ",
+      "Romaji": "kamera",
+      "English": "camera"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (buy)",
+      "Japanese": "くつ",
+      "Hiragana": "くつ",
+      "Romaji": "kutsu",
+      "English": "shoes"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (buy)",
+      "Japanese": "けいたい",
+      "Hiragana": "けいたい",
+      "Romaji": "keitai",
+      "English": "mobile phone"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (buy)",
+      "Japanese": "ふく",
+      "Hiragana": "ふく",
+      "Romaji": "fuku",
+      "English": "clothes"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (make)",
+      "Japanese": "ケーキ",
+      "Hiragana": "ケーキ",
+      "Romaji": "keeki",
+      "English": "cake"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (make)",
+      "Japanese": "すし",
+      "Hiragana": "すし",
+      "Romaji": "sushi",
+      "English": "sushi"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (meet)",
+      "Japanese": "ともだち",
+      "Hiragana": "ともだち",
+      "Romaji": "tomodachi",
+      "English": "friend"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (meet)",
+      "Japanese": "かぞく",
+      "Hiragana": "かぞく",
+      "Romaji": "kazoku",
+      "English": "family"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (watch)",
+      "Japanese": "ビデオクリップ",
+      "Hiragana": "ビデオクリップ",
+      "Romaji": "bideokurippu",
+      "English": "video clip"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (watch)",
+      "Japanese": "ディーヴィーディー",
+      "Hiragana": "ディーヴィーディー",
+      "Romaji": "diiviidii",
+      "English": "DVD"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (watch)",
+      "Japanese": "テレビ",
+      "Hiragana": "テレビ",
+      "Romaji": "terebi",
+      "English": "television"
+    },
+    {
+      "Unit": 10,
+      "Category": "Vocabulary",
+      "SubCategory": "Activity (watch)",
+      "Japanese": "フェイスブック",
+      "Hiragana": "フェイスブック",
+      "Romaji": "feisubukku",
+      "English": "Facebook"
+    }
+  ]
+}

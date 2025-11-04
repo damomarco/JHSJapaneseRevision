@@ -1,0 +1,455 @@
+
+{
+  "contentItems": [
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Time",
+      "Japanese": "ひまなときに",
+      "Hiragana": "ひまなときに",
+      "Romaji": "himanatoki ni",
+      "English": "in your spare time"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Time",
+      "Japanese": "がっこのまえに",
+      "Hiragana": "がっこのまえに",
+      "Romaji": "gakko no mae ni",
+      "English": "before school"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Time",
+      "Japanese": "がっこのあとで",
+      "Hiragana": "がっこのあとで",
+      "Romaji": "gakko no ato de",
+      "English": "after school"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Time",
+      "Japanese": "あとで",
+      "Hiragana": "あとで",
+      "Romaji": "atode",
+      "English": "later"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Time",
+      "Japanese": "ひる休みに",
+      "Hiragana": "ひるやすみに",
+      "Romaji": "hiruyasumi ni",
+      "English": "at lunch time"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Time",
+      "Japanese": "金曜日のばん",
+      "Hiragana": "きんようびのばん",
+      "Romaji": "kinyoubi no ban",
+      "English": "Friday evening"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Time",
+      "Japanese": "あしたのあさ",
+      "Hiragana": "あしたのあさ",
+      "Romaji": "ashita no asa",
+      "English": "tomorrow morning"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Time",
+      "Japanese": "あさ",
+      "Hiragana": "あさ",
+      "Romaji": "asa",
+      "English": "in the morning"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Time",
+      "Japanese": "よる",
+      "Hiragana": "よる",
+      "Romaji": "yoru",
+      "English": "at night"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Time",
+      "Japanese": "きょう",
+      "Hiragana": "きょう",
+      "Romaji": "kyou",
+      "English": "today"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Time",
+      "Japanese": "あした",
+      "Hiragana": "あした",
+      "Romaji": "ashita",
+      "English": "tomorrow"
+    },
+    {
+      "Unit": 11,
+      "Category": "Grammar",
+      "SubCategory": "Question",
+      "Japanese": "TimeExpなにをしますか。",
+      "Hiragana": "TimeExpなにをしますか。",
+      "Romaji": "TimeExp nani o shimasu ka.",
+      "English": "What are/do you do(ing) TimeExp?"
+    },
+    {
+      "Unit": 11,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "TimeExp ObjectをVerbます。",
+      "Hiragana": "TimeExp ObjectをVerbます。",
+      "Romaji": "TimeExp Object o Verbmasu.",
+      "English": "I Verb Object TimeExp."
+    },
+    {
+      "Unit": 11,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "ObjectをVerbます。",
+      "Hiragana": "ObjectをVerbます。",
+      "Romaji": "Object o Verbmasu.",
+      "English": "I Verb Object."
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "もしもし",
+      "Hiragana": "もしもし",
+      "Romaji": "moshi moshi",
+      "English": "hello (phone only)"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "ひさしぶり",
+      "Hiragana": "ひさしぶり",
+      "Romaji": "hisashiburi",
+      "English": "long time, no see"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "げんきですか。",
+      "Hiragana": "げんきですか。",
+      "Romaji": "genki desu ka.",
+      "English": "How are you?"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "おげんきですか。",
+      "Hiragana": "おげんきですか。",
+      "Romaji": "ogenki desu ka.",
+      "English": "How are you? (polite)"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "はい、げんきです。",
+      "Hiragana": "はい、げんきです。",
+      "Romaji": "hai, genki desu.",
+      "English": "Yes, I am well."
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "まあまあです。",
+      "Hiragana": "まあまあです。",
+      "Romaji": "maamaa desu.",
+      "English": "I'm so-so."
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "げんきではありません。",
+      "Hiragana": "げんきではありません。",
+      "Romaji": "genki dewa arimasen.",
+      "English": "I am not well."
+    },
+    {
+      "Unit": 11,
+      "Category": "Grammar",
+      "SubCategory": "Suggestion",
+      "Japanese": "VERB (stem) ましょう。",
+      "Hiragana": "VERB (stem) ましょう。",
+      "Romaji": "VERB (stem) mashou.",
+      "English": "Let's VERB."
+    },
+    {
+      "Unit": 11,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "いきましょう。",
+      "Hiragana": "いきましょう。",
+      "Romaji": "ikimashou.",
+      "English": "Let's go."
+    },
+    {
+      "Unit": 11,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "たべましょう。",
+      "Hiragana": "たべましょう。",
+      "Romaji": "tabemashou.",
+      "English": "Let's eat."
+    },
+    {
+      "Unit": 11,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "のみましょう。",
+      "Hiragana": "のみましょう。",
+      "Romaji": "nomimashou.",
+      "English": "Let's drink."
+    },
+    {
+      "Unit": 11,
+      "Category": "Grammar",
+      "SubCategory": "Suggestion",
+      "Japanese": "TimeExp (に) Activity (を) しましょう。",
+      "Hiragana": "TimeExp (に) Activity (を) しましょう。",
+      "Romaji": "TimeExp (ni) Activity (o) shimashou.",
+      "English": "Let's do Activity at TimeExp."
+    },
+    {
+      "Unit": 11,
+      "Category": "Grammar",
+      "SubCategory": "Answer (Suggestion)",
+      "Japanese": "はい、Verbましょう。",
+      "Hiragana": "はい、Verbましょう。",
+      "Romaji": "hai, Verb-mashou.",
+      "English": "Yes, let's Verb."
+    },
+    {
+      "Unit": 11,
+      "Category": "Grammar",
+      "SubCategory": "Answer (Suggestion)",
+      "Japanese": "はい、そうしましょう。",
+      "Hiragana": "はい、そうしましょう。",
+      "Romaji": "hai, sou shimashou.",
+      "English": "Yes, let's do that."
+    },
+    {
+      "Unit": 11,
+      "Category": "Grammar",
+      "SubCategory": "Answer (Suggestion)",
+      "Japanese": "いいえ、それはちょっと...",
+      "Hiragana": "いいえ、それはちょっと...",
+      "Romaji": "iie, sore wa chotto...",
+      "English": "I don't really want to (do that)..."
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (i)",
+      "Japanese": "おもしろい",
+      "Hiragana": "おもしろい",
+      "Romaji": "omoshiroi",
+      "English": "interesting/funny"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (i)",
+      "Japanese": "たのしい",
+      "Hiragana": "たのしい",
+      "Romaji": "tanoshii",
+      "English": "fun"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (i)",
+      "Japanese": "つまらない",
+      "Hiragana": "つまらない",
+      "Romaji": "tsumaranai",
+      "English": "boring"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (i)",
+      "Japanese": "おいしい",
+      "Hiragana": "おいしい",
+      "Romaji": "oishii",
+      "English": "delicious"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (i)",
+      "Japanese": "まずい",
+      "Hiragana": "まずい",
+      "Romaji": "mazui",
+      "English": "not tasty"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (i)",
+      "Japanese": "むずかしい",
+      "Hiragana": "むずかしい",
+      "Romaji": "muzukashii",
+      "English": "difficult"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (i)",
+      "Japanese": "やさしい",
+      "Hiragana": "やさしい",
+      "Romaji": "yasashii",
+      "English": "easy"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (i)",
+      "Japanese": "たかい",
+      "Hiragana": "たかい",
+      "Romaji": "takai",
+      "English": "expensive"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (i)",
+      "Japanese": "やすい",
+      "Hiragana": "やすい",
+      "Romaji": "yasui",
+      "English": "cheap"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (i)",
+      "Japanese": "いい",
+      "Hiragana": "いい",
+      "Romaji": "ii",
+      "English": "good"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Adverb",
+      "Japanese": "いっしょに",
+      "Hiragana": "いっしょに",
+      "Romaji": "issho ni",
+      "English": "(do something) together"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (na)",
+      "Japanese": "げんき",
+      "Hiragana": "げんき",
+      "Romaji": "genki",
+      "English": "energetic/well"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (na)",
+      "Japanese": "すてき",
+      "Hiragana": "すてき",
+      "Romaji": "suteki",
+      "English": "nice"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (na)",
+      "Japanese": "ひま",
+      "Hiragana": "ひま",
+      "Romaji": "hima",
+      "English": "free (not doing anything)"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (na)",
+      "Japanese": "しずか",
+      "Hiragana": "しずか",
+      "Romaji": "shizuka",
+      "English": "quiet"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (na)",
+      "Japanese": "ゆうめい",
+      "Hiragana": "ゆうめい",
+      "Romaji": "yuumei",
+      "English": "famous"
+    },
+    {
+      "Unit": 11,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (na)",
+      "Japanese": "きれい",
+      "Hiragana": "きれい",
+      "Romaji": "kirei",
+      "English": "beautiful/pretty/clean"
+    },
+    {
+      "Unit": 11,
+      "Category": "Grammar",
+      "SubCategory": "Particle",
+      "Japanese": "…ね",
+      "Hiragana": "…ね",
+      "Romaji": "...ne",
+      "English": "Used to confirm"
+    },
+    {
+      "Unit": 11,
+      "Category": "Grammar",
+      "SubCategory": "Particle",
+      "Japanese": "…よ",
+      "Hiragana": "…よ",
+      "Romaji": "...yo",
+      "English": "Used to emphasise"
+    },
+    {
+      "Unit": 11,
+      "Category": "Grammar",
+      "SubCategory": "Question",
+      "Japanese": "ThingはAdjですね。",
+      "Hiragana": "ThingはAdjですね。",
+      "Romaji": "Thing wa Adj desu ne.",
+      "English": "The Thing is Adj, right?"
+    },
+    {
+      "Unit": 11,
+      "Category": "Grammar",
+      "SubCategory": "Question",
+      "Japanese": "ActivityはAdjですね。",
+      "Hiragana": "ActivityはAdjですね。",
+      "Romaji": "Activity wa Adj desu ne.",
+      "English": "The Activity is Adj, right?"
+    }
+  ]
+}

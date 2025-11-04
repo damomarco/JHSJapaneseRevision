@@ -1,0 +1,374 @@
+
+{
+  "contentItems": [
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "Nation",
+      "Japanese": "オーストラリア",
+      "Hiragana": "オーストラリア",
+      "Romaji": "O-sutoraria",
+      "English": "Australia"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "Nation",
+      "Japanese": "日本",
+      "Hiragana": "にほん",
+      "Romaji": "Nihon",
+      "English": "Japan"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "Nation",
+      "Japanese": "インドネシア",
+      "Hiragana": "インドネシア",
+      "Romaji": "Indoneshia",
+      "English": "Indonesia"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "Nation",
+      "Japanese": "ニュージーランド",
+      "Hiragana": "ニュージーランド",
+      "Romaji": "Nyu-ji-rando",
+      "English": "New Zealand"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "Nation",
+      "Japanese": "カナダ",
+      "Hiragana": "カナダ",
+      "Romaji": "Kanada",
+      "English": "Canada"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "Nation",
+      "Japanese": "アメリカ",
+      "Hiragana": "アメリカ",
+      "Romaji": "Amerika",
+      "English": "America"
+    },
+    {
+      "Unit": 3,
+      "Category": "Grammar",
+      "SubCategory": "Question",
+      "Japanese": "どこからきましたか。",
+      "Hiragana": "どこからきましたか。",
+      "Romaji": "dokokara kimashitaka.",
+      "English": "Where are you (did you come) from?"
+    },
+    {
+      "Unit": 3,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "COUNTRY (から)きました。",
+      "Hiragana": "COUNTRY (から)きました。",
+      "Romaji": "COUNTRY (kara) kimashita.",
+      "English": "I (came) am from COUNTRY."
+    },
+    {
+      "Unit": 3,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "オーストラリア(から)きました。",
+      "Hiragana": "オーストラリア(から)きました。",
+      "Romaji": "O-sutoraria (kara) kimashita.",
+      "English": "I (came) am from Australia."
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "Japanese City",
+      "Japanese": "京都",
+      "Hiragana": "きょうと",
+      "Romaji": "Kyouto",
+      "English": "Kyoto"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "Japanese City",
+      "Japanese": "鹿児島",
+      "Hiragana": "かごしま",
+      "Romaji": "Kagoshima",
+      "English": "Kagoshima"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "Japanese City",
+      "Japanese": "大阪",
+      "Hiragana": "おおさか",
+      "Romaji": "Oosaka",
+      "English": "Osaka"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "Japanese City",
+      "Japanese": "仙台",
+      "Hiragana": "せんだい",
+      "Romaji": "Sendai",
+      "English": "Sendai"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "Japanese City",
+      "Japanese": "東京",
+      "Hiragana": "とうきょう",
+      "Romaji": "Toukyou",
+      "English": "Tokyo"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "Japanese City",
+      "Japanese": "横浜",
+      "Hiragana": "よこはま",
+      "Romaji": "Yokohama",
+      "English": "Yokohama"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "Japanese City",
+      "Japanese": "奈良",
+      "Hiragana": "なら",
+      "Romaji": "Nara",
+      "English": "Nara"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "Nationality",
+      "Japanese": "オーストラリア人",
+      "Hiragana": "オーストラリアじん",
+      "Romaji": "O-sutorariajin",
+      "English": "Australian"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "Nationality",
+      "Japanese": "日本人",
+      "Hiragana": "にほんじん",
+      "Romaji": "Nihonjin",
+      "English": "Japanese"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "Nationality",
+      "Japanese": "インドネシア人",
+      "Hiragana": "インドネシアじん",
+      "Romaji": "Indoneshiajin",
+      "English": "Indonesian"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "Nationality",
+      "Japanese": "ニュージーランド人",
+      "Hiragana": "ニュージーランドじん",
+      "Romaji": "Nyu-ji-randojin",
+      "English": "New Zealander"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "Nationality",
+      "Japanese": "カナダ人",
+      "Hiragana": "カナダじん",
+      "Romaji": "Kanadajin",
+      "English": "Canadian"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "Nationality",
+      "Japanese": "アメリカ人",
+      "Hiragana": "アメリカじん",
+      "Romaji": "Amerikajin",
+      "English": "American"
+    },
+    {
+      "Unit": 3,
+      "Category": "Grammar",
+      "SubCategory": "Question",
+      "Japanese": "なに人ですか。",
+      "Hiragana": "なにじんですか。",
+      "Romaji": "Nanijin desuka.",
+      "English": "What nationality are you?"
+    },
+    {
+      "Unit": 3,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "COUNTRY 人です。",
+      "Hiragana": "COUNTRY じんです。",
+      "Romaji": "COUNTRY jin desu.",
+      "English": "I am NATIONALITY."
+    },
+    {
+      "Unit": 3,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "オーストラリア人です。",
+      "Hiragana": "オーストラリアじんです。",
+      "Romaji": "O-sutorariajin desu.",
+      "English": "I am Australian."
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "World City",
+      "Japanese": "オークランド",
+      "Hiragana": "オークランド",
+      "Romaji": "O-kurando",
+      "English": "Auckland"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "World City",
+      "Japanese": "シドニー",
+      "Hiragana": "シドニー",
+      "Romaji": "Shidoni-",
+      "English": "Sydney"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "World City",
+      "Japanese": "ニューヨーク",
+      "Hiragana": "ニューヨーク",
+      "Romaji": "Nyu-yo-ku",
+      "English": "New York"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "World City",
+      "Japanese": "ヴァンクヴァ",
+      "Hiragana": "ヴァンクヴァ",
+      "Romaji": "Vankuva",
+      "English": "Vancouver"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "World City",
+      "Japanese": "パリ",
+      "Hiragana": "パリ",
+      "Romaji": "Pari",
+      "English": "Paris"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "World City",
+      "Japanese": "ブラジリア",
+      "Hiragana": "ブラジリア",
+      "Romaji": "Burajiria",
+      "English": "Brasilia"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "World City",
+      "Japanese": "ジャカルタ",
+      "Hiragana": "ジャカルタ",
+      "Romaji": "Jakaruta",
+      "English": "Jakarta"
+    },
+    {
+      "Unit": 3,
+      "Category": "Grammar",
+      "SubCategory": "Question",
+      "Japanese": "どこにすんでいますか。",
+      "Hiragana": "どこにすんでいますか。",
+      "Romaji": "Dokoni sunde imasuka.",
+      "English": "Where do you live?"
+    },
+    {
+      "Unit": 3,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "PLACE にすんでいます。",
+      "Hiragana": "PLACE にすんでいます。",
+      "Romaji": "PLACE ni sundeimasu.",
+      "English": "I live in PLACE"
+    },
+    {
+      "Unit": 3,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "アデレードにすんでいます。",
+      "Hiragana": "アデレードにすんでいます。",
+      "Romaji": "Adere-do ni sundeimasu.",
+      "English": "I live in Adelaide."
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "つぎ",
+      "Hiragana": "つぎ",
+      "Romaji": "tsugi",
+      "English": "next"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "ぼくのともだちです。",
+      "Hiragana": "ぼくのともだちです。",
+      "Romaji": "bokuno tomodachi desu.",
+      "English": "my friend"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "わたしのともだちです。",
+      "Hiragana": "わたしのともだちです。",
+      "Romaji": "watashino tomodachi desu.",
+      "English": "my friend"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "へえー?",
+      "Hiragana": "へえー?",
+      "Romaji": "he-?",
+      "English": "really / unbelievable"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "だめ!だめですよ!",
+      "Hiragana": "だめ!だめですよ!",
+      "Romaji": "Dame! Damedesuyo",
+      "English": "No / its not allowed"
+    },
+    {
+      "Unit": 3,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "あっ!すみません。",
+      "Hiragana": "あっ!すみません。",
+      "Romaji": "a! sumimasen",
+      "English": "Oh sorry"
+    }
+  ]
+}

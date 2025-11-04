@@ -1,0 +1,392 @@
+
+{
+  "contentItems": [
+    {
+      "Unit": 5,
+      "Category": "Vocabulary",
+      "SubCategory": "Pets",
+      "Japanese": "きんぎょ",
+      "Hiragana": "きんぎょ",
+      "Romaji": "kingyo",
+      "English": "goldfish"
+    },
+    {
+      "Unit": 5,
+      "Category": "Vocabulary",
+      "SubCategory": "Pets",
+      "Japanese": "へび",
+      "Hiragana": "へび",
+      "Romaji": "hebi",
+      "English": "snake"
+    },
+    {
+      "Unit": 5,
+      "Category": "Vocabulary",
+      "SubCategory": "Pets",
+      "Japanese": "うま",
+      "Hiragana": "うま",
+      "Romaji": "uma",
+      "English": "horse"
+    },
+    {
+      "Unit": 5,
+      "Category": "Vocabulary",
+      "SubCategory": "Pets",
+      "Japanese": "いぬ",
+      "Hiragana": "いぬ",
+      "Romaji": "inu",
+      "English": "dog"
+    },
+    {
+      "Unit": 5,
+      "Category": "Vocabulary",
+      "SubCategory": "Pets",
+      "Japanese": "うさぎ",
+      "Hiragana": "うさぎ",
+      "Romaji": "usagi",
+      "English": "rabbit"
+    },
+    {
+      "Unit": 5,
+      "Category": "Vocabulary",
+      "SubCategory": "Pets",
+      "Japanese": "とり",
+      "Hiragana": "とり",
+      "Romaji": "tori",
+      "English": "bird"
+    },
+    {
+      "Unit": 5,
+      "Category": "Vocabulary",
+      "SubCategory": "Pets",
+      "Japanese": "ねこ",
+      "Hiragana": "ねこ",
+      "Romaji": "neko",
+      "English": "cat"
+    },
+    {
+      "Unit": 5,
+      "Category": "Vocabulary",
+      "SubCategory": "Pets",
+      "Japanese": "あひる",
+      "Hiragana": "あひる",
+      "Romaji": "ahiru",
+      "English": "duck"
+    },
+    {
+      "Unit": 5,
+      "Category": "Grammar",
+      "SubCategory": "Question",
+      "Japanese": "ペットはなんですか。",
+      "Hiragana": "ペットはなんですか。",
+      "Romaji": "pettowa nandesuka.",
+      "English": "What pet(s) (do you) have?"
+    },
+    {
+      "Unit": 5,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "ペットはANIMALです。",
+      "Hiragana": "ペットはANIMALです。",
+      "Romaji": "pettowa ANIMAL desu.",
+      "English": "I have a pet ANIMAL."
+    },
+    {
+      "Unit": 5,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "ANIMAL です。",
+      "Hiragana": "ANIMAL です。",
+      "Romaji": "ANIMAL desu.",
+      "English": "A(n) ANIMAL."
+    },
+    {
+      "Unit": 5,
+      "Category": "Grammar",
+      "SubCategory": "Sentence",
+      "Japanese": "なまえは NAME です。",
+      "Hiragana": "なまえは NAME です。",
+      "Romaji": "namaewa NAME desu.",
+      "English": "Its name is NAME."
+    },
+    {
+      "Unit": 5,
+      "Category": "Grammar",
+      "SubCategory": "Sentence",
+      "Japanese": "OWNER の THINGです。",
+      "Hiragana": "OWNER の THINGです。",
+      "Romaji": "OWNER no THING desu.",
+      "English": "(It's) OWNER's THING."
+    },
+    {
+      "Unit": 5,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "Emily のペットです。",
+      "Hiragana": "Emily のペットです。",
+      "Romaji": "Emily no petto desu.",
+      "English": "(Its) Emily's pet."
+    },
+    {
+      "Unit": 5,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "Jack のいぬです。",
+      "Hiragana": "Jack のいぬです。",
+      "Romaji": "Jack no inu desu.",
+      "English": "(It's) Jack's dog."
+    },
+    {
+      "Unit": 5,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "ぼくのねこです。",
+      "Hiragana": "ぼくのねこです。",
+      "Romaji": "Boku no neko desu.",
+      "English": "(It's) My cat."
+    },
+    {
+      "Unit": 5,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "わたしのうさぎです。",
+      "Hiragana": "わたしのうさぎです。",
+      "Romaji": "Watashi no usagi desu.",
+      "English": "(It's) My rabbit."
+    },
+    {
+      "Unit": 5,
+      "Category": "Grammar",
+      "SubCategory": "Sentence",
+      "Japanese": "OWNER の THING は CHARACTERISTIC です。",
+      "Hiragana": "OWNER の THING は CHARACTERISTIC です。",
+      "Romaji": "OWNER no THING wa CHARACTERISTIC desu.",
+      "English": "OWNER's THING is CHARACTERISTIC."
+    },
+    {
+      "Unit": 5,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (i)",
+      "Japanese": "かわいい",
+      "Hiragana": "かわいい",
+      "Romaji": "kawaii",
+      "English": "cute"
+    },
+    {
+      "Unit": 5,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (i)",
+      "Japanese": "おもしろい",
+      "Hiragana": "おもしろい",
+      "Romaji": "omoshiroi",
+      "English": "interesting/funny"
+    },
+    {
+      "Unit": 5,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (i)",
+      "Japanese": "うるさい",
+      "Hiragana": "うるさい",
+      "Romaji": "urusai",
+      "English": "noisy"
+    },
+    {
+      "Unit": 5,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (na)",
+      "Japanese": "げんき",
+      "Hiragana": "げんき",
+      "Romaji": "genki",
+      "English": "energetic"
+    },
+    {
+      "Unit": 5,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (na)",
+      "Japanese": "しずか",
+      "Hiragana": "しずか",
+      "Romaji": "shizuka",
+      "English": "quiet"
+    },
+    {
+      "Unit": 5,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (i)",
+      "Japanese": "おおきい",
+      "Hiragana": "おおきい",
+      "Romaji": "ookii",
+      "English": "big"
+    },
+    {
+      "Unit": 5,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (i)",
+      "Japanese": "ちいさい",
+      "Hiragana": "ちいさい",
+      "Romaji": "chiisai",
+      "English": "small"
+    },
+    {
+      "Unit": 5,
+      "Category": "Grammar",
+      "SubCategory": "Sentence",
+      "Japanese": "THING は ADJECTIVE です。",
+      "Hiragana": "THING は ADJECTIVE です。",
+      "Romaji": "THING wa ADJECTIVE desu.",
+      "English": "THING is ADJECTIVE."
+    },
+    {
+      "Unit": 5,
+      "Category": "Grammar",
+      "SubCategory": "Sentence",
+      "Japanese": "ADJECTIVE です。",
+      "Hiragana": "ADJECTIVE です。",
+      "Romaji": "ADJECTIVE desu.",
+      "English": "It is ADJECTIVE."
+    },
+    {
+      "Unit": 5,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "うまはうるさいです。",
+      "Hiragana": "うまはうるさいです。",
+      "Romaji": "uma wa urusai desu.",
+      "English": "The horse is noisy."
+    },
+    {
+      "Unit": 5,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "うさぎはかわいいです。",
+      "Hiragana": "うさぎはかわいいです。",
+      "Romaji": "usagi wa kawaii desu.",
+      "English": "The rabbit is cute."
+    },
+    {
+      "Unit": 5,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "あひるはおもしろいです。",
+      "Hiragana": "あひるはおもしろいです。",
+      "Romaji": "ahiru wa omoshiroi desu.",
+      "English": "The duck is interesting/funny."
+    },
+    {
+      "Unit": 5,
+      "Category": "Vocabulary",
+      "SubCategory": "Pet Food",
+      "Japanese": "えさ",
+      "Hiragana": "えさ",
+      "Romaji": "esa",
+      "English": "pet food"
+    },
+    {
+      "Unit": 5,
+      "Category": "Vocabulary",
+      "SubCategory": "Pet Food",
+      "Japanese": "いぬのえさ",
+      "Hiragana": "いぬのえさ",
+      "Romaji": "inu no esa",
+      "English": "dog food"
+    },
+    {
+      "Unit": 5,
+      "Category": "Vocabulary",
+      "SubCategory": "Pet Food",
+      "Japanese": "やさい",
+      "Hiragana": "やさい",
+      "Romaji": "yasai",
+      "English": "vegetables"
+    },
+    {
+      "Unit": 5,
+      "Category": "Vocabulary",
+      "SubCategory": "Pet Food",
+      "Japanese": "くさ",
+      "Hiragana": "くさ",
+      "Romaji": "kusa",
+      "English": "grass"
+    },
+    {
+      "Unit": 5,
+      "Category": "Vocabulary",
+      "SubCategory": "Pet Food",
+      "Japanese": "さかな",
+      "Hiragana": "さかな",
+      "Romaji": "sakana",
+      "English": "fish"
+    },
+    {
+      "Unit": 5,
+      "Category": "Vocabulary",
+      "SubCategory": "Pet Food",
+      "Japanese": "にく",
+      "Hiragana": "にく",
+      "Romaji": "niku",
+      "English": "meat"
+    },
+    {
+      "Unit": 5,
+      "Category": "Vocabulary",
+      "SubCategory": "Pet Food",
+      "Japanese": "水",
+      "Hiragana": "みず",
+      "Romaji": "mizu",
+      "English": "water"
+    },
+    {
+      "Unit": 5,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Present)",
+      "Japanese": "たべます",
+      "Hiragana": "たべます",
+      "Romaji": "tabemasu",
+      "English": "eat"
+    },
+    {
+      "Unit": 5,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Present)",
+      "Japanese": "のみます",
+      "Hiragana": "のみます",
+      "Romaji": "nomimasu",
+      "English": "drink"
+    },
+    {
+      "Unit": 5,
+      "Category": "Grammar",
+      "SubCategory": "Question",
+      "Japanese": "PET はなにをたべますか。",
+      "Hiragana": "PET はなにをたべますか。",
+      "Romaji": "PET wa nani o tabemasuka.",
+      "English": "What do PET(s) eat?"
+    },
+    {
+      "Unit": 5,
+      "Category": "Grammar",
+      "SubCategory": "Question",
+      "Japanese": "PET はなにをのみますか。",
+      "Hiragana": "PET はなにをのみますか。",
+      "Romaji": "PET wa nani o nomimasuka.",
+      "English": "What do pet(s) drink?"
+    },
+    {
+      "Unit": 5,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "PET は FOOD をたべます。",
+      "Hiragana": "PET は FOOD をたべます。",
+      "Romaji": "PET wa FOOD o tabemasu.",
+      "English": "PET(s) eat FOOD."
+    },
+    {
+      "Unit": 5,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "PET は DRINK をのみます。",
+      "Hiragana": "PET は DRINK をのみます。",
+      "Romaji": "PET wa DRINK o nomimasu.",
+      "English": "Pet(s) drink DRINK."
+    }
+  ]
+}

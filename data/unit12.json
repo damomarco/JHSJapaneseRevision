@@ -1,0 +1,842 @@
+
+{
+  "contentItems": [
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Past)",
+      "Japanese": "きのう",
+      "Hiragana": "きのう",
+      "Romaji": "kinou",
+      "English": "yesterday"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Past)",
+      "Japanese": "せんしゅう",
+      "Hiragana": "せんしゅう",
+      "Romaji": "senshuu",
+      "English": "last week"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Past)",
+      "Japanese": "せんがつ",
+      "Hiragana": "せんがつ",
+      "Romaji": "sengetsu",
+      "English": "last month"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Past)",
+      "Japanese": "きょねん",
+      "Hiragana": "きょねん",
+      "Romaji": "kyonen",
+      "English": "last year"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Event",
+      "Japanese": "にゅうがくしき",
+      "Hiragana": "にゅうがくしき",
+      "Romaji": "nyuugakushiki",
+      "English": "school entrance ceremony"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Event",
+      "Japanese": "ぶんかさい",
+      "Hiragana": "ぶんかさい",
+      "Romaji": "bunkasai",
+      "English": "cultural festival"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Event",
+      "Japanese": "なつ休み",
+      "Hiragana": "なつやすみ",
+      "Romaji": "natsu yasumi",
+      "English": "summer holidays"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Event",
+      "Japanese": "しゅうがくりょこう",
+      "Hiragana": "しゅうがくりょこう",
+      "Romaji": "shuugakuryokou",
+      "English": "school trip"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Event",
+      "Japanese": "そつぎょうしき",
+      "Hiragana": "そつぎょうしき",
+      "Romaji": "sotsugyoushiki",
+      "English": "graduation ceremony"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Noun (Place)",
+      "Japanese": "としょかん",
+      "Hiragana": "としょかん",
+      "Romaji": "toshokan",
+      "English": "library"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Noun (Thing)",
+      "Japanese": "ジェットコースター",
+      "Hiragana": "ジェットコースター",
+      "Romaji": "jettokoosutaa",
+      "English": "jet-coaster (roller coaster)"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Noun (Place)",
+      "Japanese": "じんじゃ",
+      "Hiragana": "じんじゃ",
+      "Romaji": "jinja",
+      "English": "shrine"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Noun (Place)",
+      "Japanese": "おてら",
+      "Hiragana": "おてら",
+      "Romaji": "otera",
+      "English": "temple"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Noun (Thing)",
+      "Japanese": "さくぶん",
+      "Hiragana": "さくぶん",
+      "Romaji": "sakubun",
+      "English": "composition"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Noun (Thing)",
+      "Japanese": "りょこう",
+      "Hiragana": "りょこう",
+      "Romaji": "ryokou",
+      "English": "trip"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Noun (Thing)",
+      "Japanese": "しけん",
+      "Hiragana": "しけん",
+      "Romaji": "shiken",
+      "English": "exam"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Noun (Thing)",
+      "Japanese": "おみやげ",
+      "Hiragana": "おみやげ",
+      "Romaji": "omiyage",
+      "English": "souvenir"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past)",
+      "Japanese": "たべました",
+      "Hiragana": "たべました",
+      "Romaji": "tabemashita",
+      "English": "ate"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past)",
+      "Japanese": "のみました",
+      "Hiragana": "のみました",
+      "Romaji": "nomimashita",
+      "English": "drank"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past)",
+      "Japanese": "みました",
+      "Hiragana": "みました",
+      "Romaji": "mimashita",
+      "English": "saw/watched"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past)",
+      "Japanese": "ききました",
+      "Hiragana": "ききました",
+      "Romaji": "kikimashita",
+      "English": "heard"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past)",
+      "Japanese": "かきました",
+      "Hiragana": "かきました",
+      "Romaji": "kakimashita",
+      "English": "wrote"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past)",
+      "Japanese": "よみました",
+      "Hiragana": "よみました",
+      "Romaji": "yomimashita",
+      "English": "read"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past)",
+      "Japanese": "かいました",
+      "Hiragana": "かいました",
+      "Romaji": "kaimashita",
+      "English": "bought"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past)",
+      "Japanese": "とりました",
+      "Hiragana": "とりました",
+      "Romaji": "torimashita",
+      "English": "took"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past)",
+      "Japanese": "つくりました",
+      "Hiragana": "つくりました",
+      "Romaji": "tsukurimashita",
+      "English": "made"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past)",
+      "Japanese": "しました",
+      "Hiragana": "しました",
+      "Romaji": "shimashita",
+      "English": "did"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past)",
+      "Japanese": "いきました",
+      "Hiragana": "いきました",
+      "Romaji": "ikimashita",
+      "English": "went"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past)",
+      "Japanese": "あいました",
+      "Hiragana": "あいました",
+      "Romaji": "aimashita",
+      "English": "met"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past)",
+      "Japanese": "のりました",
+      "Hiragana": "のりました",
+      "Romaji": "norimashita",
+      "English": "caught/rode"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past)",
+      "Japanese": "ねました",
+      "Hiragana": "ねました",
+      "Romaji": "nemashita",
+      "English": "slept"
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Question (Past)",
+      "Japanese": "TimeExpなにをしましたか。",
+      "Hiragana": "TimeExpなにをしましたか。",
+      "Romaji": "TimeExp nani o shimashita ka.",
+      "English": "What did you do TimeExp?"
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Answer (Past)",
+      "Japanese": "NounをVerbました。",
+      "Hiragana": "NounをVerbました。",
+      "Romaji": "Noun o Verb-mashita.",
+      "English": "I Verb(ed) Noun."
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "きのう、なにをしましたか。",
+      "Hiragana": "きのう、なにをしましたか。",
+      "Romaji": "kinou, nani o shimashita ka.",
+      "English": "What did you do yesterday?"
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "せんがつ、なにをしましたか。",
+      "Hiragana": "せんがつ、なにをしましたか。",
+      "Romaji": "sengetsu, nani o shimashita ka.",
+      "English": "What did you do last month?"
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "きょねん、なにをしましたか。",
+      "Hiragana": "きょねん、なにをしましたか。",
+      "Romaji": "kyonen, nani o shimashita ka.",
+      "English": "What did you do last year?"
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "せんしゅう、なにをしましたか。",
+      "Hiragana": "せんしゅう、なにをしましたか。",
+      "Romaji": "senshuu, nani o shimashita ka.",
+      "English": "What did you do last week?"
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "さくぶんをかきました。",
+      "Hiragana": "さくぶんをかきました。",
+      "Romaji": "sakubun o kakimashita.",
+      "English": "I wrote a composition (essay)."
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "ジェットコースターをのりました。",
+      "Hiragana": "ジェットコースターをのりました。",
+      "Romaji": "jettokoosutaa o norimashita.",
+      "English": "I rode a jet-coaster (rollercoaster)."
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "りょこうをいきました。",
+      "Hiragana": "りょこうをいきました。",
+      "Romaji": "ryokou o ikimashita.",
+      "English": "I went on a trip."
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "おみやげをかいました。",
+      "Hiragana": "おみやげをかいました。",
+      "Romaji": "omiyage o kaimashita.",
+      "English": "I bought a/some souvenir(s)."
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past-Negative)",
+      "Japanese": "たべませんでした",
+      "Hiragana": "たべませんでした",
+      "Romaji": "tabemasen deshita",
+      "English": "did not eat"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past-Negative)",
+      "Japanese": "のみませんでした",
+      "Hiragana": "のみませんでした",
+      "Romaji": "nomimasen deshita",
+      "English": "did not drink"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past-Negative)",
+      "Japanese": "みませんでした",
+      "Hiragana": "みませんでした",
+      "Romaji": "mimasen deshita",
+      "English": "did not see/watch"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past-Negative)",
+      "Japanese": "ききませんでした",
+      "Hiragana": "ききませんでした",
+      "Romaji": "kikimasen deshita",
+      "English": "did not hear"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past-Negative)",
+      "Japanese": "かきませんでした",
+      "Hiragana": "かきませんでした",
+      "Romaji": "kakimasen deshita",
+      "English": "did not write"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past-Negative)",
+      "Japanese": "よみませんでした",
+      "Hiragana": "よみませんでした",
+      "Romaji": "yomimasen deshita",
+      "English": "did not read"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past-Negative)",
+      "Japanese": "かいませんでした",
+      "Hiragana": "かいませんでした",
+      "Romaji": "kaimasen deshita",
+      "English": "did not buy"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past-Negative)",
+      "Japanese": "とりませんでした",
+      "Hiragana": "とりませんでした",
+      "Romaji": "torimasen deshita",
+      "English": "did not take"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past-Negative)",
+      "Japanese": "つくりませんでした",
+      "Hiragana": "つくりませんでした",
+      "Romaji": "tsukurimasen deshita",
+      "English": "did not make"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past-Negative)",
+      "Japanese": "しませんでした",
+      "Hiragana": "しませんでした",
+      "Romaji": "shimasen deshita",
+      "English": "did not"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past-Negative)",
+      "Japanese": "いきませんでした",
+      "Hiragana": "いきませんでした",
+      "Romaji": "ikimasen deshita",
+      "English": "did not go"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past-Negative)",
+      "Japanese": "あいませんでした",
+      "Hiragana": "あいませんでした",
+      "Romaji": "aimasen deshita",
+      "English": "did not meet"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past-Negative)",
+      "Japanese": "のりませんでした",
+      "Hiragana": "のりませんでした",
+      "Romaji": "norimasen deshita",
+      "English": "did not catch/ride"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Past-Negative)",
+      "Japanese": "ねませんでした",
+      "Hiragana": "ねませんでした",
+      "Romaji": "nemasen deshita",
+      "English": "did not sleep"
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Question (Past)",
+      "Japanese": "TimeExp ItemをVerbましたか。",
+      "Hiragana": "TimeExp ItemをVerbましたか。",
+      "Romaji": "TimeExp Item o Verb-mashita ka.",
+      "English": "Did you Verb Item TimeExp?"
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Question (Past)",
+      "Japanese": "TimeExp、PlaceにVerbましたか。",
+      "Hiragana": "TimeExp、PlaceにVerbましたか。",
+      "Romaji": "TimeExp, Place ni Verb-mashita ka.",
+      "English": "Did you Verb at Place TimeExp?"
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Answer (Past)",
+      "Japanese": "はい、ItemをVerbました。",
+      "Hiragana": "はい、ItemをVerbました。",
+      "Romaji": "hai, Item o Verb-mashita.",
+      "English": "Yes, I Verb(ed) Item."
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Answer (Past)",
+      "Japanese": "いいえ、ItemをVerbませんでした。",
+      "Hiragana": "いいえ、ItemをVerbませんでした。",
+      "Romaji": "iie, Item o Verb-masen deshita.",
+      "English": "No, I didn’t Verb Item."
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Answer (Past)",
+      "Japanese": "はい、PlaceにVerbました。",
+      "Hiragana": "はい、PlaceにVerbました。",
+      "Romaji": "hai, Place ni Verb-mashita.",
+      "English": "Yes, I Verb at Place."
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Answer (Past)",
+      "Japanese": "いいえ、PlaceにVerbませんでした。",
+      "Hiragana": "いいえ、PlaceにVerbませんでした。",
+      "Romaji": "iie, Place ni Verb-masen deshita.",
+      "English": "No, I didn’t Verb at Place."
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "しゅうがくりょこう、としょかん にいきましたか。",
+      "Hiragana": "しゅうがくりょこう、としょかん にいきましたか。",
+      "Romaji": "shuugakuryokou, toshokan ni ikimashita ka.",
+      "English": "Did you go to the library on your school trip?"
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "きのう、にくをたべましたか。",
+      "Hiragana": "きのう、にくをたべましたか。",
+      "Romaji": "kinou, niku o tabemashita ka.",
+      "English": "Did you eat meat yesterday?"
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "せんしゅう、ほんをよみまし たか。",
+      "Hiragana": "せんしゅう、ほんをよみまし たか。",
+      "Romaji": "senshuu, hon o yomimashita ka.",
+      "English": "Did you read a book last week?"
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "はい、としょかんにいきまし た。",
+      "Hiragana": "はい、としょかんにいきまし た。",
+      "Romaji": "hai, toshokan ni ikimashita.",
+      "English": "Yes, I did go to the library."
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "いいえ、にくをたべませんで した。",
+      "Hiragana": "いいえ、にくをたべませんで した。",
+      "Romaji": "iie, niku o tabemasen deshita.",
+      "English": "No, I didn’t eat meat."
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "はい、ほんをよみました。",
+      "Hiragana": "はい、ほんをよみました。",
+      "Romaji": "hai, hon o yomimashita.",
+      "English": "Yes, I did read a book."
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (Past-i)",
+      "Japanese": "うらさかった",
+      "Hiragana": "うらさかった",
+      "Romaji": "urasakatta",
+      "English": "Was noisy"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (Past-i)",
+      "Japanese": "おいしかった",
+      "Hiragana": "おいしかった",
+      "Romaji": "oishikatta",
+      "English": "Was delicious"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (Past-i)",
+      "Japanese": "おかしかった",
+      "Hiragana": "おかしかった",
+      "Romaji": "okashikatta",
+      "English": "Was strange/funny"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (Past-i)",
+      "Japanese": "おもしろかった",
+      "Hiragana": "おもしろかった",
+      "Romaji": "omoshirokatta",
+      "English": "Was interesting/funny"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (Past-i)",
+      "Japanese": "かわいかった",
+      "Hiragana": "かわいかった",
+      "Romaji": "kawaikatta",
+      "English": "Was cute"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (Past-i)",
+      "Japanese": "くさかった",
+      "Hiragana": "くさかった",
+      "Romaji": "kusakatta",
+      "English": "Was smelly"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (Past-i)",
+      "Japanese": "こわかった",
+      "Hiragana": "こわかった",
+      "Romaji": "kowakatta",
+      "English": "Was scary"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (Past-i)",
+      "Japanese": "すごかった",
+      "Hiragana": "すごかった",
+      "Romaji": "sugokatta",
+      "English": "Was great"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (Past-i)",
+      "Japanese": "たかかった",
+      "Hiragana": "たかかった",
+      "Romaji": "takakatta",
+      "English": "Was expensive"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (Past-i)",
+      "Japanese": "たのしかった",
+      "Hiragana": "たのしかった",
+      "Romaji": "tanoshikatta",
+      "English": "Was fun/enjoyable"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (Past-i)",
+      "Japanese": "ちいさかった",
+      "Hiragana": "ちいさかった",
+      "Romaji": "chiisakatta",
+      "English": "Was small"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (Past-i)",
+      "Japanese": "つまらなかった",
+      "Hiragana": "つまらなかった",
+      "Romaji": "tsumaranakatta",
+      "English": "Was boring"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (Past-i)",
+      "Japanese": "まずかった",
+      "Hiragana": "まずかった",
+      "Romaji": "mazukatta",
+      "English": "Tasted awful"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (Past-i)",
+      "Japanese": "むずかしかった",
+      "Hiragana": "むずかしかった",
+      "Romaji": "muzukashikatta",
+      "English": "Was difficult"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (Past-i)",
+      "Japanese": "やさしかった",
+      "Hiragana": "やさしかった",
+      "Romaji": "yasashikatta",
+      "English": "Was easy/gentle"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (Past-i)",
+      "Japanese": "やすかった",
+      "Hiragana": "やすかった",
+      "Romaji": "yasukatta",
+      "English": "Was cheap"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Adjective (Past-i)",
+      "Japanese": "よかった",
+      "Hiragana": "よかった",
+      "Romaji": "yokatta",
+      "English": "Was good"
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Question (Past-Adjective)",
+      "Japanese": "Activity/itemはどうでしたか。",
+      "Hiragana": "Activity/itemはどうでしたか。",
+      "Romaji": "Activity/item wa dou deshita ka.",
+      "English": "How was the Activity/item?"
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Answer (Past-Adjective)",
+      "Japanese": "Activity/itemはAdjかったです。",
+      "Hiragana": "Activity/itemはAdjかったです。",
+      "Romaji": "Activity/item wa Adj-katta desu.",
+      "English": "The activity/item was Adj."
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "しけん はどうでしたか。",
+      "Hiragana": "しけん はどうでしたか。",
+      "Romaji": "shiken wa dou deshita ka.",
+      "English": "How was the exam?"
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "そつぎょうしき はどうでしたか。",
+      "Hiragana": "そつぎょうしき はどうでしたか。",
+      "Romaji": "sotsugyoushiki wa dou deshita ka.",
+      "English": "How was the graduation ceremony?"
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "しけん はむずかしかったです。",
+      "Hiragana": "しけん はむずかしかったです。",
+      "Romaji": "shiken wa muzukashikatta desu.",
+      "English": "The exam was difficult."
+    },
+    {
+      "Unit": 12,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "そつぎょうしき はよかったです。",
+      "Hiragana": "そつぎょうしき はよかったです。",
+      "Romaji": "sotsugyoushiki wa yokatta desu.",
+      "English": "The graduation ceremony was good."
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "たいへん！",
+      "Hiragana": "たいへん！",
+      "Romaji": "taihen!",
+      "English": "Oh no!"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "そうでしたね。",
+      "Hiragana": "そうでしたね。",
+      "Romaji": "sou deshita ne.",
+      "English": "That was right, wasn’t it?"
+    },
+    {
+      "Unit": 12,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "そうね。",
+      "Hiragana": "そうね。",
+      "Romaji": "sou ne.",
+      "English": "That’s right, isn’t it?"
+    }
+  ]
+}

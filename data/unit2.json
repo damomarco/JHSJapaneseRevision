@@ -1,0 +1,509 @@
+
+{
+  "contentItems": [
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "一",
+      "Hiragana": "いち",
+      "Romaji": "ichi",
+      "English": "one"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "二",
+      "Hiragana": "に",
+      "Romaji": "ni",
+      "English": "two"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "三",
+      "Hiragana": "さん",
+      "Romaji": "san",
+      "English": "three"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "四",
+      "Hiragana": "よん (し)",
+      "Romaji": "yon (shi)",
+      "English": "four"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "五",
+      "Hiragana": "ご",
+      "Romaji": "go",
+      "English": "five"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "六",
+      "Hiragana": "ろく",
+      "Romaji": "roku",
+      "English": "six"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "七",
+      "Hiragana": "なな (しち)",
+      "Romaji": "nana (shichi)",
+      "English": "seven"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "八",
+      "Hiragana": "はち",
+      "Romaji": "hachi",
+      "English": "eight"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "九",
+      "Hiragana": "きゅう (く)",
+      "Romaji": "kyuu (ku)",
+      "English": "nine"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "十",
+      "Hiragana": "じゅう",
+      "Romaji": "juu",
+      "English": "ten"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "0",
+      "Hiragana": "れい (ゼロ)",
+      "Romaji": "rei (zero)",
+      "English": "zero"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "十一",
+      "Hiragana": "じゅういち",
+      "Romaji": "juuichi",
+      "English": "eleven"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "十二",
+      "Hiragana": "じゅうに",
+      "Romaji": "juuni",
+      "English": "twelve"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "十三",
+      "Hiragana": "じゅうさん",
+      "Romaji": "juusan",
+      "English": "thirteen"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "十四",
+      "Hiragana": "じゅうよん (じゅうし)",
+      "Romaji": "juuyon (juushi)",
+      "English": "fourteen"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "十五",
+      "Hiragana": "じゅうご",
+      "Romaji": "juugo",
+      "English": "fifteen"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "十六",
+      "Hiragana": "じゅうろく",
+      "Romaji": "juuroku",
+      "English": "sixteen"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "十七",
+      "Hiragana": "じゅうなな (じゅうしち)",
+      "Romaji": "juunana (juushichi)",
+      "English": "seventeen"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "十八",
+      "Hiragana": "じゅうはち",
+      "Romaji": "juuhachi",
+      "English": "eighteen"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "十九",
+      "Hiragana": "じゅうきゅう (じゅうく)",
+      "Romaji": "juukyuu (juuku)",
+      "English": "nineteen"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "二十",
+      "Hiragana": "にじゅう",
+      "Romaji": "nijuu",
+      "English": "twenty"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "三十",
+      "Hiragana": "さんじゅう",
+      "Romaji": "sanjuu",
+      "English": "thirty"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "四十",
+      "Hiragana": "よんじゅう",
+      "Romaji": "yonjuu",
+      "English": "forty"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "五十",
+      "Hiragana": "ごじゅう",
+      "Romaji": "gojuu",
+      "English": "fifty"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "六十",
+      "Hiragana": "ろくじゅう",
+      "Romaji": "rokujuu",
+      "English": "sixty"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "七十",
+      "Hiragana": "ななじゅう",
+      "Romaji": "nanajuu",
+      "English": "seventy"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "八十",
+      "Hiragana": "はちじゅう",
+      "Romaji": "hachijuu",
+      "English": "eighty"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "九十",
+      "Hiragana": "きゅうじゅう",
+      "Romaji": "kyuujuu",
+      "English": "ninety"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Number",
+      "Japanese": "百",
+      "Hiragana": "ひゃく",
+      "Romaji": "hyaku",
+      "English": "one hundred"
+    },
+    {
+      "Unit": 2,
+      "Category": "Grammar",
+      "SubCategory": "Question",
+      "Japanese": "なんさいですか。",
+      "Hiragana": "なんさいですか。",
+      "Romaji": "nansai desuka.",
+      "English": "How old are you?"
+    },
+    {
+      "Unit": 2,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "# さいです。",
+      "Hiragana": "# さいです。",
+      "Romaji": "# sai desu.",
+      "English": "(I am) # years old."
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Age",
+      "Japanese": "一さい",
+      "Hiragana": "いっさい",
+      "Romaji": "issai",
+      "English": "1 year old"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Age",
+      "Japanese": "二さい",
+      "Hiragana": "にさい",
+      "Romaji": "nisai",
+      "English": "2 years old"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Age",
+      "Japanese": "三さい",
+      "Hiragana": "さんさい",
+      "Romaji": "sansai",
+      "English": "3 years old"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Age",
+      "Japanese": "四さい",
+      "Hiragana": "よんさい",
+      "Romaji": "yonsai",
+      "English": "4 years old"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Age",
+      "Japanese": "五さい",
+      "Hiragana": "ごさい",
+      "Romaji": "gosai",
+      "English": "5 years old"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Age",
+      "Japanese": "六さい",
+      "Hiragana": "ろくさい",
+      "Romaji": "rokusai",
+      "English": "6 years old"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Age",
+      "Japanese": "七さい",
+      "Hiragana": "ななさい",
+      "Romaji": "nanasai",
+      "English": "7 years old"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Age",
+      "Japanese": "八さい",
+      "Hiragana": "はっさい",
+      "Romaji": "hassai",
+      "English": "8 years old"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Age",
+      "Japanese": "九さい",
+      "Hiragana": "きゅうさい",
+      "Romaji": "kyuusai",
+      "English": "9 years old"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Age",
+      "Japanese": "十さい",
+      "Hiragana": "じゅっさい",
+      "Romaji": "jussai",
+      "English": "10 years old"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Age",
+      "Japanese": "十一さい",
+      "Hiragana": "じゅういっさい",
+      "Romaji": "juuissai",
+      "English": "11 years old"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Age",
+      "Japanese": "十二さい",
+      "Hiragana": "じゅうにさい",
+      "Romaji": "juunisai",
+      "English": "12 years old"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Age",
+      "Japanese": "十三さい",
+      "Hiragana": "じゅうさんさい",
+      "Romaji": "juusansai",
+      "English": "13 years old"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Age",
+      "Japanese": "十四さい",
+      "Hiragana": "じゅうよんさい",
+      "Romaji": "juuyonsai",
+      "English": "14 years old"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Age",
+      "Japanese": "十五さい",
+      "Hiragana": "じゅうごさい",
+      "Romaji": "juugosai",
+      "English": "15 years old"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Age",
+      "Japanese": "十六さい",
+      "Hiragana": "じゅうろくさい",
+      "Romaji": "juurokusai",
+      "English": "16 years old"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Age",
+      "Japanese": "十七さい",
+      "Hiragana": "じゅうななさい",
+      "Romaji": "juunanasai",
+      "English": "17 years old"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Age",
+      "Japanese": "十八さい",
+      "Hiragana": "じゅうはっさい",
+      "Romaji": "juuhassai",
+      "English": "18 years old"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Age",
+      "Japanese": "十九さい",
+      "Hiragana": "じゅうきゅうさい",
+      "Romaji": "juukyuusai",
+      "English": "19 years old"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Age",
+      "Japanese": "二十",
+      "Hiragana": "はたち",
+      "Romaji": "hatachi",
+      "English": "20 years old"
+    },
+    {
+      "Unit": 2,
+      "Category": "Grammar",
+      "SubCategory": "Question",
+      "Japanese": "でんわばんごうは?",
+      "Hiragana": "でんわばんごうは?",
+      "Romaji": "denwabangouwa?",
+      "English": "(What is your) phone number?"
+    },
+    {
+      "Unit": 2,
+      "Category": "Grammar",
+      "SubCategory": "Question",
+      "Japanese": "でんわばんごうはなんですか。",
+      "Hiragana": "でんわばんごうはなんですか。",
+      "Romaji": "denwabangouwa nandesuka.",
+      "English": "What is your phone number?"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Noun",
+      "Japanese": "でんわ",
+      "Hiragana": "でんわ",
+      "Romaji": "denwa",
+      "English": "telephone"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Noun",
+      "Japanese": "ばんごう",
+      "Hiragana": "ばんごう",
+      "Romaji": "bangou",
+      "English": "number"
+    },
+    {
+      "Unit": 2,
+      "Category": "Vocabulary",
+      "SubCategory": "Particle",
+      "Japanese": "の",
+      "Hiragana": "の",
+      "Romaji": "no",
+      "English": "(particle used as 'dash' in phone numbers)"
+    }
+  ]
+}

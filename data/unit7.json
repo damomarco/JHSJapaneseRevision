@@ -1,0 +1,626 @@
+
+{
+  "contentItems": [
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Day of Week)",
+      "Japanese": "日曜日",
+      "Hiragana": "にちようび",
+      "Romaji": "nichiyoubi",
+      "English": "Sunday"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Day of Week)",
+      "Japanese": "月曜日",
+      "Hiragana": "げつようび",
+      "Romaji": "getsuyoubi",
+      "English": "Monday"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Day of Week)",
+      "Japanese": "火曜日",
+      "Hiragana": "かようび",
+      "Romaji": "kayoubi",
+      "English": "Tuesday"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Day of Week)",
+      "Japanese": "水曜日",
+      "Hiragana": "すいようび",
+      "Romaji": "suiyoubi",
+      "English": "Wednesday"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Day of Week)",
+      "Japanese": "木曜日",
+      "Hiragana": "もくようび",
+      "Romaji": "mokuyoubi",
+      "English": "Thursday"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Day of Week)",
+      "Japanese": "金曜日",
+      "Hiragana": "きんようび",
+      "Romaji": "kinyoubi",
+      "English": "Friday"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Day of Week)",
+      "Japanese": "土曜日",
+      "Hiragana": "どようび",
+      "Romaji": "doyoubi",
+      "English": "Saturday"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Event",
+      "Japanese": "キャンプ",
+      "Hiragana": "キャンプ",
+      "Romaji": "kyanpu",
+      "English": "camp"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Event",
+      "Japanese": "パーティー",
+      "Hiragana": "パーティー",
+      "Romaji": "paatii",
+      "English": "party"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Event",
+      "Japanese": "テスト",
+      "Hiragana": "テスト",
+      "Romaji": "tesuto",
+      "English": "test"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Event",
+      "Japanese": "えんそく",
+      "Hiragana": "えんそく",
+      "Romaji": "ensoku",
+      "English": "excursion"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Event",
+      "Japanese": "休み",
+      "Hiragana": "やすみ",
+      "Romaji": "yasumi",
+      "English": "holiday"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Event",
+      "Japanese": "たんじょうび",
+      "Hiragana": "たんじょうび",
+      "Romaji": "tanjoubi",
+      "English": "birthday"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Event",
+      "Japanese": "うんどうかい",
+      "Hiragana": "うんどうかい",
+      "Romaji": "undoukai",
+      "English": "sports day"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Event",
+      "Japanese": "すいえいたいかい",
+      "Hiragana": "すいえいたいかい",
+      "Romaji": "suieitaikai",
+      "English": "swimming carnival"
+    },
+    {
+      "Unit": 7,
+      "Category": "Grammar",
+      "SubCategory": "Question",
+      "Japanese": "TIME WORD/EVENTは何曜日ですか。",
+      "Hiragana": "TIME WORD/EVENTはなんようびですか。",
+      "Romaji": "TIME WORD/EVENT wa nanyoubi desuka.",
+      "English": "What day is the TIME WORD/EVENT?"
+    },
+    {
+      "Unit": 7,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "TIME WORD/EVENTはDAY OF THE WEEKです。",
+      "Hiragana": "TIME WORD/EVENTはDAY OF THE WEEKです。",
+      "Romaji": "TIME WORD/EVENT wa DAY OF THE WEEK desu.",
+      "English": "TIME WORD/EVENT is DAY OF THE WEEK."
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time",
+      "Japanese": "いつ",
+      "Hiragana": "いつ",
+      "Romaji": "itsu",
+      "English": "when"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time",
+      "Japanese": "今日",
+      "Hiragana": "きょう",
+      "Romaji": "kyou",
+      "English": "today"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time",
+      "Japanese": "明日",
+      "Hiragana": "あした",
+      "Romaji": "ashita",
+      "English": "tomorrow"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Month)",
+      "Japanese": "一月",
+      "Hiragana": "いちがつ",
+      "Romaji": "ichigatsu",
+      "English": "January"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Month)",
+      "Japanese": "二月",
+      "Hiragana": "にがつ",
+      "Romaji": "nigatsu",
+      "English": "February"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Month)",
+      "Japanese": "三月",
+      "Hiragana": "さんがつ",
+      "Romaji": "sangatsu",
+      "English": "March"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Month)",
+      "Japanese": "四月",
+      "Hiragana": "しがつ",
+      "Romaji": "shigatsu",
+      "English": "April"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Month)",
+      "Japanese": "五月",
+      "Hiragana": "ごがつ",
+      "Romaji": "gogatsu",
+      "English": "May"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Month)",
+      "Japanese": "六月",
+      "Hiragana": "ろくがつ",
+      "Romaji": "rokugatsu",
+      "English": "June"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Month)",
+      "Japanese": "七月",
+      "Hiragana": "しちがつ",
+      "Romaji": "shichigatsu",
+      "English": "July"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Month)",
+      "Japanese": "八月",
+      "Hiragana": "はちがつ",
+      "Romaji": "hachigatsu",
+      "English": "August"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Month)",
+      "Japanese": "九月",
+      "Hiragana": "くがつ",
+      "Romaji": "kugatsu",
+      "English": "September"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Month)",
+      "Japanese": "十月",
+      "Hiragana": "じゅうがつ",
+      "Romaji": "juugatsu",
+      "English": "October"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Month)",
+      "Japanese": "十一月",
+      "Hiragana": "じゅういちがつ",
+      "Romaji": "juuichigatsu",
+      "English": "November"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Month)",
+      "Japanese": "十二月",
+      "Hiragana": "じゅうにがつ",
+      "Romaji": "juunigatsu",
+      "English": "December"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "一日",
+      "Hiragana": "ついたち",
+      "Romaji": "tsuitachi",
+      "English": "1st (day of month)"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "二日",
+      "Hiragana": "ふつか",
+      "Romaji": "futsuka",
+      "English": "2nd"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "三日",
+      "Hiragana": "みっか",
+      "Romaji": "mikka",
+      "English": "3rd"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "四日",
+      "Hiragana": "よっか",
+      "Romaji": "yokka",
+      "English": "4th"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "五日",
+      "Hiragana": "いつか",
+      "Romaji": "itsuka",
+      "English": "5th"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "六日",
+      "Hiragana": "むいか",
+      "Romaji": "muika",
+      "English": "6th"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "七日",
+      "Hiragana": "なのか",
+      "Romaji": "nanoka",
+      "English": "7th"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "八日",
+      "Hiragana": "ようか",
+      "Romaji": "youka",
+      "English": "8th"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "九日",
+      "Hiragana": "ここのか",
+      "Romaji": "kokonoka",
+      "English": "9th"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "十日",
+      "Hiragana": "とおか",
+      "Romaji": "tooka",
+      "English": "10th"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "十一日",
+      "Hiragana": "じゅういちにち",
+      "Romaji": "juuichinichi",
+      "English": "11th"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "十二日",
+      "Hiragana": "じゅうににち",
+      "Romaji": "juuninichi",
+      "English": "12th"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "十三日",
+      "Hiragana": "じゅうさんにち",
+      "Romaji": "juusannichi",
+      "English": "13th"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "十四日",
+      "Hiragana": "じゅうよっか",
+      "Romaji": "juuyokka",
+      "English": "14th"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "十五日",
+      "Hiragana": "じゅうごにち",
+      "Romaji": "juugonichi",
+      "English": "15th"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "十六日",
+      "Hiragana": "じゅうろくにち",
+      "Romaji": "juurokunichi",
+      "English": "16th"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "十七日",
+      "Hiragana": "じゅうしちにち",
+      "Romaji": "juushichinichi",
+      "English": "17th"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "十八日",
+      "Hiragana": "じゅうはちにち",
+      "Romaji": "juuhachinichi",
+      "English": "18th"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "十九日",
+      "Hiragana": "じゅうくにち",
+      "Romaji": "juukunichi",
+      "English": "19th"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "二十日",
+      "Hiragana": "はつか",
+      "Romaji": "hatsuka",
+      "English": "20th"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "二十一日",
+      "Hiragana": "にじゅういちにち",
+      "Romaji": "nijuuichinichi",
+      "English": "21st"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "二十二日",
+      "Hiragana": "にじゅうににち",
+      "Romaji": "nijuuninichi",
+      "English": "22nd"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "二十三日",
+      "Hiragana": "にじゅうさんにち",
+      "Romaji": "nijuusannichi",
+      "English": "23rd"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "二十四日",
+      "Hiragana": "にじゅうよっか",
+      "Romaji": "nijuuyokka",
+      "English": "24th"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "二十五日",
+      "Hiragana": "にじゅうごにち",
+      "Romaji": "nijuugonichi",
+      "English": "25th"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "二十六日",
+      "Hiragana": "にじゅうろくにち",
+      "Romaji": "nijuurokunichi",
+      "English": "26th"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "二十七日",
+      "Hiragana": "にじゅうしちにち",
+      "Romaji": "nijuushichinichi",
+      "English": "27th"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "二十八日",
+      "Hiragana": "にじゅうはちにち",
+      "Romaji": "nijuuhachinichi",
+      "English": "28th"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "二十九日",
+      "Hiragana": "にじゅうくにち",
+      "Romaji": "nijuukunichi",
+      "English": "29th"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "三十日",
+      "Hiragana": "さんじゅうにち",
+      "Romaji": "sanjuunichi",
+      "English": "30th"
+    },
+    {
+      "Unit": 7,
+      "Category": "Vocabulary",
+      "SubCategory": "Time (Date)",
+      "Japanese": "三十一日",
+      "Hiragana": "さんじゅういちにち",
+      "Romaji": "sanjuuichinichi",
+      "English": "31st"
+    },
+    {
+      "Unit": 7,
+      "Category": "Grammar",
+      "SubCategory": "Question",
+      "Japanese": "EVENTはいつですか。",
+      "Hiragana": "EVENTはいつですか。",
+      "Romaji": "EVENT wa itsu desuka.",
+      "English": "When is (the) EVENT?"
+    },
+    {
+      "Unit": 7,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "EVENTはMONTH-DATEです。",
+      "Hiragana": "EVENTはMONTH-DATEです。",
+      "Romaji": "EVENT wa MONTH-DATE desu.",
+      "English": "The EVENT is on DATE of MONTH."
+    },
+    {
+      "Unit": 7,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "EVENTはDayOfWeekです。",
+      "Hiragana": "EVENTはDayOfWeekです。",
+      "Romaji": "EVENT wa DayOfWeek desu.",
+      "English": "The EVENT is on DayOfWeek."
+    },
+    {
+      "Unit": 7,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "EVENTはTimeWordです。",
+      "Hiragana": "EVENTはTimeWordです。",
+      "Romaji": "EVENT wa TimeWord desu.",
+      "English": "The EVENT is TimeWord."
+    },
+    {
+      "Unit": 7,
+      "Category": "Grammar",
+      "SubCategory": "Question",
+      "Japanese": "TimeWord/DayOfWeekは何日ですか。",
+      "Hiragana": "TimeWord/DayOfWeekはなんにちですか。",
+      "Romaji": "TimeWord/DayOfWeek wa nannichi desuka.",
+      "English": "What is the date (on) TimeWord/DayOfWeek?"
+    },
+    {
+      "Unit": 7,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "TimeWord/DayOfWeekはMONTH-DATEです。",
+      "Hiragana": "TimeWord/DayOfWeekはMONTH-DATEです。",
+      "Romaji": "TimeWord/DayOfWeek wa MONTH-DATE desu.",
+      "English": "TimeWord/DayOfWeek is the DATE-MONTH."
+    }
+  ]
+}

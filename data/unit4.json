@@ -1,0 +1,338 @@
+
+{
+  "contentItems": [
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Counting (People)",
+      "Japanese": "一人",
+      "Hiragana": "ひとり",
+      "Romaji": "hitori",
+      "English": "1 person"
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Counting (People)",
+      "Japanese": "二人",
+      "Hiragana": "ふたり",
+      "Romaji": "futari",
+      "English": "2 people"
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Counting (People)",
+      "Japanese": "三人",
+      "Hiragana": "さんにん",
+      "Romaji": "sannin",
+      "English": "3 people"
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Counting (People)",
+      "Japanese": "四人",
+      "Hiragana": "よにん",
+      "Romaji": "yonin",
+      "English": "4 people"
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Counting (People)",
+      "Japanese": "五人",
+      "Hiragana": "ごにん",
+      "Romaji": "gonin",
+      "English": "5 people"
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Counting (People)",
+      "Japanese": "六人",
+      "Hiragana": "ろくにん",
+      "Romaji": "rokunin",
+      "English": "6 people"
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Counting (People)",
+      "Japanese": "七人",
+      "Hiragana": "ななにん (しちにん)",
+      "Romaji": "nananin (shichinin)",
+      "English": "7 people"
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Counting (People)",
+      "Japanese": "八人",
+      "Hiragana": "はちにん",
+      "Romaji": "hachinin",
+      "English": "8 people"
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Counting (People)",
+      "Japanese": "九人",
+      "Hiragana": "きゅうにん",
+      "Romaji": "kyuunin",
+      "English": "9 people"
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Counting (People)",
+      "Japanese": "十人",
+      "Hiragana": "じゅうにん",
+      "Romaji": "juunin",
+      "English": "10 people"
+    },
+    {
+      "Unit": 4,
+      "Category": "Grammar",
+      "SubCategory": "Question",
+      "Japanese": "なんにんかぞくですか。",
+      "Hiragana": "なんにんかぞくですか。",
+      "Romaji": "Nannin kazoku desuka.",
+      "English": "How many people are in your family?"
+    },
+    {
+      "Unit": 4,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "#人です。",
+      "Hiragana": "#にんです。",
+      "Romaji": "# nin desu.",
+      "English": "(There are) # people (in my family)."
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Family",
+      "Japanese": "おじいさん",
+      "Hiragana": "おじいさん",
+      "Romaji": "ojiisan",
+      "English": "grandfather"
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Family",
+      "Japanese": "おばあさん",
+      "Hiragana": "おばあさん",
+      "Romaji": "obaasan",
+      "English": "grandmother"
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Family",
+      "Japanese": "おとうさん",
+      "Hiragana": "おとうさん",
+      "Romaji": "otousan",
+      "English": "father"
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Family",
+      "Japanese": "おかあさん",
+      "Hiragana": "おかあさん",
+      "Romaji": "okaasan",
+      "English": "mother"
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Family",
+      "Japanese": "おにいさん",
+      "Hiragana": "おにいさん",
+      "Romaji": "oniisan",
+      "English": "older brother"
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Family",
+      "Japanese": "おねえさん",
+      "Hiragana": "おねえさん",
+      "Romaji": "oneesan",
+      "English": "older sister"
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Family",
+      "Japanese": "おとうと(さん)",
+      "Hiragana": "おとうと(さん)",
+      "Romaji": "otouto (san)",
+      "English": "younger brother"
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Family",
+      "Japanese": "いもうと(さん)",
+      "Hiragana": "いもうと(さん)",
+      "Romaji": "imouto (san)",
+      "English": "younger sister"
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Pets",
+      "Japanese": "いぬ",
+      "Hiragana": "いぬ",
+      "Romaji": "inu",
+      "English": "dog"
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Pets",
+      "Japanese": "あひる",
+      "Hiragana": "あひる",
+      "Romaji": "ahiru",
+      "English": "duck"
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Pets",
+      "Japanese": "うさぎ",
+      "Hiragana": "うさぎ",
+      "Romaji": "usagi",
+      "English": "rabbit"
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Pets",
+      "Japanese": "うま",
+      "Hiragana": "うま",
+      "Romaji": "uma",
+      "English": "horse"
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Pets",
+      "Japanese": "きんぎょ",
+      "Hiragana": "きんぎょ",
+      "Romaji": "kingyo",
+      "English": "goldfish"
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Pets",
+      "Japanese": "とり",
+      "Hiragana": "とり",
+      "Romaji": "tori",
+      "English": "bird"
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Pets",
+      "Japanese": "ねこ",
+      "Hiragana": "ねこ",
+      "Romaji": "neko",
+      "English": "cat"
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Pets",
+      "Japanese": "へび",
+      "Hiragana": "へび",
+      "Romaji": "hebi",
+      "English": "snake"
+    },
+    {
+      "Unit": 4,
+      "Category": "Grammar",
+      "SubCategory": "Question",
+      "Japanese": "ペットがいますか。",
+      "Hiragana": "ペットがいますか。",
+      "Romaji": "petto ga imasu ka.",
+      "English": "Do you have any pets?"
+    },
+    {
+      "Unit": 4,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "はい、ペットがいます。",
+      "Hiragana": "はい、ペットがいます。",
+      "Romaji": "hai, (petto ga) imasu.",
+      "English": "Yes, I have (a) pet(s)."
+    },
+    {
+      "Unit": 4,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "いいえ、ペットがいません。",
+      "Hiragana": "いいえ、ペットがいません。",
+      "Romaji": "iie, (petto ga) imasen.",
+      "English": "No, I don't have any pets."
+    },
+    {
+      "Unit": 4,
+      "Category": "Grammar",
+      "SubCategory": "Sentence",
+      "Japanese": "はい、PETとPETがいます。",
+      "Hiragana": "はい、PETとPETがいます。",
+      "Romaji": "Hai, PET to PET ga imasu.",
+      "English": "Yes, I have a PET and a PET."
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "すごい!",
+      "Hiragana": "すごい!",
+      "Romaji": "sugoi!",
+      "English": "Wow! Amazing!"
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "みなさんにあいたい。",
+      "Hiragana": "みなさんにあいたい。",
+      "Romaji": "minasan ni aitai.",
+      "English": "I want to (see) everyone!"
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "じゃ、Skype しましょう。",
+      "Hiragana": "じゃ、Skype しましょう。",
+      "Romaji": "Ja, Skype shimashou.",
+      "English": "Well, let's use Skype."
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "えっ、ほんとう?",
+      "Hiragana": "えっ、ほんとう?",
+      "Romaji": "e, hontou?",
+      "English": "Huh, really?"
+    },
+    {
+      "Unit": 4,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "はじめまして。",
+      "Hiragana": "はじめまして。",
+      "Romaji": "hajimemashite.",
+      "English": "Nice to meet you."
+    }
+  ]
+}

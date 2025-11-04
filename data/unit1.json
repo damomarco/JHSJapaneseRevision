@@ -1,0 +1,401 @@
+
+{
+  "contentItems": [
+    {
+      "Unit": 1,
+      "Category": "Grammar",
+      "SubCategory": "Question",
+      "Japanese": "おなまえはなんですか。",
+      "Hiragana": "おなまえはなんですか。",
+      "Romaji": "onamaewa nandesuka.",
+      "English": "What is your name?"
+    },
+    {
+      "Unit": 1,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "ぼくはNAMEです。",
+      "Hiragana": "ぼくはNAMEです。",
+      "Romaji": "bokuwa NAME desu.",
+      "English": "I am NAME. (Boys/men)"
+    },
+    {
+      "Unit": 1,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "わたしはNAMEです。",
+      "Hiragana": "わたしはNAMEです。",
+      "Romaji": "watashiwa NAME desu.",
+      "English": "I am NAME. (Girls/women/default)"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Honorific",
+      "Japanese": "くん",
+      "Hiragana": "くん",
+      "Romaji": "kun",
+      "English": "For boys/men your age or younger"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Honorific",
+      "Japanese": "さん",
+      "Hiragana": "さん",
+      "Romaji": "san",
+      "English": "Safe option if unsure"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Honorific",
+      "Japanese": "ちゃん",
+      "Hiragana": "ちゃん",
+      "Romaji": "chan",
+      "English": "For toddlers, or 'cutesy' (use caution)"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Honorific",
+      "Japanese": "せんせい",
+      "Hiragana": "せんせい",
+      "Romaji": "sensei",
+      "English": "Used for teachers and doctors"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Greeting",
+      "Japanese": "おはよう(ございます)",
+      "Hiragana": "おはよう(ございます)",
+      "Romaji": "ohayou (gozaimasu)",
+      "English": "Good morning (used until 11am~)"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Greeting",
+      "Japanese": "こんにちは",
+      "Hiragana": "こんにちは",
+      "Romaji": "konnichiwa",
+      "English": "Hello / Good afternoon (11am~ to late afternoon)"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Greeting",
+      "Japanese": "こんばんわ",
+      "Hiragana": "こんばんわ",
+      "Romaji": "konbanwa",
+      "English": "Good evening (dusk until late)"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Leave-taking",
+      "Japanese": "さようなら",
+      "Hiragana": "さようなら",
+      "Romaji": "sayounara",
+      "English": "Goodbye (when not seeing for a while)"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Leave-taking",
+      "Japanese": "またね",
+      "Hiragana": "またね",
+      "Romaji": "matane",
+      "English": "See you later"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Leave-taking",
+      "Japanese": "おやすみなさい",
+      "Hiragana": "おやすみなさい",
+      "Romaji": "oyasumi nasai",
+      "English": "Goodnight"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Leave-taking",
+      "Japanese": "またあした",
+      "Hiragana": "またあした",
+      "Romaji": "mata ashita",
+      "English": "See you tomorrow"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Courtesy",
+      "Japanese": "はい",
+      "Hiragana": "はい",
+      "Romaji": "hai",
+      "English": "Yes"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Courtesy",
+      "Japanese": "いいえ",
+      "Hiragana": "いいえ",
+      "Romaji": "iie",
+      "English": "No"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Courtesy",
+      "Japanese": "ありがとう",
+      "Hiragana": "ありがとう",
+      "Romaji": "arigatou",
+      "English": "Thank you"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Courtesy",
+      "Japanese": "どうぞよろしく",
+      "Hiragana": "どうぞよろしく",
+      "Romaji": "douzo yoroshiku",
+      "English": "Pleased to meet you / Good relationship"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Courtesy",
+      "Japanese": "はじめまして",
+      "Hiragana": "はじめまして",
+      "Romaji": "hajime mashite",
+      "English": "How do you do?"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (core)",
+      "Japanese": "たって",
+      "Hiragana": "たって",
+      "Romaji": "tatte",
+      "English": "Stand up"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (core)",
+      "Japanese": "すわって",
+      "Hiragana": "すわって",
+      "Romaji": "suwatte",
+      "English": "Sit down"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (core)",
+      "Japanese": "きいて",
+      "Hiragana": "きいて",
+      "Romaji": "kiite",
+      "English": "Listen"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (core)",
+      "Japanese": "みて",
+      "Hiragana": "みて",
+      "Romaji": "mite",
+      "English": "Look"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (core)",
+      "Japanese": "みせて",
+      "Hiragana": "みせて",
+      "Romaji": "misete",
+      "English": "Show"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (core)",
+      "Japanese": "かいて",
+      "Hiragana": "かいて",
+      "Romaji": "kaite",
+      "English": "Write"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (core)",
+      "Japanese": "よんで",
+      "Hiragana": "よんで",
+      "Romaji": "yonde",
+      "English": "Read"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (core)",
+      "Japanese": "いって",
+      "Hiragana": "いって",
+      "Romaji": "itte",
+      "English": "Say"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (core)",
+      "Japanese": "しずかにして",
+      "Hiragana": "しずかにして",
+      "Romaji": "shizukani shite",
+      "English": "Be quiet"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (extended)",
+      "Japanese": "まどをあけて",
+      "Hiragana": "まどをあけて",
+      "Romaji": "mado o akete",
+      "English": "Open the window"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (extended)",
+      "Japanese": "まどをしめて",
+      "Hiragana": "まどをしめて",
+      "Romaji": "mado o shimete",
+      "English": "Shut the window"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (extended)",
+      "Japanese": "ドアをあけて",
+      "Hiragana": "ドアをあけて",
+      "Romaji": "doa o akete",
+      "English": "Open the door"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (extended)",
+      "Japanese": "ドアをしめて",
+      "Hiragana": "ドアをしめて",
+      "Romaji": "doa o shimete",
+      "English": "Shut the door"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (extended)",
+      "Japanese": "まって",
+      "Hiragana": "まって",
+      "Romaji": "matte",
+      "English": "Wait"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (extended)",
+      "Japanese": "ちょっとまって",
+      "Hiragana": "ちょっとまって",
+      "Romaji": "chotto matte",
+      "English": "Wait a moment"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (extended)",
+      "Japanese": "ほんをだして",
+      "Hiragana": "ほんをだして",
+      "Romaji": "hon o dashite",
+      "English": "Take out your book"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (extended)",
+      "Japanese": "ペンをかして",
+      "Hiragana": "ペンをかして",
+      "Romaji": "pen o kashite",
+      "English": "Lend me a pen"
+    },
+    {
+      "Unit": 1,
+      "Category": "Grammar",
+      "SubCategory": "Instruction",
+      "Japanese": "NAME さん/くん/せんせい、VERB ください。",
+      "Hiragana": "NAME さん/くん/せんせい、VERB ください。",
+      "Romaji": "NAME san/kun/sensei, VERB kudasai.",
+      "English": "NAME, please VERB."
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "みなさん",
+      "Hiragana": "みなさん",
+      "Romaji": "minasan",
+      "English": "Everyone"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "ああ！",
+      "Hiragana": "ああ！",
+      "Romaji": "aa!",
+      "English": "I got it!"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "THING ですね",
+      "Hiragana": "THING ですね",
+      "Romaji": "THING desune",
+      "English": "THING, isn’t that right?"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "ええと/あのう",
+      "Hiragana": "ええと/あのう",
+      "Romaji": "eeto/anou",
+      "English": "Let me think"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "あっ！",
+      "Hiragana": "あっ！",
+      "Romaji": "a!",
+      "English": "What!? (surprised)"
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "はい、そうですね。",
+      "Hiragana": "はい、そうですね。",
+      "Romaji": "Hai, soudesune",
+      "English": "Yes, that’s right."
+    },
+    {
+      "Unit": 1,
+      "Category": "Vocabulary",
+      "SubCategory": "Conversation",
+      "Japanese": "すごい！",
+      "Hiragana": "すごい！",
+      "Romaji": "sugoi!",
+      "English": "Great!"
+    }
+  ]
+}

@@ -1,0 +1,500 @@
+
+{
+  "contentItems": [
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Food",
+      "Japanese": "ごはん",
+      "Hiragana": "ごはん",
+      "Romaji": "gohan",
+      "English": "rice/meal"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Food",
+      "Japanese": "たまご",
+      "Hiragana": "たまご",
+      "Romaji": "tamago",
+      "English": "egg"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Food",
+      "Japanese": "さかな",
+      "Hiragana": "さかな",
+      "Romaji": "sakana",
+      "English": "fish"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Food",
+      "Japanese": "にく",
+      "Hiragana": "にく",
+      "Romaji": "niku",
+      "English": "meat"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Food",
+      "Japanese": "やさい",
+      "Hiragana": "やさい",
+      "Romaji": "yasai",
+      "English": "vegetable"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Food",
+      "Japanese": "くだもの",
+      "Hiragana": "くだもの",
+      "Romaji": "kudamono",
+      "English": "fruit"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Food",
+      "Japanese": "おかし",
+      "Hiragana": "おかし",
+      "Romaji": "okashi",
+      "English": "snacks"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Food",
+      "Japanese": "おこのみやき",
+      "Hiragana": "おこのみやき",
+      "Romaji": "okonomiyaki",
+      "English": "okonomiyaki (savoury pancake)"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Food",
+      "Japanese": "シリアル",
+      "Hiragana": "シリアル",
+      "Romaji": "shiriaru",
+      "English": "cereal"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Food",
+      "Japanese": "トースト",
+      "Hiragana": "トースト",
+      "Romaji": "toosuto",
+      "English": "toast"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Food",
+      "Japanese": "パン",
+      "Hiragana": "パン",
+      "Romaji": "pan",
+      "English": "bread"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Food",
+      "Japanese": "パスタ",
+      "Hiragana": "パスタ",
+      "Romaji": "pasuta",
+      "English": "pasta"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Food",
+      "Japanese": "サンドイッチ",
+      "Hiragana": "サンドイッチ",
+      "Romaji": "sandoichi",
+      "English": "sandwich"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Food",
+      "Japanese": "ソーセージ",
+      "Hiragana": "ソーセージ",
+      "Romaji": "sooseeji",
+      "English": "sausage"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Food",
+      "Japanese": "ハンバーガー",
+      "Hiragana": "ハンバーガー",
+      "Romaji": "hanbaagaa",
+      "English": "hamburger"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Food",
+      "Japanese": "ピザ",
+      "Hiragana": "ピザ",
+      "Romaji": "piza",
+      "English": "pizza"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Food",
+      "Japanese": "チキン",
+      "Hiragana": "チキン",
+      "Romaji": "chikin",
+      "English": "chicken"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Food",
+      "Japanese": "サラダ",
+      "Hiragana": "サラダ",
+      "Romaji": "sarada",
+      "English": "salad"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Food",
+      "Japanese": "カレーライス",
+      "Hiragana": "カレーライス",
+      "Romaji": "kareeraisu",
+      "English": "curry-rice"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Food",
+      "Japanese": "チーズ",
+      "Hiragana": "チーズ",
+      "Romaji": "chiizu",
+      "English": "cheese"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Food",
+      "Japanese": "アイスクリーム",
+      "Hiragana": "アイスクリーム",
+      "Romaji": "aisukuriimu",
+      "English": "ice cream"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Food",
+      "Japanese": "チョコレート",
+      "Hiragana": "チョコレート",
+      "Romaji": "chokoreeto",
+      "English": "chocolate"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Food",
+      "Japanese": "ケーキ",
+      "Hiragana": "ケーキ",
+      "Romaji": "keeki",
+      "English": "cake"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Meals",
+      "Japanese": "あさごはん",
+      "Hiragana": "あさごはん",
+      "Romaji": "asagohan",
+      "English": "breakfast"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Meals",
+      "Japanese": "ひるごはん",
+      "Hiragana": "ひるごはん",
+      "Romaji": "hirugohan",
+      "English": "lunch"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Meals",
+      "Japanese": "ばんごはん",
+      "Hiragana": "ばんごはん",
+      "Romaji": "bangohan",
+      "English": "dinner"
+    },
+    {
+      "Unit": 6,
+      "Category": "Grammar",
+      "SubCategory": "Question",
+      "Japanese": "MEALになにをたべますか。",
+      "Hiragana": "MEALになにをたべますか。",
+      "Romaji": "MEAL ni nani o tabemasuka.",
+      "English": "What do you eat for MEAL?"
+    },
+    {
+      "Unit": 6,
+      "Category": "Grammar",
+      "SubCategory": "Question",
+      "Japanese": "MEALになにをのみますか。",
+      "Hiragana": "MEALになにをのみますか。",
+      "Romaji": "MEAL ni nani o nomimasuka.",
+      "English": "What do you drink for MEAL?"
+    },
+    {
+      "Unit": 6,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "FOODをたべます。",
+      "Hiragana": "FOODをたべます。",
+      "Romaji": "FOOD o tabemasu.",
+      "English": "I eat FOOD."
+    },
+    {
+      "Unit": 6,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "DRINKをのみます。",
+      "Hiragana": "DRINKをのみます。",
+      "Romaji": "DRINK o nomimasu.",
+      "English": "I drink DRINK."
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Drink",
+      "Japanese": "コーヒー",
+      "Hiragana": "コーヒー",
+      "Romaji": "koohii",
+      "English": "coffee"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Drink",
+      "Japanese": "コーラ",
+      "Hiragana": "コーラ",
+      "Romaji": "koora",
+      "English": "coke"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Drink",
+      "Japanese": "ジュース",
+      "Hiragana": "ジュース",
+      "Romaji": "juusu",
+      "English": "juice"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Drink",
+      "Japanese": "おちゃ",
+      "Hiragana": "おちゃ",
+      "Romaji": "ocha",
+      "English": "tea (green)"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Drink",
+      "Japanese": "ぎゅうにゅう/ミルク",
+      "Hiragana": "ぎゅうにゅう/ミルク",
+      "Romaji": "gyuunyuu/miruku",
+      "English": "milk"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Drink",
+      "Japanese": "水",
+      "Hiragana": "みず",
+      "Romaji": "mizu",
+      "English": "water"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Preference",
+      "Japanese": "すき",
+      "Hiragana": "すき",
+      "Romaji": "suki",
+      "English": "like"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Preference",
+      "Japanese": "だいすき",
+      "Hiragana": "だいすき",
+      "Romaji": "daisuki",
+      "English": "love"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Preference",
+      "Japanese": "きらい",
+      "Hiragana": "きらい",
+      "Romaji": "kirai",
+      "English": "dislike"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Preference",
+      "Japanese": "だいきらい",
+      "Hiragana": "だいきらい",
+      "Romaji": "daikirai",
+      "English": "hate"
+    },
+    {
+      "Unit": 6,
+      "Category": "Grammar",
+      "SubCategory": "Question",
+      "Japanese": "THINGがすきですか。",
+      "Hiragana": "THINGがすきですか。",
+      "Romaji": "THING ga suki desuka.",
+      "English": "Do you like THING?"
+    },
+    {
+      "Unit": 6,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "はい、すきです。",
+      "Hiragana": "はい、すきです。",
+      "Romaji": "hai, suki desu.",
+      "English": "Yes, I like it."
+    },
+    {
+      "Unit": 6,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "はい、だいすきです。",
+      "Hiragana": "はい、だいすきです。",
+      "Romaji": "hai, daisuki desu.",
+      "English": "Yes, I love it."
+    },
+    {
+      "Unit": 6,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "いいえ、あんまり...",
+      "Hiragana": "いいえ、あんまり...",
+      "Romaji": "iie, anmari...",
+      "English": "No, not really..."
+    },
+    {
+      "Unit": 6,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "いいえ、きらいです。",
+      "Hiragana": "いいえ、きらいです。",
+      "Romaji": "iie, kirai desu.",
+      "English": "No, I do not like it."
+    },
+    {
+      "Unit": 6,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "いいえ、だいきらいです。",
+      "Hiragana": "いいえ、だいきらいです。",
+      "Romaji": "iie, daikirai desu.",
+      "English": "No, I hate it."
+    },
+    {
+      "Unit": 6,
+      "Category": "Grammar",
+      "SubCategory": "Sentence",
+      "Japanese": "PERSONはFOOD/DRINKがLIKE/DISLIKEです。",
+      "Hiragana": "PERSONはFOOD/DRINKがLIKE/DISLIKEです。",
+      "Romaji": "PERSON wa FOOD/DRINK ga LIKE/DISLIKE desu.",
+      "English": "PERSON LIKE(s)/DISLIKE(s) FOOD/DRINK."
+    },
+    {
+      "Unit": 6,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "わたしはすしがだいすきです。",
+      "Hiragana": "わたしはすしがだいすきです。",
+      "Romaji": "watashi wa sushi ga daisuki desu.",
+      "English": "I love sushi."
+    },
+    {
+      "Unit": 6,
+      "Category": "Grammar",
+      "SubCategory": "Example",
+      "Japanese": "ぼくはサラダがすきです。",
+      "Hiragana": "ぼくはサラダがすきです。",
+      "Romaji": "boku wa sarada ga suki desu.",
+      "English": "I like salad."
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Present)",
+      "Japanese": "たべます",
+      "Hiragana": "たべます",
+      "Romaji": "tabemasu",
+      "English": "eat"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Present)",
+      "Japanese": "のみます",
+      "Hiragana": "のみます",
+      "Romaji": "nomimasu",
+      "English": "drink"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Negative)",
+      "Japanese": "たべません",
+      "Hiragana": "たべません",
+      "Romaji": "tabemasen",
+      "English": "don't eat"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Verb (Negative)",
+      "Japanese": "のみません",
+      "Hiragana": "のみません",
+      "Romaji": "nomimasen",
+      "English": "don't drink"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Conjunction",
+      "Japanese": "そして",
+      "Hiragana": "そして",
+      "Romaji": "soshite",
+      "English": "and (in addition)"
+    },
+    {
+      "Unit": 6,
+      "Category": "Vocabulary",
+      "SubCategory": "Conjunction",
+      "Japanese": "でも",
+      "Hiragana": "でも",
+      "Romaji": "demo",
+      "English": "but"
+    }
+  ]
+}

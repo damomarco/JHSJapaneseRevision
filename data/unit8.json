@@ -1,0 +1,383 @@
+
+{
+  "contentItems": [
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Hobbies",
+      "Japanese": "ピアノ",
+      "Hiragana": "ピアノ",
+      "Romaji": "piano",
+      "English": "piano"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Hobbies",
+      "Japanese": "コンピューター",
+      "Hiragana": "コンピューター",
+      "Romaji": "konpyuutaa",
+      "English": "computer(s)"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Hobbies",
+      "Japanese": "りょうり",
+      "Hiragana": "りょうり",
+      "Romaji": "ryouri",
+      "English": "cooking"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Hobbies",
+      "Japanese": "おんがく",
+      "Hiragana": "おんがく",
+      "Romaji": "ongaku",
+      "English": "music"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Hobbies",
+      "Japanese": "どくしょ",
+      "Hiragana": "どくしょ",
+      "Romaji": "dokusho",
+      "English": "reading"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Hobbies",
+      "Japanese": "かいもの",
+      "Hiragana": "かいもの",
+      "Romaji": "kaimono",
+      "English": "shopping"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Hobbies",
+      "Japanese": "ギター",
+      "Hiragana": "ギター",
+      "Romaji": "gitaa",
+      "English": "guitar"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Hobbies",
+      "Japanese": "カラオケ",
+      "Hiragana": "カラオケ",
+      "Romaji": "karaoke",
+      "English": "karaoke"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Hobbies",
+      "Japanese": "ダンス",
+      "Hiragana": "ダンス",
+      "Romaji": "dansu",
+      "English": "dance"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Language",
+      "Japanese": "インドネシア語",
+      "Hiragana": "インドネシアご",
+      "Romaji": "Indoneshia-go",
+      "English": "Indonesian (language)"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Language",
+      "Japanese": "フランス語",
+      "Hiragana": "フランスご",
+      "Romaji": "Furansu-go",
+      "English": "French (language)"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Language",
+      "Japanese": "イタリア語",
+      "Hiragana": "イタリアご",
+      "Romaji": "Itaria-go",
+      "English": "Italian (language)"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Language",
+      "Japanese": "英語",
+      "Hiragana": "えいご",
+      "Romaji": "eigo",
+      "English": "English (language)"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Language",
+      "Japanese": "中国語",
+      "Hiragana": "ちゅうごくご",
+      "Romaji": "chuugokugo",
+      "English": "Chinese (language)"
+    },
+    {
+      "Unit": 8,
+      "Category": "Grammar",
+      "SubCategory": "Question",
+      "Japanese": "しゅみはなんですか。",
+      "Hiragana": "しゅみはなんですか。",
+      "Romaji": "shumi wa nandesuka.",
+      "English": "What is (your) hobby?"
+    },
+    {
+      "Unit": 8,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "しゅみはHOBBYです。",
+      "Hiragana": "しゅみはHOBBYです。",
+      "Romaji": "(My) hobby is HOBBY.",
+      "English": "(My) hobby is HOBBY."
+    },
+    {
+      "Unit": 8,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "HOBBYです。",
+      "Hiragana": "HOBBYです。",
+      "Romaji": "HOBBY desu.",
+      "English": "(It) is HOBBY."
+    },
+    {
+      "Unit": 8,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "HOBBY がすきです。",
+      "Hiragana": "HOBBY がすきです。",
+      "Romaji": "HOBBY ga suki desu.",
+      "English": "I like HOBBY."
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Sports",
+      "Japanese": "すいえい",
+      "Hiragana": "すいえい",
+      "Romaji": "suiei",
+      "English": "swimming"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Sports",
+      "Japanese": "やきゅう",
+      "Hiragana": "やきゅう",
+      "Romaji": "yakyuu",
+      "English": "baseball"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Sports",
+      "Japanese": "からて",
+      "Hiragana": "からて",
+      "Romaji": "karate",
+      "English": "karate"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Sports",
+      "Japanese": "じょうば",
+      "Hiragana": "じょうば",
+      "Romaji": "jouba",
+      "English": "horse-riding"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Sports",
+      "Japanese": "スポーツ",
+      "Hiragana": "スポーツ",
+      "Romaji": "supootsu",
+      "English": "sport"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Sports",
+      "Japanese": "サーフィン",
+      "Hiragana": "サーフィン",
+      "Romaji": "saafin",
+      "English": "surfing"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Sports",
+      "Japanese": "バスケットボール",
+      "Hiragana": "バスケットボール",
+      "Romaji": "basukettobooru",
+      "English": "basketball"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Sports",
+      "Japanese": "ラグビー",
+      "Hiragana": "ラグビー",
+      "Romaji": "ragubii",
+      "English": "rugby"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Sports",
+      "Japanese": "テニス",
+      "Hiragana": "テニス",
+      "Romaji": "tenisu",
+      "English": "tennis"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Sports",
+      "Japanese": "バレーボール",
+      "Hiragana": "バレーボール",
+      "Romaji": "bareebooru",
+      "English": "volleyball"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Sports",
+      "Japanese": "フットボール",
+      "Hiragana": "フットボール",
+      "Romaji": "futtobooru",
+      "English": "football"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Sports",
+      "Japanese": "サッカー",
+      "Hiragana": "サッカー",
+      "Romaji": "sakkaa",
+      "English": "soccer"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Sports",
+      "Japanese": "ゴルフ",
+      "Hiragana": "ゴルフ",
+      "Romaji": "gorufu",
+      "English": "golf"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Sports (Japanese)",
+      "Japanese": "すもう",
+      "Hiragana": "すもう",
+      "Romaji": "sumou",
+      "English": "sumo"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Sports (Japanese)",
+      "Japanese": "きゅうどう",
+      "Hiragana": "きゅうどう",
+      "Romaji": "kyuudou",
+      "English": "Japanese archery"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Sports (Japanese)",
+      "Japanese": "じゅどう",
+      "Hiragana": "じゅどう",
+      "Romaji": "judou",
+      "English": "judo"
+    },
+    {
+      "Unit": 8,
+      "Category": "Vocabulary",
+      "SubCategory": "Sports (Japanese)",
+      "Japanese": "けんどう",
+      "Hiragana": "けんどう",
+      "Romaji": "kendou",
+      "English": "kendo"
+    },
+    {
+      "Unit": 8,
+      "Category": "Grammar",
+      "SubCategory": "Question",
+      "Japanese": "HOBBY/SPORT ができますか。",
+      "Hiragana": "HOBBY/SPORT ができますか。",
+      "Romaji": "HOBBY/SPORT ga dekimasu ka.",
+      "English": "Can (you play/do) HOBBY/SPORT?"
+    },
+    {
+      "Unit": 8,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "はい、できます。",
+      "Hiragana": "はい、できます。",
+      "Romaji": "hai, dekimasu.",
+      "English": "Yes, I can (do it)."
+    },
+    {
+      "Unit": 8,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "はい、すこしできます。",
+      "Hiragana": "はい、すこしできます。",
+      "Romaji": "hai, sukoshi dekimasu.",
+      "English": "Yes, I can (do it) a little."
+    },
+    {
+      "Unit": 8,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "いいえ、あまりできません。",
+      "Hiragana": "いいえ、あまりできません。",
+      "Romaji": "iie, amari dekimasen.",
+      "English": "No, I can’t (do it) well."
+    },
+    {
+      "Unit": 8,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "いいえ、できません。",
+      "Hiragana": "いいえ、できません。",
+      "Romaji": "iie, dekimasen.",
+      "English": "No, I can’t (do it)."
+    },
+    {
+      "Unit": 8,
+      "Category": "Grammar",
+      "SubCategory": "Answer",
+      "Japanese": "いいえ、ぜんぜんできません。",
+      "Hiragana": "いいえ、ぜんぜんできません。",
+      "Romaji": "iie, zenzen dekimasen.",
+      "English": "No, I can’t (do it) at all."
+    },
+    {
+      "Unit": 8,
+      "Category": "Grammar",
+      "SubCategory": "Question (Negative)",
+      "Japanese": "PERSON は HOBBY/INTEREST/SPORT ができませんか。",
+      "Hiragana": "PERSON は HOBBY/INTEREST/SPORT ができませんか。",
+      "Romaji": "PERSON wa HOBBY/INTEREST/SPORT ga dekimasen ka.",
+      "English": "Can’t PERSON (play/do/go) HOBBY/INTEREST/SPORT?"
+    }
+  ]
+}
