@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { ContentItem } from '../types';
 import { BackArrowIcon } from './icons';
-import { createTokenizer, createRomajiConverter } from './languageUtils';
+import { createTokenizer, createRomajiConverter, shuffleArray } from './languageUtils';
 
 interface SentenceScrambleProps {
     questions: ScrambleQuestion[];
@@ -11,15 +11,6 @@ interface SentenceScrambleProps {
     contentItems: ContentItem[];
     onBack: () => void;
 }
-
-const shuffleArray = <T,>(array: T[]): T[] => {
-    const newArray = [...array];
-    for (let i = newArray.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-    }
-    return newArray;
-};
 
 export interface ScrambleQuestion {
     english: string;

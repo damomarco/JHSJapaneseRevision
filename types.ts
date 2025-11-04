@@ -12,3 +12,14 @@ export interface ContentItem {
 export interface UnitData {
   contentItems: ContentItem[];
 }
+
+export interface AiScrambleResponseItem {
+  japanese: string;
+  english: string;
+}
+
+export interface AiFillBlanksResponseItem {
+  japanese_sentence: string;
+  english_translation: string;
+  blanked_word: string;
+}

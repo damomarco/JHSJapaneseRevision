@@ -2,6 +2,15 @@ import { ContentItem } from '../types';
 
 export const BLANK_MARKER = '＿＿＿';
 
+export const shuffleArray = <T>(array: T[]): T[] => {
+    const newArray = [...array];
+    for (let i = newArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    }
+    return newArray;
+};
+
 const WORD_EXCEPTIONS = [
     'こんにちは', 'ありがとう', 'どうぞよろしく', 'おやすみなさい', 'はじめまして',
 ];
@@ -18,7 +27,7 @@ export const createTokenizer = (contentItems: ContentItem[]) => {
     const vocabularyWords = contentItems.map(i => i.Hiragana.split(/[\(\s]/)[0].trim()).filter(Boolean);
     const allKnownWords = [...new Set([...vocabularyWords, ...WORD_EXCEPTIONS])];
     
-    let allTokens = [...allKnownWords, ...PARTICLES, ...ENDINGS_PUNCTUATION];
+    let allTokens = [...new Set([...allKnownWords, ...PARTICLES, ...ENDINGS_PUNCTUATION])];
     allTokens.sort((a, b) => b.length - a.length);
     const allTokensWithBlank = [BLANK_MARKER, ...allTokens];
 

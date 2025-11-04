@@ -1,21 +1,12 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { ContentItem } from '../types';
 import { BackArrowIcon } from './icons';
+import { shuffleArray } from './languageUtils';
 
 interface MatchingGameProps {
     contentItems: ContentItem[];
     onBack: () => void;
 }
-
-// FIX: Use <T,> to disambiguate generic from JSX tag
-const shuffleArray = <T,>(array: T[]): T[] => {
-    const newArray = [...array];
-    for (let i = newArray.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-    }
-    return newArray;
-};
 
 interface CardContent {
     japanese: string;

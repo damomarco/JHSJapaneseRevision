@@ -1,20 +1,12 @@
 import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import { ContentItem } from '../types';
 import { BackArrowIcon, CheckIcon, XIcon } from './icons';
+import { shuffleArray } from './languageUtils';
 
 interface TypingPracticeProps {
     contentItems: ContentItem[];
     onBack: () => void;
 }
-
-const shuffleArray = <T,>(array: T[]): T[] => {
-    const newArray = [...array];
-    for (let i = newArray.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-    }
-    return newArray;
-};
 
 const ROMAJI_MAP: { [key: string]: string } = {
     'a':'あ','i':'い','u':'う','e':'え','o':'お',

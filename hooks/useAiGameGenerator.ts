@@ -1,25 +1,14 @@
 import { useState, useEffect, useMemo } from 'react';
-import { ContentItem } from '../types';
+import { ContentItem, AiScrambleResponseItem, AiFillBlanksResponseItem } from '../types';
 import { ScrambleQuestion } from '../components/SentenceScramble';
 import { GameQuestion as FillBlanksQuestion } from '../components/FillInTheBlanks';
 import { GoogleGenAI, Type } from '@google/genai';
-import { createTokenizer, createRomajiConverter, BLANK_MARKER } from '../components/languageUtils';
-
-// FIX: In .ts files, <T> is the correct syntax for generics. <T,> is for .tsx files.
-const shuffleArray = <T>(array: T[]): T[] => {
-    const newArray = [...array];
-    for (let i = newArray.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-    }
-    return newArray;
-};
+import { createTokenizer, createRomajiConverter, BLANK_MARKER, shuffleArray } from '../components/languageUtils';
 
 const MAX_QUESTIONS = 8;
 const PARTICLES = ['は', 'が', 'を', 'に', 'へ', 'と', 'も', 'の', 'で', 'か'];
 
-// FIX: The function returns objects with 'japanese' and 'english' properties, not the full ScrambleQuestion type which requires a 'words' property.
-async function generateScramble(ai: GoogleGenAI, vocabList: string): Promise<{ japanese: string; english: string; }[]> {
+async function generateScramble(ai: GoogleGenAI, vocabList: string): Promise<AiScrambleResponseItem[]> {
     const themes = [
         "daily activities at home", "talking about school life", "weekend plans with friends", 
         "hobbies and interests", "food and meals", "shopping in town", "describing pets and family"
@@ -58,11 +47,11 @@ async function generateScramble(ai: GoogleGenAI, vocabList: string): Promise<{ j
         config: { responseMimeType: "application/json", responseSchema: schema, temperature: 0.9, },
     });
 
-    return JSON.parse(response.text) as { japanese: string; english: string }[];
+    return JSON.parse(response.text) as AiScrambleResponseItem[];
 }
 
 
-async function generateFillBlanks(ai: GoogleGenAI, vocabList: string): Promise<{ japanese_sentence: string; english_translation: string; blanked_word: string }[]> {
+async function generateFillBlanks(ai: GoogleGenAI, vocabList: string): Promise<AiFillBlanksResponseItem[]> {
      const prompt = `
         You are a Japanese language teacher creating 'fill-in-the-blank' quizzes for beginner students. 
         Your task is to generate up to ${MAX_QUESTIONS} simple, semantically plausible Japanese sentences.
@@ -96,7 +85,7 @@ async function generateFillBlanks(ai: GoogleGenAI, vocabList: string): Promise<{
         config: { responseMimeType: "application/json", responseSchema: schema, temperature: 0.9, },
     });
     
-    return JSON.parse(response.text) as { japanese_sentence: string; english_translation: string; blanked_word: string }[];
+    return JSON.parse(response.text) as AiFillBlanksResponseItem[];
 }
 
 
@@ -165,12 +154,10 @@ export const useAiGameGenerator = (contentItems: ContentItem[]) => {
                         distractors = shuffleArray(PARTICLES.filter(p => p !== correctAnswer)).slice(0, 2);
                     } else if (answerItem) {
                         const distractorPool = vocabularyItems.filter(v => v.SubCategory === answerItem.SubCategory && !v.Hiragana.startsWith(correctAnswer));
-                        // FIX: Explicitly type the parameter 'd' as ContentItem to resolve potential type inference issue.
                         distractors = shuffleArray(distractorPool).slice(0, 2).map((d: ContentItem) => d.Hiragana.split('/')[0].trim());
                     }
                     if (distractors.length < 2) {
                         const fallbackPool = vocabularyItems.filter(v => !v.Hiragana.startsWith(correctAnswer));
-                        // FIX: Explicitly type the parameter 'd' as ContentItem to resolve the 'Property 'Hiragana' does not exist on type 'unknown'' error.
                         distractors.push(...shuffleArray(fallbackPool).slice(0, 2 - distractors.length).map((d: ContentItem) => d.Hiragana.split('/')[0].trim()));
                     }
 

@@ -135,6 +135,15 @@ This section logs the key milestones and fixes implemented during the developmen
     2.  **Smart Fallback:** If the Gemini API returns a successful response but the payload contains no audio data, the system now intelligently recognizes this case and *immediately* falls back to the standard browser voice without attempting any retries.
 - **Impact:** This change ensures the application is both resilient to temporary network problems and efficient in its error handling, providing the best possible audio experience to the user.
 
+### 13. Enhanced Feedback in Category Sort
+- **Enhancement:** Based on user feedback, the visual indication for correct and incorrect answers in the "Category Sort" game was made significantly more explicit to improve the learning experience.
+- **Problem:** The initial feedback was too subtle and could be missed by users focused on the drag-and-drop action.
+- **Solution:** A multi-layered feedback system was implemented. When an answer is submitted, the draggable vocabulary card now:
+    1.  Displays a colored ring (`ring-green-500` for correct, `ring-red-500` for incorrect).
+    2.  Shows a clear icon (a checkmark for correct, an 'X' for incorrect) in the top corner.
+    3.  Changes its entire background color to a light green or light red, providing an immediate and unmissable visual cue.
+- **Impact:** This change provides clear, instant, and unambiguous feedback, reinforcing learning and improving the overall usability of the activity.
+
 ## 📝 Content Guidelines
 
 ### Sentence Scramble Chunking

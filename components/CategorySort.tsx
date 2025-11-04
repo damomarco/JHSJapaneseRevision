@@ -1,21 +1,12 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { ContentItem } from '../types';
 import { BackArrowIcon, CheckIcon, XIcon } from './icons';
+import { shuffleArray } from './languageUtils';
 
 interface CategorySortProps {
     contentItems: ContentItem[];
     onBack: () => void;
 }
-
-// FIX: Use <T,> to disambiguate generic from JSX tag
-const shuffleArray = <T,>(array: T[]): T[] => {
-    const newArray = [...array];
-    for (let i = newArray.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-    }
-    return newArray;
-};
 
 const ALLOWED_SUBCATEGORIES = [
     'Pets', 'Family', 'Food', 'Drink', 'Hobbies', 'Sports', 'Language', 
@@ -32,6 +23,7 @@ const CategorySort: React.FC<CategorySortProps> = ({ contentItems, onBack }) => 
     const [isFinished, setIsFinished] = useState(false);
     const [isAnswered, setIsAnswered] = useState(false);
     const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
+    const [wasCorrect, setWasCorrect] = useState<boolean | null>(null);
     const [activeCategories, setActiveCategories] = useState<string[]>([]);
     const [draggedOverCategory, setDraggedOverCategory] = useState<string | null>(null);
 
@@ -65,6 +57,7 @@ const CategorySort: React.FC<CategorySortProps> = ({ contentItems, onBack }) => 
         setCurrentIndex(index);
         setSelectedAnswer(null);
         setIsAnswered(false);
+        setWasCorrect(null);
     }, [gameItems, allPossibleCategories]);
 
     useEffect(() => {
@@ -78,7 +71,10 @@ const CategorySort: React.FC<CategorySortProps> = ({ contentItems, onBack }) => 
 
         setSelectedAnswer(category);
         setIsAnswered(true);
-        if (gameItems[currentIndex] && category === gameItems[currentIndex].SubCategory) {
+        const isCorrect = gameItems[currentIndex] && category === gameItems[currentIndex].SubCategory
+        setWasCorrect(isCorrect);
+
+        if (isCorrect) {
             setScore(prev => prev + 1);
         }
 
@@ -141,6 +137,13 @@ const CategorySort: React.FC<CategorySortProps> = ({ contentItems, onBack }) => 
     
     const currentItem = gameItems[currentIndex];
 
+    const cardStateClasses = isAnswered
+    ? wasCorrect
+        ? 'ring-2 ring-green-500 bg-green-100 dark:bg-green-900/30'
+        : 'ring-2 ring-red-500 bg-red-100 dark:bg-red-900/30'
+    : 'bg-slate-100 dark:bg-slate-700 cursor-grab active:cursor-grabbing hover:scale-105 hover:shadow-xl';
+
+
     return (
         <div className="flex flex-col h-full w-full relative">
             <button onClick={onBack} className="absolute top-0 left-0 text-slate-500 dark:text-slate-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors">
@@ -156,8 +159,13 @@ const CategorySort: React.FC<CategorySortProps> = ({ contentItems, onBack }) => 
             <div 
                 draggable={!isAnswered}
                 onDragStart={(e) => handleDragStart(e, currentItem)}
-                className={`bg-slate-100 dark:bg-slate-700 rounded-lg p-8 text-center my-auto transition-all duration-300 min-h-[150px] flex flex-col justify-center ${!isAnswered ? 'cursor-grab active:cursor-grabbing hover:scale-105 hover:shadow-xl' : 'opacity-50'}`}
+                className={`relative rounded-lg p-8 text-center my-auto transition-all duration-300 min-h-[150px] flex flex-col justify-center ${cardStateClasses}`}
             >
+                {isAnswered && (
+                    <div className="absolute top-3 right-3">
+                        {wasCorrect ? <CheckIcon className="w-8 h-8 text-green-500" /> : <XIcon className="w-8 h-8 text-red-500" />}
+                    </div>
+                )}
                 <p className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">{currentItem.Japanese}</p>
                 {currentItem.Japanese !== currentItem.Hiragana && (
                      <p className="text-xl text-slate-700 dark:text-slate-200 mt-2">{currentItem.Hiragana}</p>

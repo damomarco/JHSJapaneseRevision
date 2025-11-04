@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { ContentItem } from '../types';
 import { BackArrowIcon, CheckIcon, XIcon } from './icons';
+import { shuffleArray } from './languageUtils';
 
 interface QuizProps {
     contentItems: ContentItem[];
@@ -24,7 +25,7 @@ interface QuizQuestion {
 const generateQuestions = (items: ContentItem[], count: number): QuizQuestion[] => {
     if (items.length < 4) return [];
 
-    const shuffledItems = [...items].sort(() => 0.5 - Math.random());
+    const shuffledItems = shuffleArray([...items]);
     const selectedItems = shuffledItems.slice(0, count);
 
     return selectedItems.map(item => {
@@ -36,9 +37,9 @@ const generateQuestions = (items: ContentItem[], count: number): QuizQuestion[] 
         
         const optionItems = [item, ...distractors];
 
-        const options: QuizOption[] = optionItems.map(optItem => ({
+        const options: QuizOption[] = shuffleArray(optionItems.map(optItem => ({
             text: optItem.English,
-        })).sort(() => 0.5 - Math.random());
+        })));
 
         return {
             questionText: item.Japanese,
