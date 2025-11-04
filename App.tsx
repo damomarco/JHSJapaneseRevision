@@ -5,10 +5,13 @@ import ActivitySelector from './components/ActivitySelector';
 import Flashcards from './components/Flashcards';
 import Quiz from './components/Quiz';
 import CategorySort from './components/CategorySort';
+import MatchingGame from './components/MatchingGame';
+import ListeningGame from './components/ListeningGame';
+import SentenceScramble from './components/SentenceScramble';
 import { useContentLoader } from './hooks/useContentLoader';
 import { MoonIcon, SunIcon } from './components/icons';
 
-type View = 'unit_selection' | 'activity_selection' | 'flashcards' | 'quiz' | 'category_sort';
+type View = 'unit_selection' | 'activity_selection' | 'flashcards' | 'quiz' | 'category_sort' | 'matching_game' | 'listening_game' | 'sentence_scramble';
 type Theme = 'light' | 'dark';
 
 const App: React.FC = () => {
@@ -37,7 +40,7 @@ const App: React.FC = () => {
         }
     };
     
-    const handleActivitySelected = (activity: 'flashcards' | 'quiz' | 'category_sort') => {
+    const handleActivitySelected = (activity: 'flashcards' | 'quiz' | 'category_sort' | 'matching_game' | 'listening_game' | 'sentence_scramble') => {
         setView(activity);
     };
 
@@ -83,31 +86,33 @@ const App: React.FC = () => {
                 return <Quiz contentItems={content} onBack={handleBackToActivitySelection} />;
             case 'category_sort':
                 return <CategorySort contentItems={content} onBack={handleBackToActivitySelection} />;
+            case 'matching_game':
+                return <MatchingGame contentItems={content} onBack={handleBackToActivitySelection} />;
+            case 'listening_game':
+                return <ListeningGame contentItems={content} onBack={handleBackToActivitySelection} />;
+            case 'sentence_scramble':
+                return <SentenceScramble contentItems={content} onBack={handleBackToActivitySelection} />;
             default:
                 return <UnitSelector onUnitsSelected={handleUnitsSelected} />;
         }
     };
 
     return (
-        <main className="min-h-screen bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-white font-sans p-4 sm:p-6 md:p-8 transition-colors duration-300">
-            <div className="max-w-5xl mx-auto">
-                 <header className="text-center mb-8 relative">
-                    <h1 className="text-4xl sm:text-5xl font-bold text-teal-600 dark:text-teal-400 tracking-tight">日本語学習ハブ</h1>
-                    <p className="text-slate-600 dark:text-slate-400 text-lg mt-2">Nihongo Revision Hub</p>
-                     <button
-                        onClick={toggleTheme}
-                        className="absolute top-0 right-0 p-2 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors"
-                        aria-label="Toggle theme"
-                    >
-                        {theme === 'dark' ? <SunIcon className="w-6 h-6" /> : <MoonIcon className="w-6 h-6" />}
-                    </button>
-                </header>
-                <div className="bg-white dark:bg-slate-800 rounded-xl shadow-2xl p-4 sm:p-6 md:p-8 min-h-[60vh] flex flex-col transition-colors duration-300">
-                   {renderView()}
-                </div>
-                 <footer className="text-center mt-8 text-slate-500 dark:text-slate-500 text-sm">
-                    <p>Created for junior high students to make learning Japanese fun!</p>
-                </footer>
+        <main className="min-h-screen bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-white font-sans p-4 sm:p-6 md:p-8 transition-colors duration-300 flex flex-col items-center justify-center">
+             <header className="w-full max-w-4xl mx-auto flex justify-between items-center mb-6">
+                <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-100">
+                    Nihongo <span className="text-teal-500">Revision Hub</span>
+                </h1>
+                <button 
+                    onClick={toggleTheme}
+                    className="p-2 rounded-full bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors"
+                    aria-label="Toggle theme"
+                >
+                    {theme === 'dark' ? <SunIcon className="w-6 h-6 text-yellow-400" /> : <MoonIcon className="w-6 h-6 text-slate-800" />}
+                </button>
+            </header>
+            <div className="w-full max-w-4xl mx-auto flex-grow flex flex-col">
+                {renderView()}
             </div>
         </main>
     );

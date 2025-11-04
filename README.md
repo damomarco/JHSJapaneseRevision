@@ -8,15 +8,20 @@ This application provides a simple, clean, and effective way for students to eng
 
 - **Dynamic Content Loading:** Loads study materials from local JSON files based on user selection.
 - **Unit Selection:** Allows users to select one or multiple units to study at a time.
-- **Activity Selection:** Users can choose between two revision modes:
+- **Activity Selection:** Users can choose between multiple revision modes:
   - **Flashcards:** An interactive flashcard system with a smooth 3D flip animation to reveal answers.
   - **Quiz:** A multiple-choice quiz that dynamically generates questions and distractors from the selected content.
+  - **Category Sort:** A drag-and-drop game to sort vocabulary into the correct categories.
+  - **Matching Game:** A classic memory game to match Japanese terms to their Romaji.
+  - **Listening Game:** An audio-based quiz where students listen to Japanese pronunciation and select the correct English translation, powered by Google's Gemini API.
+  - **Sentence Scramble:** A game where students unscramble Japanese words to form a correct sentence based on an English prompt.
 - **Responsive Design:** The user interface is fully responsive and works seamlessly on devices of all sizes, from mobile phones to desktops.
 - **Light & Dark Mode:** A theme toggle allows users to switch between a light and dark visual theme for comfortable viewing in any lighting condition.
 
 ## 🛠️ Tech Stack
 
 - **Frontend:** React.js, TypeScript
+- **AI/ML:** Google Gemini API (Text-to-Speech)
 - **Styling:** Tailwind CSS (via CDN)
 - **Data:** Static JSON files for learning content.
 
@@ -74,27 +79,49 @@ This section logs the key milestones and fixes implemented during the developmen
     - In **Unit 9**, the "Places" subcategory was refined to only include actual locations. Activity-based nouns (like "movie" and "shopping") were moved to a new, more appropriate "Activity/Event" category.
 - **Impact:** These changes significantly improve the quality and precision of the learning data, making the "Category Sort" activity a more effective and less confusing exercise for students.
 
+### 6. New Activity: Matching Game
+- **Feature:** Added a new "Matching Game" activity based on the "Kana Karuta" concept from the roadmap.
+- **Gameplay:** Users flip cards to match Japanese terms with their Romaji counterparts. This reinforces character and word recognition in a fun, interactive way.
+- **Implementation:**
+    - Created a new `MatchingGame.tsx` component to handle the game logic, including card shuffling, state management (flipped, matched), and win conditions.
+    - The card flip animation re-uses the robust inline-style technique from the Flashcards component.
+    - The activity is seamlessly integrated into the existing view routing in `App.tsx`.
+
+### 7. Visual Polish: Matching Game
+- **Issue:** Based on user feedback, the face-down cards in the Matching Game were too dark and lacked contrast with the background, making them difficult to see.
+- **Solution:** The styling for the card backs was updated to use a lighter color (`bg-slate-300 dark:bg-slate-600`). The question mark icon was also given a lighter, more distinct color (`text-slate-500 dark:text-slate-400`). This significantly improves the visual clarity and accessibility of the game board.
+
+### 8. New Activity: Listening Game (Gemini API Integration)
+- **Feature:** Added a "Listening Game" to test comprehension of spoken Japanese.
+- **Gameplay:** Users hear a Japanese word or phrase, synthesized by the Gemini Text-to-Speech model, and must select the correct English translation from four options.
+- **Implementation Details & Technical Deep Dive:**
+    - **API Integration:** Integrated the `@google/genai` library to make calls to the `gemini-2.5-flash-preview-tts` model. The `responseModalities` config is set to `[Modality.AUDIO]` to request audio output.
+    - **Handling Raw Audio Data:** A key technical challenge with the Gemini TTS API is that it does not return a standard audio file (like `.mp3` or `.wav`). Instead, it provides a Base64-encoded string representing raw, headerless PCM audio data. Attempting to use this data directly in an `<audio>` tag or with the browser's default decoders will fail and can crash the application.
+    - **Two-Step Audio Decoding:** A robust, two-step process was implemented in `ListeningGame.tsx` to handle this data:
+        1.  **Base64 to Bytes:** A helper function (`decode`) first decodes the Base64 string back into its raw binary form (`Uint8Array`).
+        2.  **Bytes to Playable Buffer:** A second, more complex async function (`decodeAudioData`) uses the Web Audio API to manually construct a playable `AudioBuffer`. It creates an empty buffer and explicitly provides the necessary metadata that a file header would normally contain: a sample rate of **24000 Hz** (required for this model) and **1** audio channel (mono). The raw audio bytes are then copied into this buffer.
+    - **Audio Playback:** Once the data is in a proper `AudioBuffer`, it is played using a standard `AudioContext` and `BufferSourceNode`. The component also manages the `AudioContext` lifecycle, ensuring it is resumed after user interaction to comply with browser autoplay policies.
+    - **Component Stability:** The new `ListeningGame.tsx` component includes full game logic, question generation, scoring, and robust UI states for loading and errors. This ensures a smooth user experience and isolates the complex audio logic, preventing it from causing app-wide failures as seen in previous attempts.
+
 ## 🚀 Future Enhancements & Ideas
 
 Based on the existing data structure, here are some potential new activities to further enhance the learning experience:
 
 ### Recognition & Matching Activities
 
-*   **Kana Karuta (Card Matching):** A matching game where students pair Hiragana/Katakana cards with their corresponding Romaji. This is excellent for reinforcing Kana recognition.
+*   **Kana Karuta (Card Matching):** A matching game where students pair Hiragana/Katakana cards with their corresponding Romaji. This is excellent for reinforcing Kana recognition. (✓ **Implemented as Matching Game!**)
 *   **Kanji Connect:** Match Kanji characters with their Hiragana readings to build reading fluency.
-*   **Category Sorting:** Drag and drop vocabulary words into their correct categories (e.g., "Food", "Hobby", "Family") to reinforce contextual understanding.
+*   **Category Sorting:** Drag and drop vocabulary words into their correct categories (e.g., "Food", "Hobby", "Family") to reinforce contextual understanding. (✓ **Implemented!**)
 
 ### Production & Recall Activities
 
 *   **Fill-in-the-Blanks:** Focus on grammar by presenting sentences with missing particles, requiring students to select the correct ones.
-*   **Sentence Scramble:** Shuffle the words of a Japanese sentence and have students reorder them correctly to teach sentence structure.
+*   **Sentence Scramble:** Shuffle the words of a Japanese sentence and have students reorder them correctly to teach sentence structure. (✓ **Implemented!**)
 *   **Typing Practice:** Prompt students with an English word and have them type the corresponding Romaji or Hiragana, encouraging active recall and familiarity with a Japanese IME.
 
 ### Listening Comprehension Activities
 
-*(Requires integration with a Text-to-Speech API, like Gemini's TTS model)*
-
-*   **Listen & Pick:** Play the audio of a Japanese word and have the student select the correct English translation from multiple choices.
+*   **Listen & Pick:** Play the audio of a Japanese word and have the student select the correct English translation from multiple choices. (✓ **Implemented!**)
 *   **Dictation Drill:** Play a word or phrase and require the student to type what they heard, combining listening and writing skills.
 
 ### Gamification
