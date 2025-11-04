@@ -2,12 +2,11 @@ import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { ContentItem } from '../types';
 import { BackArrowIcon } from './icons';
 
-interface MatchingGameProps {
+interface KanjiConnectProps {
     contentItems: ContentItem[];
     onBack: () => void;
 }
 
-// FIX: Use <T,> to disambiguate generic from JSX tag
 const shuffleArray = <T,>(array: T[]): T[] => {
     const newArray = [...array];
     for (let i = newArray.length - 1; i > 0; i--) {
@@ -17,22 +16,17 @@ const shuffleArray = <T,>(array: T[]): T[] => {
     return newArray;
 };
 
-interface CardContent {
-    japanese: string;
-    hiragana?: string;
-}
-
 interface Card {
     id: number;
     pairId: string;
-    content: CardContent | string;
+    content: string; 
     status: 'down' | 'up' | 'matched';
 }
 
-const MIN_PAIRS = 6;
+const MIN_PAIRS = 4;
 const MAX_PAIRS = 8;
 
-const MatchingGame: React.FC<MatchingGameProps> = ({ contentItems, onBack }) => {
+const KanjiConnect: React.FC<KanjiConnectProps> = ({ contentItems, onBack }) => {
     const [cards, setCards] = useState<Card[]>([]);
     const [flippedIndices, setFlippedIndices] = useState<number[]>([]);
     const [isFinished, setIsFinished] = useState(false);
@@ -41,8 +35,7 @@ const MatchingGame: React.FC<MatchingGameProps> = ({ contentItems, onBack }) => 
     const gameItems = useMemo(() => {
         const uniqueItems = contentItems.filter(item => 
             item.Category === 'Vocabulary' && 
-            item.Japanese !== item.Romaji && 
-            !item.Romaji.includes('(') // Exclude items with alternate readings for simplicity
+            item.Japanese !== item.Hiragana
         );
         const shuffled = shuffleArray(uniqueItems);
         return shuffled.slice(0, MAX_PAIRS);
@@ -52,12 +45,8 @@ const MatchingGame: React.FC<MatchingGameProps> = ({ contentItems, onBack }) => 
         const pairs = gameItems;
         const newCards: Card[] = [];
         pairs.forEach((item, index) => {
-            const japaneseContent: CardContent = {
-                japanese: item.Japanese,
-                hiragana: item.Japanese !== item.Hiragana ? item.Hiragana : undefined
-            };
-            newCards.push({ id: index * 2, pairId: item.Romaji, content: japaneseContent, status: 'down' });
-            newCards.push({ id: index * 2 + 1, pairId: item.Romaji, content: item.Romaji, status: 'down' });
+            newCards.push({ id: index * 2, pairId: item.Romaji, content: item.Japanese, status: 'down' });
+            newCards.push({ id: index * 2 + 1, pairId: item.Romaji, content: item.Hiragana, status: 'down' });
         });
 
         setCards(shuffleArray(newCards));
@@ -118,7 +107,7 @@ const MatchingGame: React.FC<MatchingGameProps> = ({ contentItems, onBack }) => 
     if (gameItems.length < MIN_PAIRS) {
         return (
             <div className="flex flex-col items-center justify-center h-full text-center">
-                <p className="text-slate-500 dark:text-slate-400 text-lg">Not enough unique vocabulary items to start a matching game (need at least {MIN_PAIRS}).</p>
+                <p className="text-slate-500 dark:text-slate-400 text-lg">Not enough vocabulary with Kanji to start this game (need at least {MIN_PAIRS}).</p>
                 <button onClick={onBack} className="mt-6 bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-lg transition-colors">
                     Go Back
                 </button>
@@ -130,7 +119,7 @@ const MatchingGame: React.FC<MatchingGameProps> = ({ contentItems, onBack }) => 
         return (
             <div className="flex flex-col items-center justify-center h-full text-center">
                 <h2 className="text-3xl font-bold text-teal-600 dark:text-teal-400">Congratulations!</h2>
-                <p className="text-xl mt-4 text-slate-800 dark:text-slate-200">You found all {gameItems.length} pairs in <span className="font-bold text-slate-900 dark:text-white">{moves}</span> moves.</p>
+                <p className="text-xl mt-4 text-slate-800 dark:text-slate-200">You matched all {gameItems.length} pairs in <span className="font-bold text-slate-900 dark:text-white">{moves}</span> moves.</p>
                 <div className="flex gap-4 mt-8">
                     <button onClick={setupGame} className="px-6 py-2 bg-teal-600 text-white font-bold rounded-lg hover:bg-teal-700 transition-colors">Play Again</button>
                     <button onClick={onBack} className="px-6 py-2 bg-slate-500 dark:bg-slate-600 text-white font-bold rounded-lg hover:bg-slate-600 dark:hover:bg-slate-700 transition-colors">Change Activity</button>
@@ -145,7 +134,7 @@ const MatchingGame: React.FC<MatchingGameProps> = ({ contentItems, onBack }) => 
                 <BackArrowIcon className="w-8 h-8"/>
             </button>
              <div className="text-center mb-4">
-                <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-slate-100">Matching Game</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-slate-100">Kanji Connect</h2>
                 <p className="text-slate-500 dark:text-slate-400">Moves: {moves}</p>
             </div>
 
@@ -173,16 +162,7 @@ const MatchingGame: React.FC<MatchingGameProps> = ({ contentItems, onBack }) => 
                                             ${isMatched ? 'bg-green-500 dark:bg-green-800' : 'bg-sky-400 dark:bg-sky-600'}`}
                                         style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
                                     >
-                                        {typeof card.content === 'object' && card.content !== null ? (
-                                            <div>
-                                                <p className="text-lg sm:text-xl font-bold text-white break-words">{card.content.japanese}</p>
-                                                {card.content.hiragana && (
-                                                    <p className="text-sm font-normal text-slate-200 mt-1">{card.content.hiragana}</p>
-                                                )}
-                                            </div>
-                                        ) : (
-                                            <span className="text-lg sm:text-xl font-bold text-white break-all">{card.content as string}</span>
-                                        )}
+                                        <span className="text-xl sm:text-2xl font-bold text-white break-words">{card.content}</span>
                                     </div>
                                 </div>
                             </div>
@@ -194,4 +174,4 @@ const MatchingGame: React.FC<MatchingGameProps> = ({ contentItems, onBack }) => 
     );
 };
 
-export default MatchingGame;
+export default KanjiConnect;

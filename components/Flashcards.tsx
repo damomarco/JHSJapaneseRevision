@@ -36,6 +36,13 @@ const Flashcards: React.FC<FlashcardsProps> = ({ contentItems, onBack }) => {
         setCurrentIndex(prev => (prev - 1 + contentItems.length) % contentItems.length);
     };
 
+    const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            setIsFlipped(!isFlipped);
+        }
+    };
+
     return (
         <div className="flex flex-col items-center justify-center h-full w-full relative">
             <button onClick={onBack} className="absolute top-0 left-0 text-slate-500 dark:text-slate-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors">
@@ -45,12 +52,17 @@ const Flashcards: React.FC<FlashcardsProps> = ({ contentItems, onBack }) => {
             
             <div className="w-full max-w-xl h-72" style={{ perspective: '1000px' }}>
                  <div
-                    className="relative w-full h-full cursor-pointer transition-transform duration-700"
+                    className="relative w-full h-full cursor-pointer transition-transform duration-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-100 dark:focus:ring-offset-slate-900 focus:ring-teal-500 rounded-xl"
                     style={{
                         transformStyle: 'preserve-3d',
                         transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
                     }}
                     onClick={() => setIsFlipped(!isFlipped)}
+                    onKeyDown={handleKeyDown}
+                    role="button"
+                    tabIndex={0}
+                    aria-pressed={isFlipped}
+                    aria-label={`Flashcard: ${isFlipped ? currentItem.English : currentItem.Japanese}. Click or press Enter to flip.`}
                 >
                     {/* Front of card (Japanese) */}
                     <div 

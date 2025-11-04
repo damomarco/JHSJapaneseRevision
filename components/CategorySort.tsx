@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { ContentItem } from '../types';
 import { BackArrowIcon, CheckIcon, XIcon } from './icons';
@@ -8,8 +7,8 @@ interface CategorySortProps {
     onBack: () => void;
 }
 
-// FIX: The generic constraint on shuffleArray was incorrect and has been removed to ensure proper type inference.
-const shuffleArray = (array: any[]): any[] => {
+// FIX: Use <T,> to disambiguate generic from JSX tag
+const shuffleArray = <T,>(array: T[]): T[] => {
     const newArray = [...array];
     for (let i = newArray.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -27,7 +26,6 @@ const ALLOWED_SUBCATEGORIES = [
 
 const MAX_QUESTIONS = 10;
 
-// FIX: Re-wrapped component logic in a React.FC and added a default export to resolve all scope and export-related errors.
 const CategorySort: React.FC<CategorySortProps> = ({ contentItems, onBack }) => {
     const [score, setScore] = useState(0);
     const [currentIndex, setCurrentIndex] = useState(0);

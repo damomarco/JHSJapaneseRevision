@@ -13,6 +13,7 @@ This application provides a simple, clean, and effective way for students to eng
   - **Quiz:** A multiple-choice quiz that dynamically generates questions and distractors from the selected content.
   - **Category Sort:** A drag-and-drop game to sort vocabulary into the correct categories.
   - **Matching Game:** A classic memory game to match Japanese terms to their Romaji.
+  - **Kanji Connect:** A matching game to connect Japanese words written in Kanji with their Hiragana readings.
   - **Listening Game:** An audio-based quiz where students listen to Japanese pronunciation and select the correct English translation, powered by Google's Gemini API.
   - **Sentence Scramble:** A game where students unscramble Japanese words to form a correct sentence based on an English prompt.
 - **Responsive Design:** The user interface is fully responsive and works seamlessly on devices of all sizes, from mobile phones to desktops.
@@ -21,7 +22,7 @@ This application provides a simple, clean, and effective way for students to eng
 ## 🛠️ Tech Stack
 
 - **Frontend:** React.js, TypeScript
-- **AI/ML:** Google Gemini API (Text-to-Speech)
+- **AI/ML:** Google Gemini API (Text-to-Speech, Text Generation)
 - **Styling:** Tailwind CSS (via CDN)
 - **Data:** Static JSON files for learning content.
 
@@ -108,6 +109,14 @@ This section logs the key milestones and fixes implemented during the developmen
 - **Solution:** A more robust tokenizer was implemented in `components/SentenceScramble.tsx`. It now recognizes common greetings (like `こんにちは`), verb endings (like `ます` and `ました`), and particles as distinct grammatical units.
 - **Impact:** This ensures that sentences are broken into their core components in a much more logical way, making the game more intuitive and educationally effective for students learning sentence structure.
 
+### 10. New Activity: Kanji Connect
+- **Feature:** Added the "Kanji Connect" activity, as proposed in the future enhancements roadmap.
+- **Gameplay:** This is a matching game where students flip cards to pair Japanese words written with Kanji characters to their corresponding Hiragana readings. It reinforces a critical skill for learners of Japanese.
+- **Implementation:**
+    - Created a new `KanjiConnect.tsx` component, adapting the core logic from the existing `MatchingGame` for a different data pairing (Kanji to Hiragana).
+    - Added a new icon for the activity and integrated it into the `ActivitySelector` and main app router.
+    - The game includes logic to only be available if there are enough vocabulary items with distinct Kanji and Hiragana forms in the selected units.
+
 ## 📝 Content Guidelines
 
 ### Sentence Scramble Chunking
@@ -123,7 +132,7 @@ Based on the existing data structure, here are some potential new activities to 
 ### Recognition & Matching Activities
 
 *   **Kana Karuta (Card Matching):** A matching game where students pair Hiragana/Katakana cards with their corresponding Romaji. This is excellent for reinforcing Kana recognition. (✓ **Implemented as Matching Game!**)
-*   **Kanji Connect:** Match Kanji characters with their Hiragana readings to build reading fluency.
+*   **Kanji Connect:** Match Kanji characters with their Hiragana readings to build reading fluency. (✓ **Implemented!**)
 *   **Category Sorting:** Drag and drop vocabulary words into their correct categories (e.g., "Food", "Hobby", "Family") to reinforce contextual understanding. (✓ **Implemented!**)
 
 ### Production & Recall Activities

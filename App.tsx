@@ -8,10 +8,11 @@ import CategorySort from './components/CategorySort';
 import MatchingGame from './components/MatchingGame';
 import ListeningGame from './components/ListeningGame';
 import SentenceScramble from './components/SentenceScramble';
+import KanjiConnect from './components/KanjiConnect';
 import { useContentLoader } from './hooks/useContentLoader';
 import { MoonIcon, SunIcon } from './components/icons';
 
-type View = 'unit_selection' | 'activity_selection' | 'flashcards' | 'quiz' | 'category_sort' | 'matching_game' | 'listening_game' | 'sentence_scramble';
+type View = 'unit_selection' | 'activity_selection' | 'flashcards' | 'quiz' | 'category_sort' | 'matching_game' | 'listening_game' | 'sentence_scramble' | 'kanji_connect';
 type Theme = 'light' | 'dark';
 
 const App: React.FC = () => {
@@ -40,7 +41,7 @@ const App: React.FC = () => {
         }
     };
     
-    const handleActivitySelected = (activity: 'flashcards' | 'quiz' | 'category_sort' | 'matching_game' | 'listening_game' | 'sentence_scramble') => {
+    const handleActivitySelected = (activity: 'flashcards' | 'quiz' | 'category_sort' | 'matching_game' | 'listening_game' | 'sentence_scramble' | 'kanji_connect') => {
         setView(activity);
     };
 
@@ -92,6 +93,8 @@ const App: React.FC = () => {
                 return <ListeningGame contentItems={content} onBack={handleBackToActivitySelection} />;
             case 'sentence_scramble':
                 return <SentenceScramble contentItems={content} onBack={handleBackToActivitySelection} />;
+            case 'kanji_connect':
+                return <KanjiConnect contentItems={content} onBack={handleBackToActivitySelection} />;
             default:
                 return <UnitSelector onUnitsSelected={handleUnitsSelected} />;
         }

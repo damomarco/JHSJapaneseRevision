@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { ContentItem } from '../types';
 import { BackArrowIcon } from './icons';
+// FIX: Import `Type` for responseSchema definition.
 import { GoogleGenAI, Type } from '@google/genai';
 
 interface SentenceScrambleProps {
@@ -8,8 +9,8 @@ interface SentenceScrambleProps {
     onBack: () => void;
 }
 
-// FIX: The generic constraint on shuffleArray was incorrect and has been removed to ensure proper type inference.
-const shuffleArray = (array: any[]): any[] => {
+// FIX: Use <T,> to disambiguate generic from JSX tag
+const shuffleArray = <T,>(array: T[]): T[] => {
     const newArray = [...array];
     for (let i = newArray.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -154,7 +155,6 @@ interface ScrambleQuestion {
 
 const MAX_QUESTIONS = 8;
 
-// FIX: Re-wrapped component logic in a React.FC and added a default export to resolve all scope and export-related errors.
 const SentenceScramble: React.FC<SentenceScrambleProps> = ({ contentItems, onBack }) => {
     const [questions, setQuestions] = useState<ScrambleQuestion[]>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -166,7 +166,6 @@ const SentenceScramble: React.FC<SentenceScrambleProps> = ({ contentItems, onBac
     const [isFinished, setIsFinished] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
-    // FIX: Add a state to trigger sentence generation for restarting the game.
     const [generationTrigger, setGenerationTrigger] = useState(0);
 
     const vocabularyItems = useMemo(() => {
@@ -187,7 +186,8 @@ const SentenceScramble: React.FC<SentenceScrambleProps> = ({ contentItems, onBac
             try {
                 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
                 
-                const vocabList = shuffleArray(vocabularyItems).slice(0, 75).map(item => `- ${item.Hiragana.split('/')[0].trim()} (${item.English})`).join('\n');
+                // FIX: Explicitly type `item` to resolve type inference issue.
+                const vocabList = shuffleArray(vocabularyItems).slice(0, 75).map((item: ContentItem) => `- ${item.Hiragana.split('/')[0].trim()} (${item.English})`).join('\n');
                 
                 const themes = [
                     "daily activities at home", "talking about school life", "weekend plans with friends", 
@@ -266,7 +266,6 @@ const SentenceScramble: React.FC<SentenceScrambleProps> = ({ contentItems, onBac
 
         generateSentences();
 
-    // FIX: Add generationTrigger to dependency array to allow re-running generation.
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [vocabularyItems, generationTrigger]);
 
@@ -311,7 +310,6 @@ const SentenceScramble: React.FC<SentenceScrambleProps> = ({ contentItems, onBac
         setupRound(currentIndex + 1, questions);
     };
 
-    // FIX: Re-implement restartGame to correctly re-trigger sentence generation.
     const restartGame = () => {
         setScore(0);
         setIsFinished(false);
@@ -346,7 +344,6 @@ const SentenceScramble: React.FC<SentenceScrambleProps> = ({ contentItems, onBac
                 <h2 className="text-3xl font-bold text-teal-600 dark:text-teal-400">Game Over!</h2>
                 <p className="text-xl mt-4 text-slate-800 dark:text-slate-200">Your Score: <span className="font-bold text-slate-900 dark:text-white">{score} / {questions.length}</span></p>
                 <div className="flex gap-4 mt-8">
-                     {/* FIX: Add "Play Again" button */}
                      <button onClick={restartGame} className="px-6 py-2 bg-teal-600 text-white font-bold rounded-lg hover:bg-teal-700 transition-colors">Play Again</button>
                      <button onClick={onBack} className="px-6 py-2 bg-slate-500 dark:bg-slate-600 text-white font-bold rounded-lg hover:bg-slate-600 dark:hover:bg-slate-700 transition-colors">Change Activity</button>
                 </div>
