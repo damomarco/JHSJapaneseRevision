@@ -1,0 +1,254 @@
+import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react';
+import { ContentItem } from '../types';
+import { BackArrowIcon, CheckIcon, XIcon } from './icons';
+
+interface TypingPracticeProps {
+    contentItems: ContentItem[];
+    onBack: () => void;
+}
+
+const shuffleArray = <T,>(array: T[]): T[] => {
+    const newArray = [...array];
+    for (let i = newArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    }
+    return newArray;
+};
+
+const ROMAJI_MAP: { [key: string]: string } = {
+    'a':'あ','i':'い','u':'う','e':'え','o':'お',
+    'ka':'か','ki':'き','ku':'く','ke':'け','ko':'こ',
+    'sa':'さ','shi':'し','su':'す','se':'せ','so':'そ',
+    'ta':'た','chi':'ち','tsu':'つ','te':'て','to':'と',
+    'na':'な','ni':'に','nu':'ぬ','ne':'ね','no':'の',
+    'ha':'は','hi':'ひ','fu':'ふ','he':'へ','ho':'ほ',
+    'ma':'ま','mi':'み','mu':'む','me':'め','mo':'も',
+    'ya':'や','yu':'ゆ','yo':'よ',
+    'ra':'ら','ri':'り','ru':'る','re':'れ','ro':'ろ',
+    'wa':'わ','wo':'を', 'n':'ん',
+    'ga':'が','gi':'ぎ','gu':'ぐ','ge':'げ','go':'ご',
+    'za':'ざ','ji':'じ','zu':'ず','ze':'ぜ','zo':'ぞ',
+    // FIX: Changed 'zu':'づ' to 'du':'づ' to resolve duplicate key issue with 'zu':'ず'.
+    'da':'だ','di':'ぢ','du':'づ','de':'で','do':'ど',
+    'ba':'ば','bi':'び','bu':'ぶ','be':'べ','bo':'ぼ',
+    'pa':'ぱ','pi':'ぴ','pu':'ぷ','pe':'ぺ','po':'ぽ',
+    'kya':'きゃ','kyu':'きゅ','kyo':'きょ',
+    'sha':'しゃ','shu':'しゅ','sho':'しょ',
+    'cha':'ちゃ','chu':'ちゅ','cho':'ちょ',
+    'nya':'にゃ','nyu':'にゅ','nyo':'にょ',
+    'hya':'ひゃ','hyu':'ひゅ','hyo':'ひょ',
+    'mya':'みゃ','myu':'みゅ','myo':'みょ',
+    'rya':'りゃ','ryu':'りゅ','ryo':'りょ',
+    'gya':'ぎゃ','gyu':'ぎゅ','gyo':'ぎょ',
+    'ja':'じゃ','ju':'じゅ','jo':'じょ',
+    'bya':'びゃ','byu':'びゅ','byo':'びょ',
+    'pya':'ぴゃ','pyu':'ぴゅ','pyo':'ぴょ',
+    '-':'ー',
+};
+
+const convertRomajiToHiragana = (romaji: string) => {
+    let hiragana = '';
+    let tempRomaji = romaji.toLowerCase();
+    
+    while (tempRomaji.length > 0) {
+        let foundMatch = false;
+
+        if (tempRomaji.length > 1 && tempRomaji[0] !== 'n' && 'bcdfghjklmpqrstvwxyz'.includes(tempRomaji[0]) && tempRomaji[0] === tempRomaji[1]) {
+            hiragana += 'っ';
+            tempRomaji = tempRomaji.substring(1);
+            continue;
+        }
+
+        for (let len = 3; len >= 1; len--) {
+            if (tempRomaji.length >= len) {
+                const sub = tempRomaji.substring(0, len);
+                if (ROMAJI_MAP[sub]) {
+                    if (sub === 'n') {
+                         const nextChar = tempRomaji[1];
+                         if (nextChar && 'aiueoy'.includes(nextChar)) {
+                             // It's 'na', 'ni', etc., not syllabic 'n'. Let the loop handle it.
+                         } else {
+                             hiragana += ROMAJI_MAP[sub];
+                             tempRomaji = tempRomaji.substring(len);
+                             foundMatch = true;
+                             break;
+                         }
+                    } else {
+                        hiragana += ROMAJI_MAP[sub];
+                        tempRomaji = tempRomaji.substring(len);
+                        foundMatch = true;
+                        break;
+                    }
+                }
+            }
+        }
+        
+        if (!foundMatch) {
+            hiragana += tempRomaji[0];
+            tempRomaji = tempRomaji.substring(1);
+        }
+    }
+    return hiragana;
+};
+
+const MAX_QUESTIONS = 10;
+const MIN_ITEMS = 5;
+
+const TypingPractice: React.FC<TypingPracticeProps> = ({ contentItems, onBack }) => {
+    const [questions, setQuestions] = useState<ContentItem[]>([]);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [score, setScore] = useState(0);
+    const [romajiInput, setRomajiInput] = useState('');
+    const [hiraganaOutput, setHiraganaOutput] = useState('');
+    const [isAnswered, setIsAnswered] = useState(false);
+    const [isCorrect, setIsCorrect] = useState(false);
+    const [isFinished, setIsFinished] = useState(false);
+    const inputRef = useRef<HTMLInputElement>(null);
+
+    const gameItems = useMemo(() => {
+        return contentItems.filter(item => item.Category === 'Vocabulary' && !item.Romaji.includes(' '));
+    }, [contentItems]);
+
+    const setupGame = useCallback(() => {
+        const selectedQuestions = shuffleArray(gameItems).slice(0, MAX_QUESTIONS);
+        setQuestions(selectedQuestions);
+        setCurrentIndex(0);
+        setScore(0);
+        setRomajiInput('');
+        setHiraganaOutput('');
+        setIsAnswered(false);
+        setIsCorrect(false);
+        setIsFinished(false);
+        setTimeout(() => inputRef.current?.focus(), 0);
+    }, [gameItems]);
+
+    useEffect(() => {
+        if (gameItems.length >= MIN_ITEMS) {
+            setupGame();
+        }
+    }, [gameItems, setupGame]);
+
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const newRomaji = e.target.value;
+        setRomajiInput(newRomaji);
+        setHiraganaOutput(convertRomajiToHiragana(newRomaji));
+    };
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        if (isAnswered || !romajiInput) return;
+
+        const correctAnswer = questions[currentIndex]?.Hiragana.split(/[\(\/]/)[0].trim();
+        const correct = hiraganaOutput === correctAnswer;
+        
+        setIsCorrect(correct);
+        setIsAnswered(true);
+        if (correct) {
+            setScore(prev => prev + 1);
+        }
+    };
+    
+    const handleNext = () => {
+        if (currentIndex < questions.length - 1) {
+            setCurrentIndex(prev => prev + 1);
+            setRomajiInput('');
+            setHiraganaOutput('');
+            setIsAnswered(false);
+            setIsCorrect(false);
+            setTimeout(() => inputRef.current?.focus(), 0);
+        } else {
+            setIsFinished(true);
+        }
+    };
+
+    if (gameItems.length < MIN_ITEMS) {
+        return (
+            <div className="flex flex-col items-center justify-center h-full text-center">
+                <p className="text-slate-500 dark:text-slate-400 text-lg">Not enough vocabulary items to start this game (need at least {MIN_ITEMS}).</p>
+                <button onClick={onBack} className="mt-6 bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                    Go Back
+                </button>
+            </div>
+        );
+    }
+
+    if (isFinished) {
+        return (
+            <div className="flex flex-col items-center justify-center h-full text-center">
+                <h2 className="text-3xl font-bold text-teal-600 dark:text-teal-400">Game Complete!</h2>
+                <p className="text-xl mt-4 text-slate-800 dark:text-slate-200">Your Score: <span className="font-bold text-slate-900 dark:text-white">{score} / {questions.length}</span></p>
+                <div className="flex gap-4 mt-8">
+                    <button onClick={setupGame} className="px-6 py-2 bg-teal-600 text-white font-bold rounded-lg hover:bg-teal-700 transition-colors">Play Again</button>
+                    <button onClick={onBack} className="px-6 py-2 bg-slate-500 dark:bg-slate-600 text-white font-bold rounded-lg hover:bg-slate-600 dark:hover:bg-slate-700 transition-colors">Change Activity</button>
+                </div>
+            </div>
+        );
+    }
+
+    if (questions.length === 0) return null;
+
+    const currentQuestion = questions[currentIndex];
+
+    return (
+        <div className="flex flex-col h-full w-full relative">
+            <button onClick={onBack} className="absolute top-0 left-0 text-slate-500 dark:text-slate-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors">
+                <BackArrowIcon className="w-8 h-8"/>
+            </button>
+            <div className="text-center mb-6">
+                 <p className="text-slate-500 dark:text-slate-400">Question {currentIndex + 1} of {questions.length} • Score: {score}</p>
+                 <div className="w-full bg-slate-200 dark:bg-slate-600 rounded-full h-2.5 mt-2">
+                    <div className="bg-teal-500 h-2.5 rounded-full" style={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }}></div>
+                </div>
+            </div>
+
+            <div className="bg-slate-100 dark:bg-slate-700 rounded-lg p-6 text-center my-auto transition-colors duration-300">
+                <p className="text-sm text-slate-500 dark:text-slate-400">Type the Japanese for:</p>
+                <p className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">{currentQuestion.English}</p>
+            </div>
+            
+            <form onSubmit={handleSubmit} className="mt-6 flex flex-col items-center">
+                <div className={`w-full max-w-md rounded-lg p-4 mb-2 transition-colors duration-200
+                    ${isAnswered ? (isCorrect ? 'bg-green-100 dark:bg-green-900' : 'bg-red-100 dark:bg-red-900') : 'bg-slate-200 dark:bg-slate-800'}`}>
+                    <p className="text-center text-4xl font-bold text-slate-800 dark:text-slate-100 min-h-[3rem]" aria-live="polite">
+                        {hiraganaOutput || <span className="text-slate-400 dark:text-slate-600">...</span>}
+                    </p>
+                </div>
+
+                <input
+                    ref={inputRef}
+                    type="text"
+                    value={romajiInput}
+                    onChange={handleInputChange}
+                    disabled={isAnswered}
+                    autoCapitalize="none"
+                    autoComplete="off"
+                    autoCorrect="off"
+                    spellCheck="false"
+                    className="w-full max-w-md p-4 bg-white dark:bg-slate-700 border-2 border-slate-300 dark:border-slate-600 rounded-lg text-center text-xl text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    aria-label="Romaji input"
+                />
+
+                {isAnswered && (
+                    <div className="mt-4 text-center w-full max-w-md">
+                        <div className="flex items-center justify-center gap-2">
+                            {isCorrect ? 
+                                <CheckIcon className="w-7 h-7 text-green-500" /> : 
+                                <XIcon className="w-7 h-7 text-red-500" />
+                            }
+                            <p className={`text-xl font-bold ${isCorrect ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
+                                {isCorrect ? 'Correct!' : 'Not quite!'}
+                            </p>
+                        </div>
+                        {!isCorrect && <p className="text-slate-600 dark:text-slate-400 mt-1">Correct answer: <span className="font-bold">{currentQuestion.Hiragana}</span> ({currentQuestion.Romaji})</p>}
+                        <button type="button" onClick={handleNext} className="mt-4 w-full py-3 bg-teal-600 text-white font-bold rounded-lg shadow-md hover:bg-teal-700 transition-colors">
+                            {currentIndex < questions.length - 1 ? 'Next Question' : 'Finish Game'}
+                        </button>
+                    </div>
+                )}
+            </form>
+        </div>
+    );
+};
+
+export default TypingPractice;

@@ -84,11 +84,16 @@ const ListeningGame: React.FC<ListeningGameProps> = ({ contentItems, onBack }) =
     const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
     const [isAnswered, setIsAnswered] = useState(false);
     const [isFinished, setIsFinished] = useState(false);
-    const [isAudioLoading, setIsAudioLoading] = useState(false);
+    
+    const [isAudioLoading, setIsAudioLoading] = useState(false); // For when user clicks and audio isn't ready
+    const [audioCache, setAudioCache] = useState<Map<string, AudioBuffer>>(new Map());
+    const [fetchingAudio, setFetchingAudio] = useState<Set<string>>(new Set());
+
     const [error, setError] = useState<string | null>(null);
 
     const gameItems = useMemo(() => contentItems.filter(item => item.Category === 'Vocabulary'), [contentItems]);
 
+    // Initialize AI and AudioContext
     useEffect(() => {
         try {
             setAi(new GoogleGenAI({ apiKey: process.env.API_KEY }));
@@ -99,119 +104,147 @@ const ListeningGame: React.FC<ListeningGameProps> = ({ contentItems, onBack }) =
         }
     }, []);
 
+    // Generate questions when content is available
     useEffect(() => {
         if (gameItems.length >= 4) {
             setQuestions(generateQuestions(gameItems, Math.min(10, gameItems.length)));
         }
     }, [gameItems]);
 
-    const playAudio = useCallback(async (text: string) => {
-        if (!ai) {
-            setError("Gemini API not initialized.");
+    const playWithBrowserTTS = useCallback((text: string) => {
+        if (!('speechSynthesis' in window)) {
+            setError("AI voice failed and your browser doesn't support a fallback.");
+            setIsAudioLoading(false);
             return;
+        }
+
+        const speak = () => {
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            const voices = window.speechSynthesis.getVoices();
+            const japaneseVoice = voices.find(voice => voice.lang === 'ja-JP');
+            
+            if (japaneseVoice) utterance.voice = japaneseVoice;
+            
+            utterance.lang = 'ja-JP';
+            utterance.rate = 0.9;
+            utterance.onend = () => setIsAudioLoading(false);
+            utterance.onerror = (e) => {
+                console.error("Browser TTS Error:", e);
+                setError("The fallback voice also failed to play.");
+                setIsAudioLoading(false);
+            };
+            
+            window.speechSynthesis.speak(utterance);
+        };
+        
+        if (window.speechSynthesis.getVoices().length === 0) {
+            window.speechSynthesis.onvoiceschanged = speak;
+        } else {
+            speak();
+        }
+    }, []);
+
+    const fetchAndCacheAudio = useCallback(async (text: string): Promise<boolean> => {
+        if (!ai || !audioContext || audioCache.has(text) || fetchingAudio.has(text)) {
+            return true;
         }
         
         const cleanedText = text.split(/[\(\/]/)[0].trim();
-        const promptText = cleanedText;
 
-        const playWithBrowserTTS = () => {
-            if (!('speechSynthesis' in window)) {
-                setError("AI voice failed and your browser doesn't support a fallback.");
-                setIsAudioLoading(false);
-                return;
-            }
+        setFetchingAudio(prev => new Set(prev).add(text));
 
-            const speak = () => {
-                window.speechSynthesis.cancel();
-                const utterance = new SpeechSynthesisUtterance(promptText);
-                const voices = window.speechSynthesis.getVoices();
-                const japaneseVoice = voices.find(voice => voice.lang === 'ja-JP');
-                
-                if (japaneseVoice) {
-                    utterance.voice = japaneseVoice;
-                }
-                utterance.lang = 'ja-JP';
-                utterance.rate = 0.9;
-                
-                utterance.onend = () => setIsAudioLoading(false);
-                utterance.onerror = (e) => {
-                    console.error("Browser TTS Error:", e);
-                    setError("The fallback voice also failed to play.");
-                    setIsAudioLoading(false);
-                };
-                
-                window.speechSynthesis.speak(utterance);
-            };
-            
-            if (window.speechSynthesis.getVoices().length === 0) {
-                window.speechSynthesis.onvoiceschanged = speak;
-            } else {
-                speak();
-            }
-        };
-
-        let localAudioContext = audioContext;
-        if (!localAudioContext || localAudioContext.state === 'suspended') {
-            const newContext = new (window.AudioContext || (window as any).webkitAudioContext)({ sampleRate: 24000 });
-            await newContext.resume();
-            setAudioContext(newContext);
-            localAudioContext = newContext;
-        }
-        if (!localAudioContext) {
-            setError("Audio context could not be created.");
-            return;
-        }
-
-        setIsAudioLoading(true);
-        setError(null);
-
-        const MAX_RETRIES = 3;
-        let geminiSuccess = false;
-
-        for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
-            try {
+        const MAX_RETRIES = 2;
+        for (let i = 0; i <= MAX_RETRIES; i++) {
+             try {
                 const response = await ai.models.generateContent({
                     model: "gemini-2.5-flash-preview-tts",
-                    contents: [{ parts: [{ text: promptText }] }],
+                    contents: [{ parts: [{ text: cleanedText }] }],
                     config: {
                         responseModalities: [Modality.AUDIO],
-                        speechConfig: {
-                            voiceConfig: {
-                                prebuiltVoiceConfig: { voiceName: 'Zephyr' },
-                            },
-                        },
+                        speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: 'Zephyr' } } },
                     },
                 });
-
                 const base64Audio = response.candidates?.[0]?.content?.parts?.[0]?.inlineData?.data;
-
                 if (base64Audio) {
                     const audioBytes = decode(base64Audio);
-                    const audioBuffer = await decodeAudioData(audioBytes, localAudioContext, 24000, 1);
-                    const source = localAudioContext.createBufferSource();
-                    source.buffer = audioBuffer;
-                    source.connect(localAudioContext.destination);
-                    source.onended = () => setIsAudioLoading(false);
-                    source.start();
-                    geminiSuccess = true;
-                    break; 
+                    const audioBuffer = await decodeAudioData(audioBytes, audioContext, 24000, 1);
+                    setAudioCache(prev => new Map(prev).set(text, audioBuffer));
+                    setFetchingAudio(prev => {
+                        const newSet = new Set(prev);
+                        newSet.delete(text);
+                        return newSet;
+                    });
+                    return true;
                 } else {
-                    throw new Error("No audio data received in API response.");
+                    // Successful response, but no audio data. Fallback immediately.
+                    console.warn("AI request succeeded but returned no audio data. Falling back to TTS.");
+                    break; // Exit retry loop
                 }
             } catch (e) {
-                if (attempt < MAX_RETRIES) {
-                    const delay = 500 * attempt;
-                    await new Promise(res => setTimeout(res, delay));
+                console.error(`Attempt ${i + 1}/${MAX_RETRIES + 1} failed to fetch AI audio:`, e);
+                if (i === MAX_RETRIES) {
+                    // Last attempt failed
+                    break;
                 }
+                 // Wait before retrying
+                 await new Promise(res => setTimeout(res, 500 * (i + 1)));
             }
         }
         
-        if (!geminiSuccess) {
-            setError("Premium AI voice unavailable, using standard voice.");
-            playWithBrowserTTS();
-        }
+        // This part is reached on failure or empty response
+        setFetchingAudio(prev => {
+            const newSet = new Set(prev);
+            newSet.delete(text);
+            return newSet;
+        });
+        
+        return false;
+    }, [ai, audioContext, audioCache, fetchingAudio]);
 
-    }, [ai, audioContext]);
+    // Pre-fetch initial and subsequent audio clips
+    useEffect(() => {
+        if (questions.length > 0 && ai && audioContext) {
+            // Pre-fetch current question if not already cached/fetching
+            fetchAndCacheAudio(questions[currentIndex].audioText);
+            
+            // Pre-fetch next question
+            const nextIndex = currentIndex + 1;
+            if (nextIndex < questions.length) {
+                fetchAndCacheAudio(questions[nextIndex].audioText);
+            }
+        }
+    }, [questions, currentIndex, ai, audioContext, fetchAndCacheAudio]);
+
+    const playAudio = useCallback(async (text: string) => {
+        if (!audioContext) return;
+        if (audioContext.state === 'suspended') await audioContext.resume();
+
+        setIsAudioLoading(true);
+        setError(null);
+        
+        const cachedBuffer = audioCache.get(text);
+        if (cachedBuffer) {
+            const source = audioContext.createBufferSource();
+            source.buffer = cachedBuffer;
+            source.connect(audioContext.destination);
+            source.onended = () => setIsAudioLoading(false);
+            source.start();
+        } else {
+            const success = await fetchAndCacheAudio(text);
+            if (success && audioCache.has(text)) {
+                const newBuffer = audioCache.get(text)!;
+                const source = audioContext.createBufferSource();
+                source.buffer = newBuffer;
+                source.connect(audioContext.destination);
+                source.onended = () => setIsAudioLoading(false);
+                source.start();
+            } else {
+                setError("Premium AI voice unavailable, using standard voice.");
+                playWithBrowserTTS(text.split(/[\(\/]/)[0].trim());
+            }
+        }
+    }, [audioContext, audioCache, fetchAndCacheAudio, playWithBrowserTTS]);
     
     const handleAnswerSelect = (answer: string) => {
         if (isAnswered) return;
@@ -234,13 +267,15 @@ const ListeningGame: React.FC<ListeningGameProps> = ({ contentItems, onBack }) =
     };
     
     const restartGame = () => {
-        setQuestions(generateQuestions(gameItems, Math.min(10, gameItems.length)));
+        const newQuestions = generateQuestions(gameItems, Math.min(10, gameItems.length));
+        setQuestions(newQuestions);
         setCurrentIndex(0);
         setScore(0);
         setSelectedAnswer(null);
         setIsAnswered(false);
         setIsFinished(false);
         setError(null);
+        setAudioCache(new Map()); // Clear cache for new game
     };
     
     if (gameItems.length < 4) {

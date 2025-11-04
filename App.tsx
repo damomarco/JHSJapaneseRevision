@@ -10,10 +10,12 @@ import ListeningGame from './components/ListeningGame';
 import SentenceScramble from './components/SentenceScramble';
 import KanjiConnect from './components/KanjiConnect';
 import FillInTheBlanks from './components/FillInTheBlanks';
+import TypingPractice from './components/TypingPractice';
 import { useContentLoader } from './hooks/useContentLoader';
+import { useAiGameGenerator } from './hooks/useAiGameGenerator';
 import { MoonIcon, SunIcon } from './components/icons';
 
-type View = 'unit_selection' | 'activity_selection' | 'flashcards' | 'quiz' | 'category_sort' | 'matching_game' | 'listening_game' | 'sentence_scramble' | 'kanji_connect' | 'fill_in_the_blanks';
+type View = 'unit_selection' | 'activity_selection' | 'flashcards' | 'quiz' | 'category_sort' | 'matching_game' | 'listening_game' | 'sentence_scramble' | 'kanji_connect' | 'fill_in_the_blanks' | 'typing_practice';
 type Theme = 'light' | 'dark';
 
 const App: React.FC = () => {
@@ -33,7 +35,15 @@ const App: React.FC = () => {
         setTheme(prevTheme => prevTheme === 'dark' ? 'light' : 'dark');
     };
     
-    const { content, isLoading, error } = useContentLoader(selectedUnits);
+    const { content, isLoading: isContentLoading, error: contentError } = useContentLoader(selectedUnits);
+    const { 
+        scrambleQuestions, 
+        fillBlanksQuestions, 
+        isGenerating: isAiGenerating, 
+        generationError: aiError, 
+        regenerate: regenerateAiGames 
+    } = useAiGameGenerator(content);
+
 
     const handleUnitsSelected = (units: number[]) => {
         if (units.length > 0) {
@@ -42,7 +52,7 @@ const App: React.FC = () => {
         }
     };
     
-    const handleActivitySelected = (activity: 'flashcards' | 'quiz' | 'category_sort' | 'matching_game' | 'listening_game' | 'sentence_scramble' | 'kanji_connect' | 'fill_in_the_blanks') => {
+    const handleActivitySelected = (activity: 'flashcards' | 'quiz' | 'category_sort' | 'matching_game' | 'listening_game' | 'sentence_scramble' | 'kanji_connect' | 'fill_in_the_blanks' | 'typing_practice') => {
         setView(activity);
     };
 
@@ -56,7 +66,7 @@ const App: React.FC = () => {
     };
 
     const renderView = () => {
-        if (isLoading) {
+        if (isContentLoading && view !== 'unit_selection') {
             return (
                 <div className="flex flex-col items-center justify-center h-full">
                     <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-teal-500"></div>
@@ -65,11 +75,11 @@ const App: React.FC = () => {
             );
         }
 
-        if (error) {
+        if (contentError) {
             return (
                 <div className="flex flex-col items-center justify-center h-full text-center">
                     <p className="text-red-500 text-xl">Oops! Something went wrong.</p>
-                    <p className="mt-2 text-slate-600 dark:text-slate-400">{error.message}</p>
+                    <p className="mt-2 text-slate-600 dark:text-slate-400">{contentError.message}</p>
                     <button onClick={handleBackToUnitSelection} className="mt-6 bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-lg transition-colors">
                         Try Again
                     </button>
@@ -93,11 +103,27 @@ const App: React.FC = () => {
             case 'listening_game':
                 return <ListeningGame contentItems={content} onBack={handleBackToActivitySelection} />;
             case 'sentence_scramble':
-                return <SentenceScramble contentItems={content} onBack={handleBackToActivitySelection} />;
+                return <SentenceScramble 
+                            questions={scrambleQuestions}
+                            isLoading={isAiGenerating && scrambleQuestions.length === 0}
+                            error={aiError}
+                            onRestart={regenerateAiGames}
+                            contentItems={content} 
+                            onBack={handleBackToActivitySelection} 
+                        />;
             case 'kanji_connect':
                 return <KanjiConnect contentItems={content} onBack={handleBackToActivitySelection} />;
+             case 'typing_practice':
+                return <TypingPractice contentItems={content} onBack={handleBackToActivitySelection} />;
             case 'fill_in_the_blanks':
-                return <FillInTheBlanks contentItems={content} onBack={handleBackToActivitySelection} />;
+                 return <FillInTheBlanks 
+                            questions={fillBlanksQuestions}
+                            isLoading={isAiGenerating && fillBlanksQuestions.length === 0}
+                            error={aiError}
+                            onRestart={regenerateAiGames}
+                            contentItems={content} 
+                            onBack={handleBackToActivitySelection} 
+                        />;
             default:
                 return <UnitSelector onUnitsSelected={handleUnitsSelected} />;
         }

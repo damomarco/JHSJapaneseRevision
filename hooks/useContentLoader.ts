@@ -49,7 +49,16 @@ export const useContentLoader = (unitNumbers: number[]) => {
                     }
                 }
                 
-                setContent(shuffleArray(loadedItems));
+                // Deduplicate the items based on the unique 'Romaji' property
+                const uniqueItemsMap = new Map<string, ContentItem>();
+                for (const item of loadedItems) {
+                    if (!uniqueItemsMap.has(item.Romaji)) {
+                        uniqueItemsMap.set(item.Romaji, item);
+                    }
+                }
+                const uniqueContentItems = Array.from(uniqueItemsMap.values());
+
+                setContent(shuffleArray(uniqueContentItems));
 
             } catch (err) {
                 console.error("Failed to load unit data:", err);

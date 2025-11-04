@@ -127,6 +127,14 @@ This section logs the key milestones and fixes implemented during the developmen
     - The component identifies common particles (は, が, を, に, etc.), randomly removes one to create a blank, and generates distractor options for the quiz.
     - The UI follows the established pattern of other quiz-like activities, providing clear feedback and a final score.
 
+### 12. Enhanced Audio Fetching Logic
+- **Enhancement:** The Listening Game's audio fetching logic was refined for better resilience and a smoother user experience.
+- **Problem:** The previous logic would fall back to the standard browser TTS too quickly, even for temporary network glitches. Conversely, it would needlessly retry API calls that had already succeeded but returned no audio data.
+- **Solution:** A more nuanced, two-pronged approach was implemented:
+    1.  **Network Resilience:** API requests that fail due to network errors will now be automatically retried up to two times. This makes the feature more robust against transient connection issues.
+    2.  **Smart Fallback:** If the Gemini API returns a successful response but the payload contains no audio data, the system now intelligently recognizes this case and *immediately* falls back to the standard browser voice without attempting any retries.
+- **Impact:** This change ensures the application is both resilient to temporary network problems and efficient in its error handling, providing the best possible audio experience to the user.
+
 ## 📝 Content Guidelines
 
 ### Sentence Scramble Chunking

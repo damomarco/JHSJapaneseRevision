@@ -1,10 +1,13 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { ContentItem } from '../types';
 import { BackArrowIcon } from './icons';
-import { GoogleGenAI, Type } from '@google/genai';
 import { createTokenizer, createRomajiConverter } from './languageUtils';
 
 interface SentenceScrambleProps {
+    questions: ScrambleQuestion[];
+    isLoading: boolean;
+    error: string | null;
+    onRestart: () => void;
     contentItems: ContentItem[];
     onBack: () => void;
 }
@@ -18,16 +21,13 @@ const shuffleArray = <T,>(array: T[]): T[] => {
     return newArray;
 };
 
-interface ScrambleQuestion {
+export interface ScrambleQuestion {
     english: string;
     japanese: string;
     words: string[];
 }
 
-const MAX_QUESTIONS = 8;
-
-const SentenceScramble: React.FC<SentenceScrambleProps> = ({ contentItems, onBack }) => {
-    const [questions, setQuestions] = useState<ScrambleQuestion[]>([]);
+const SentenceScramble: React.FC<SentenceScrambleProps> = ({ questions, isLoading, error, onRestart, contentItems, onBack }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [score, setScore] = useState(0);
     const [userAnswer, setUserAnswer] = useState<{word: string, originalIndex: number}[]>([]);
@@ -35,114 +35,11 @@ const SentenceScramble: React.FC<SentenceScrambleProps> = ({ contentItems, onBac
     const [isAnswered, setIsAnswered] = useState(false);
     const [isCorrect, setIsCorrect] = useState(false);
     const [isFinished, setIsFinished] = useState(false);
-    const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
-    const [generationTrigger, setGenerationTrigger] = useState(0);
 
-    const vocabularyItems = useMemo(() => {
-        return contentItems.filter(item => item.Category === 'Vocabulary' || (item.Category === 'Grammar' && item.SubCategory.startsWith('Verb')));
-    }, [contentItems]);
-
-    const tokenizer = useMemo(() => createTokenizer(contentItems), [contentItems]);
     const getRomajiForPart = useMemo(() => createRomajiConverter(contentItems), [contentItems]);
 
-    useEffect(() => {
-        const generateSentences = async () => {
-            if (vocabularyItems.length < 10) {
-                 setError("Not enough vocabulary in the selected units to generate sentences.");
-                 setIsLoading(false);
-                 return;
-            }
-
-            setIsLoading(true);
-            setError(null);
-
-            try {
-                const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-                
-                const vocabList = shuffleArray(vocabularyItems).slice(0, 75).map((item: ContentItem) => `- ${item.Hiragana.split('/')[0].trim()} (${item.English})`).join('\n');
-                
-                const themes = [
-                    "daily activities at home", "talking about school life", "weekend plans with friends", 
-                    "hobbies and interests", "food and meals", "shopping in town", "describing pets and family"
-                ];
-                const randomTheme = themes[Math.floor(Math.random() * themes.length)];
-
-                const prompt = `
-                    You are a Japanese language teacher creating quiz questions for junior high school students.
-                    Your task is to generate ${MAX_QUESTIONS} unique and varied, simple, grammatically correct Japanese sentences.
-                    The sentences should be about the theme of "${randomTheme}".
-
-                    **Instructions:**
-                    1. You MUST ONLY use words from the following list. Each word is provided with its English meaning:
-                       ${vocabList}
-                    2. Ensure the sentences are diverse. Avoid using the exact same sentence structure for every sentence. Create a mix of questions, statements, and descriptions.
-                    3. Each sentence must be unique.
-                    4. The sentences must be suitable for a beginner Japanese learner.
-                    5. For each sentence you generate, provide its simple English translation.
-                    
-                    Return the result as a JSON array of objects.
-                `;
-
-                const schema = {
-                    type: Type.ARRAY,
-                    items: {
-                        type: Type.OBJECT,
-                        properties: {
-                            japanese: { 
-                                type: Type.STRING,
-                                description: "The generated Japanese sentence in Hiragana/Katakana."
-                            },
-                            english: {
-                                type: Type.STRING,
-                                description: "The English translation of the sentence."
-                             }
-                        },
-                        required: ['japanese', 'english']
-                    }
-                };
-                
-                const response = await ai.models.generateContent({
-                    model: 'gemini-2.5-pro',
-                    contents: prompt,
-                    config: {
-                        responseMimeType: "application/json",
-                        responseSchema: schema,
-                        temperature: 0.9,
-                    },
-                });
-
-                const generatedData = JSON.parse(response.text) as { japanese: string; english: string }[];
-                
-                const generatedQuestions = generatedData.map(item => {
-                    const cleanJapanese = item.japanese.replace(/[()（）]/g, '');
-                    return {
-                        english: item.english,
-                        japanese: cleanJapanese,
-                        words: tokenizer(cleanJapanese)
-                    };
-                }).filter(q => q.words.length >= 3); // Ensure there's something to scramble
-
-                if (generatedQuestions.length < 1) {
-                    throw new Error("AI failed to generate valid sentences. Please try selecting different units.");
-                }
-
-                setQuestions(generatedQuestions);
-                setupRound(0, generatedQuestions);
-            } catch (e) {
-                console.error("Error generating sentences:", e);
-                setError("Could not generate sentences with AI. Please check your connection or try again.");
-            } finally {
-                setIsLoading(false);
-            }
-        };
-
-        generateSentences();
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [vocabularyItems, generationTrigger, tokenizer]);
-
-    const setupRound = (index: number, currentQuestions: ScrambleQuestion[]) => {
+    const setupRound = useCallback((index: number, currentQuestions: ScrambleQuestion[]) => {
+        if (!currentQuestions || currentQuestions.length === 0) return;
         if (index >= currentQuestions.length) {
             setIsFinished(true);
             return;
@@ -154,7 +51,14 @@ const SentenceScramble: React.FC<SentenceScrambleProps> = ({ contentItems, onBac
         setIsAnswered(false);
         setIsCorrect(false);
         setCurrentIndex(index);
-    };
+    }, []);
+
+    useEffect(() => {
+        if (questions && questions.length > 0) {
+            setupRound(0, questions);
+        }
+    }, [questions, setupRound]);
+
 
     const handleOptionClick = (option: {word: string, originalIndex: number}) => {
         setUserAnswer(prev => [...prev, option]);
@@ -186,9 +90,7 @@ const SentenceScramble: React.FC<SentenceScrambleProps> = ({ contentItems, onBac
     const restartGame = () => {
         setScore(0);
         setIsFinished(false);
-        setIsLoading(true);
-        setQuestions([]);
-        setGenerationTrigger(t => t + 1);
+        onRestart();
     };
 
     if (isLoading) {
@@ -200,10 +102,10 @@ const SentenceScramble: React.FC<SentenceScrambleProps> = ({ contentItems, onBac
         );
     }
 
-    if (error || questions.length === 0) {
+    if (error) {
         return (
             <div className="flex flex-col items-center justify-center h-full text-center">
-                <p className="text-red-500 text-lg">{error || "Not enough content available to start this game."}</p>
+                <p className="text-red-500 text-lg">{error}</p>
                 <button onClick={onBack} className="mt-6 bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-lg transition-colors">
                     Go Back
                 </button>
@@ -211,7 +113,7 @@ const SentenceScramble: React.FC<SentenceScrambleProps> = ({ contentItems, onBac
         );
     }
     
-    if (isFinished) {
+    if (isFinished || questions.length === 0) {
         return (
             <div className="flex flex-col items-center justify-center h-full text-center">
                 <h2 className="text-3xl font-bold text-teal-600 dark:text-teal-400">Game Over!</h2>
