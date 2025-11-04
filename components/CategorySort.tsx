@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { ContentItem } from '../types';
 import { BackArrowIcon, CheckIcon, XIcon } from './icons';
 
@@ -8,7 +8,8 @@ interface CategorySortProps {
     onBack: () => void;
 }
 
-const shuffleArray = <T,>(array: T[]): T[] => {
+// FIX: The generic constraint on shuffleArray was incorrect and has been removed to ensure proper type inference.
+const shuffleArray = (array: any[]): any[] => {
     const newArray = [...array];
     for (let i = newArray.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -26,6 +27,7 @@ const ALLOWED_SUBCATEGORIES = [
 
 const MAX_QUESTIONS = 10;
 
+// FIX: Re-wrapped component logic in a React.FC and added a default export to resolve all scope and export-related errors.
 const CategorySort: React.FC<CategorySortProps> = ({ contentItems, onBack }) => {
     const [score, setScore] = useState(0);
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -47,13 +49,7 @@ const CategorySort: React.FC<CategorySortProps> = ({ contentItems, onBack }) => 
         [...new Set(gameItems.map(item => item.SubCategory))],
     [gameItems]);
 
-    useEffect(() => {
-        if (gameItems.length > 0) {
-            setupRound(0);
-        }
-    }, [gameItems]);
-
-    const setupRound = (index: number) => {
+    const setupRound = useCallback((index: number) => {
         if (index >= gameItems.length) {
             setIsFinished(true);
             return;
@@ -71,14 +67,20 @@ const CategorySort: React.FC<CategorySortProps> = ({ contentItems, onBack }) => 
         setCurrentIndex(index);
         setSelectedAnswer(null);
         setIsAnswered(false);
-    };
+    }, [gameItems, allPossibleCategories]);
+
+    useEffect(() => {
+        if (gameItems.length > 0) {
+            setupRound(0);
+        }
+    }, [gameItems, setupRound]);
     
     const processAnswer = (category: string) => {
         if (isAnswered) return;
 
         setSelectedAnswer(category);
         setIsAnswered(true);
-        if (category === gameItems[currentIndex].SubCategory) {
+        if (gameItems[currentIndex] && category === gameItems[currentIndex].SubCategory) {
             setScore(prev => prev + 1);
         }
 
@@ -101,7 +103,7 @@ const CategorySort: React.FC<CategorySortProps> = ({ contentItems, onBack }) => 
         const droppedItem: ContentItem = JSON.parse(e.dataTransfer.getData('application/json'));
         
         // Ensure the dropped item is the one for the current question
-        if (droppedItem.Romaji === gameItems[currentIndex].Romaji) {
+        if (gameItems[currentIndex] && droppedItem.Romaji === gameItems[currentIndex].Romaji) {
             processAnswer(targetCategory);
         }
     };
@@ -137,7 +139,7 @@ const CategorySort: React.FC<CategorySortProps> = ({ contentItems, onBack }) => 
         );
     }
 
-    if (gameItems.length === 0) return null;
+    if (gameItems.length === 0 || !gameItems[currentIndex]) return null;
     
     const currentItem = gameItems[currentIndex];
 

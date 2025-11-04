@@ -103,6 +103,19 @@ This section logs the key milestones and fixes implemented during the developmen
     - **Audio Playback:** Once the data is in a proper `AudioBuffer`, it is played using a standard `AudioContext` and `BufferSourceNode`. The component also manages the `AudioContext` lifecycle, ensuring it is resumed after user interaction to comply with browser autoplay policies.
     - **Component Stability:** The new `ListeningGame.tsx` component includes full game logic, question generation, scoring, and robust UI states for loading and errors. This ensures a smooth user experience and isolates the complex audio logic, preventing it from causing app-wide failures as seen in previous attempts.
 
+### 9. Sentence Scramble Chunking Logic
+- **Enhancement:** The "Sentence Scramble" game relies on splitting Japanese sentences into logical words and particles. The initial implementation used a simple regex to split based on a list of particles, which sometimes incorrectly broke apart compound words or common phrases (e.g., "ありがとう" being split into "ありが" and "と").
+- **Solution:** A more robust tokenizer was implemented in `components/SentenceScramble.tsx`. It now recognizes common greetings (like `こんにちは`), verb endings (like `ます` and `ました`), and particles as distinct grammatical units.
+- **Impact:** This ensures that sentences are broken into their core components in a much more logical way, making the game more intuitive and educationally effective for students learning sentence structure.
+
+## 📝 Content Guidelines
+
+### Sentence Scramble Chunking
+
+The "Sentence Scramble" activity automatically splits Japanese sentences into words and particles. While we have significantly improved this logic to handle many common phrases and verb endings correctly, the system is rule-based and may not be perfect for every possible sentence.
+
+If you are adding new grammar content and notice a sentence is being split into illogical chunks in the game, please notify the development team. The problematic word or phrase can be easily added to the tokenizer's "exception list" in `components/SentenceScramble.tsx` to resolve the issue. Please do not attempt to modify the JSON data with special characters to fix chunking, as this keeps the source data clean and portable.
+
 ## 🚀 Future Enhancements & Ideas
 
 Based on the existing data structure, here are some potential new activities to further enhance the learning experience:

@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useMemo } from 'react';
+
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { ContentItem } from '../types';
 import { BackArrowIcon } from './icons';
 
@@ -7,7 +8,8 @@ interface MatchingGameProps {
     onBack: () => void;
 }
 
-const shuffleArray = <T,>(array: T[]): T[] => {
+// FIX: The generic constraint on shuffleArray was incorrect and has been removed to ensure proper type inference.
+const shuffleArray = (array: any[]): any[] => {
     const newArray = [...array];
     for (let i = newArray.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -31,6 +33,7 @@ interface Card {
 const MIN_PAIRS = 6;
 const MAX_PAIRS = 8;
 
+// FIX: Re-wrapped component logic in a React.FC and added a default export to resolve all scope and export-related errors.
 const MatchingGame: React.FC<MatchingGameProps> = ({ contentItems, onBack }) => {
     const [cards, setCards] = useState<Card[]>([]);
     const [flippedIndices, setFlippedIndices] = useState<number[]>([]);
@@ -47,19 +50,7 @@ const MatchingGame: React.FC<MatchingGameProps> = ({ contentItems, onBack }) => 
         return shuffled.slice(0, MAX_PAIRS);
     }, [contentItems]);
     
-    useEffect(() => {
-        if (gameItems.length >= MIN_PAIRS) {
-            setupGame();
-        }
-    }, [gameItems]);
-
-    useEffect(() => {
-        if (cards.length > 0 && cards.every(c => c.status === 'matched')) {
-             setTimeout(() => setIsFinished(true), 500);
-        }
-    }, [cards]);
-
-    const setupGame = () => {
+    const setupGame = useCallback(() => {
         const pairs = gameItems;
         const newCards: Card[] = [];
         pairs.forEach((item, index) => {
@@ -75,7 +66,19 @@ const MatchingGame: React.FC<MatchingGameProps> = ({ contentItems, onBack }) => 
         setFlippedIndices([]);
         setIsFinished(false);
         setMoves(0);
-    };
+    }, [gameItems]);
+
+    useEffect(() => {
+        if (gameItems.length >= MIN_PAIRS) {
+            setupGame();
+        }
+    }, [gameItems, setupGame]);
+
+    useEffect(() => {
+        if (cards.length > 0 && cards.every(c => c.status === 'matched')) {
+             setTimeout(() => setIsFinished(true), 500);
+        }
+    }, [cards]);
 
     const handleCardClick = (index: number) => {
         if (flippedIndices.length >= 2 || cards[index].status !== 'down' || isFinished) {
@@ -180,7 +183,7 @@ const MatchingGame: React.FC<MatchingGameProps> = ({ contentItems, onBack }) => 
                                                 )}
                                             </div>
                                         ) : (
-                                            <span className="text-lg sm:text-xl font-bold text-white break-all">{card.content}</span>
+                                            <span className="text-lg sm:text-xl font-bold text-white break-all">{card.content as string}</span>
                                         )}
                                     </div>
                                 </div>
