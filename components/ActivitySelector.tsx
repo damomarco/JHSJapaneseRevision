@@ -1,13 +1,13 @@
 import React from 'react';
-import { BackArrowIcon, CardIcon, QuizIcon, SortIcon, GridIcon, SpeakerIcon, ScrambleIcon, KanjiConnectIcon } from './icons';
+import { BackArrowIcon, CardIcon, QuizIcon, SortIcon, GridIcon, SpeakerIcon, ScrambleIcon, KanjiConnectIcon, FillBlanksIcon } from './icons';
 
 interface ActivitySelectorProps {
-    onActivitySelected: (activity: 'flashcards' | 'quiz' | 'category_sort' | 'matching_game' | 'listening_game' | 'sentence_scramble' | 'kanji_connect') => void;
+    onActivitySelected: (activity: 'flashcards' | 'quiz' | 'category_sort' | 'matching_game' | 'listening_game' | 'sentence_scramble' | 'kanji_connect' | 'fill_in_the_blanks') => void;
     onBack: () => void;
 }
 
 interface Activity {
-    id: 'flashcards' | 'quiz' | 'category_sort' | 'matching_game' | 'listening_game' | 'sentence_scramble' | 'kanji_connect';
+    id: 'flashcards' | 'quiz' | 'category_sort' | 'matching_game' | 'listening_game' | 'sentence_scramble' | 'kanji_connect' | 'fill_in_the_blanks';
     name: string;
     icon: React.FC<React.SVGProps<SVGSVGElement>>;
 }
@@ -20,6 +20,7 @@ const activities: Activity[] = [
     { id: 'kanji_connect', name: 'Kanji Connect', icon: KanjiConnectIcon },
     { id: 'listening_game', name: 'Listening Game', icon: SpeakerIcon },
     { id: 'sentence_scramble', name: 'Sentence Scramble', icon: ScrambleIcon },
+    { id: 'fill_in_the_blanks', name: 'Fill in the Blanks', icon: FillBlanksIcon },
 ];
 
 

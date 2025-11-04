@@ -16,6 +16,7 @@ This application provides a simple, clean, and effective way for students to eng
   - **Kanji Connect:** A matching game to connect Japanese words written in Kanji with their Hiragana readings.
   - **Listening Game:** An audio-based quiz where students listen to Japanese pronunciation and select the correct English translation, powered by Google's Gemini API.
   - **Sentence Scramble:** A game where students unscramble Japanese words to form a correct sentence based on an English prompt.
+  - **Fill-in-the-Blanks:** A grammar-focused game where students choose the correct particle to complete a sentence.
 - **Responsive Design:** The user interface is fully responsive and works seamlessly on devices of all sizes, from mobile phones to desktops.
 - **Light & Dark Mode:** A theme toggle allows users to switch between a light and dark visual theme for comfortable viewing in any lighting condition.
 
@@ -117,6 +118,15 @@ This section logs the key milestones and fixes implemented during the developmen
     - Added a new icon for the activity and integrated it into the `ActivitySelector` and main app router.
     - The game includes logic to only be available if there are enough vocabulary items with distinct Kanji and Hiragana forms in the selected units.
 
+### 11. New Activity: Fill-in-the-Blanks
+- **Feature:** Added a grammar-focused "Fill-in-the-Blanks" activity.
+- **Gameplay:** Students are presented with a Japanese sentence that has a grammatical particle missing. They must choose the correct particle from a set of options to complete the sentence.
+- **Implementation:**
+    - Created a new `FillInTheBlanks.tsx` component.
+    - Implemented logic to scan the selected units for grammar-based sentences.
+    - The component identifies common particles (は, が, を, に, etc.), randomly removes one to create a blank, and generates distractor options for the quiz.
+    - The UI follows the established pattern of other quiz-like activities, providing clear feedback and a final score.
+
 ## 📝 Content Guidelines
 
 ### Sentence Scramble Chunking
@@ -137,7 +147,7 @@ Based on the existing data structure, here are some potential new activities to 
 
 ### Production & Recall Activities
 
-*   **Fill-in-the-Blanks:** Focus on grammar by presenting sentences with missing particles, requiring students to select the correct ones.
+*   **Fill-in-the-Blanks:** Focus on grammar by presenting sentences with missing particles, requiring students to select the correct ones. (✓ **Implemented!**)
 *   **Sentence Scramble:** Shuffle the words of a Japanese sentence and have students reorder them correctly to teach sentence structure. (✓ **Implemented!**)
 *   **Typing Practice:** Prompt students with an English word and have them type the corresponding Romaji or Hiragana, encouraging active recall and familiarity with a Japanese IME.
 

@@ -1,15 +1,14 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { ContentItem } from '../types';
 import { BackArrowIcon } from './icons';
-// FIX: Import `Type` for responseSchema definition.
 import { GoogleGenAI, Type } from '@google/genai';
+import { createTokenizer, createRomajiConverter } from './languageUtils';
 
 interface SentenceScrambleProps {
     contentItems: ContentItem[];
     onBack: () => void;
 }
 
-// FIX: Use <T,> to disambiguate generic from JSX tag
 const shuffleArray = <T,>(array: T[]): T[] => {
     const newArray = [...array];
     for (let i = newArray.length - 1; i > 0; i--) {
@@ -17,134 +16,6 @@ const shuffleArray = <T,>(array: T[]): T[] => {
         [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
     }
     return newArray;
-};
-
-// A list of common words/greetings that the tokenizer should treat as a single, unbreakable unit.
-const WORD_EXCEPTIONS = [
-    'こんにちは', 'ありがとう', 'どうぞよろしく', 'おやすみなさい', 'はじめまして',
-];
-
-// Splits a Japanese sentence into logical words, particles, and verb endings.
-const splitSentence = (sentence: string): string[] => {
-    const placeholders = WORD_EXCEPTIONS.map((_, i) => `__EX_${i}__`);
-    
-    let tempSentence = sentence;
-    WORD_EXCEPTIONS.forEach((exc, i) => {
-        tempSentence = tempSentence.replace(new RegExp(exc, 'g'), placeholders[i]);
-    });
-
-    const particles = ['は', 'が', 'を', 'に', 'へ', 'と', 'も', 'の', 'で', 'か', 'ね', 'よ', 'から', 'まで'];
-    const endingsAndPunctuation = [
-        'ます', 'ません', 'ました', 'ませんでした', 'ましょう',
-        'です', 'でした', 'ですか', 'でしたか', 'ではありません', 'じゃありません',
-        'ください', 'なさい',
-        '。', '、', '！', '？', '「', '」'
-    ];
-    const delimiters = [...particles, ...endingsAndPunctuation];
-    // Sort delimiters by length (desc) to match longer ones first (e.g., 'から' before 'か')
-    delimiters.sort((a, b) => b.length - a.length);
-    
-    const regex = new RegExp(`(${delimiters.join('|')})`, 'g');
-    
-    const splitParts = tempSentence.replace(/\s+/g, '').split(regex).filter(p => p && p.trim() !== '');
-
-    // Replace placeholders back with their original words.
-    return splitParts.map(part => {
-        const placeholderIndex = placeholders.indexOf(part);
-        if (placeholderIndex > -1) {
-            return WORD_EXCEPTIONS[placeholderIndex];
-        }
-        return part;
-    });
-};
-
-
-const ROMANIZATION_TABLE: { [key: string]: string } = {
-    'あ': 'a', 'い': 'i', 'う': 'u', 'え': 'e', 'お': 'o',
-    'か': 'ka', 'き': 'ki', 'く': 'ku', 'け': 'ke', 'こ': 'ko',
-    'さ': 'sa', 'し': 'shi', 'す': 'su', 'せ': 'se', 'そ': 'so',
-    'た': 'ta', 'ち': 'chi', 'つ': 'tsu', 'て': 'te', 'と': 'to',
-    'な': 'na', 'に': 'ni', 'ぬ': 'nu', 'ね': 'ne', 'の': 'no',
-    'は': 'ha', 'ひ': 'hi', 'ふ': 'fu', 'へ': 'he', 'ほ': 'ho',
-    'ま': 'ma', 'み': 'mi', 'む': 'mu', 'め': 'me', 'も': 'mo',
-    'や': 'ya', 'ゆ': 'yu', 'よ': 'yo',
-    'ら': 'ra', 'り': 'ri', 'る': 'ru', 'れ': 're', 'ろ': 'ro',
-    'わ': 'wa', 'を': 'o', 'ん': 'n',
-    'が': 'ga', 'ぎ': 'gi', 'ぐ': 'gu', 'げ': 'ge', 'ご': 'go',
-    'ざ': 'za', 'じ': 'ji', 'ず': 'zu', 'ぜ': 'ze', 'ぞ': 'zo',
-    'だ': 'da', 'ぢ': 'ji', 'づ': 'zu', 'で': 'de', 'ど': 'do',
-    'ば': 'ba', 'び': 'bi', 'ぶ': 'bu', 'べ': 'be', 'ぼ': 'bo',
-    'ぱ': 'pa', 'ぴ': 'pi', 'ぷ': 'pu', 'ぺ': 'pe', 'ぽ': 'po',
-    'きゃ': 'kya', 'きゅ': 'kyu', 'きょ': 'kyo',
-    'しゃ': 'sha', 'しゅ': 'shu', 'しょ': 'sho',
-    'ちゃ': 'cha', 'ちゅ': 'chu', 'ちょ': 'cho',
-    'にゃ': 'nya', 'にゅ': 'nyu', 'にょ': 'nyo',
-    'ひゃ': 'hya', 'ひゅ': 'hyu', 'ひょ': 'hyo',
-    'みゃ': 'mya', 'みゅ': 'myu', 'みょ': 'myo',
-    'りゃ': 'rya', 'りゅ': 'ryu', 'りょ': 'ryo',
-    'ぎゃ': 'gya', 'ぎゅ': 'gyu', 'ぎょ': 'gyo',
-    'じゃ': 'ja', 'じゅ': 'ju', 'じょ': 'jo',
-    'ぢゃ': 'ja', 'ぢゅ': 'ju', 'ぢょ': 'jo',
-    'びゃ': 'bya', 'びゅ': 'byu', 'びょ': 'byo',
-    'ぴゃ': 'pya', 'ぴゅ': 'pyu', 'ぴょ': 'pyo',
-    '。': '.', '、': ',', '！': '!', '？': '?', '「':'`', '」':'`'
-};
-
-const toRomaji = (text: string): string => {
-    if (!text) return '';
-    let result = '';
-    for (let i = 0; i < text.length; i++) {
-        // Handle small 'tsu' for double consonants
-        if (text[i] === 'っ') {
-            if (i + 1 < text.length) {
-                const nextChar = text[i + 1];
-                const nextRomaji = toRomaji(nextChar);
-                if (nextRomaji && !['a', 'i', 'u', 'e', 'o'].includes(nextRomaji[0])) {
-                    result += nextRomaji[0];
-                }
-            }
-            continue;
-        }
-
-        // Handle long vowels
-        if (text[i] === 'ー') {
-            if (result.length > 0) {
-                 const lastChar = result[result.length - 1];
-                 if (['a', 'i', 'u', 'e', 'o'].includes(lastChar)) {
-                     result += lastChar;
-                     continue;
-                 }
-            }
-            // If it's at the beginning or after a consonant, just skip it or handle as needed
-            continue;
-        }
-
-        // Check for two-character combinations (e.g., きゃ)
-        if (i + 1 < text.length) {
-            const twoChar = text.substring(i, i + 2);
-            if (ROMANIZATION_TABLE[twoChar]) {
-                result += ROMANIZATION_TABLE[twoChar];
-                i++;
-                continue;
-            }
-        }
-        
-        // Handle single characters
-        if (ROMANIZATION_TABLE[text[i]]) {
-            result += ROMANIZATION_TABLE[text[i]];
-        } else {
-            result += text[i];
-        }
-    }
-    return result;
-};
-
-
-const getRomajiForPart = (part: string): string => {
-    // Handle particles that have different readings
-    if (part === 'は') return 'wa';
-    if (part === 'へ') return 'e';
-    return toRomaji(part);
 };
 
 interface ScrambleQuestion {
@@ -172,6 +43,9 @@ const SentenceScramble: React.FC<SentenceScrambleProps> = ({ contentItems, onBac
         return contentItems.filter(item => item.Category === 'Vocabulary' || (item.Category === 'Grammar' && item.SubCategory.startsWith('Verb')));
     }, [contentItems]);
 
+    const tokenizer = useMemo(() => createTokenizer(contentItems), [contentItems]);
+    const getRomajiForPart = useMemo(() => createRomajiConverter(contentItems), [contentItems]);
+
     useEffect(() => {
         const generateSentences = async () => {
             if (vocabularyItems.length < 10) {
@@ -186,7 +60,6 @@ const SentenceScramble: React.FC<SentenceScrambleProps> = ({ contentItems, onBac
             try {
                 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
                 
-                // FIX: Explicitly type `item` to resolve type inference issue.
                 const vocabList = shuffleArray(vocabularyItems).slice(0, 75).map((item: ContentItem) => `- ${item.Hiragana.split('/')[0].trim()} (${item.English})`).join('\n');
                 
                 const themes = [
@@ -246,7 +119,7 @@ const SentenceScramble: React.FC<SentenceScrambleProps> = ({ contentItems, onBac
                     return {
                         english: item.english,
                         japanese: cleanJapanese,
-                        words: splitSentence(cleanJapanese)
+                        words: tokenizer(cleanJapanese)
                     };
                 }).filter(q => q.words.length >= 3); // Ensure there's something to scramble
 
@@ -267,7 +140,7 @@ const SentenceScramble: React.FC<SentenceScrambleProps> = ({ contentItems, onBac
         generateSentences();
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [vocabularyItems, generationTrigger]);
+    }, [vocabularyItems, generationTrigger, tokenizer]);
 
     const setupRound = (index: number, currentQuestions: ScrambleQuestion[]) => {
         if (index >= currentQuestions.length) {

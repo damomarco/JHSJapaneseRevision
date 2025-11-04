@@ -9,10 +9,11 @@ import MatchingGame from './components/MatchingGame';
 import ListeningGame from './components/ListeningGame';
 import SentenceScramble from './components/SentenceScramble';
 import KanjiConnect from './components/KanjiConnect';
+import FillInTheBlanks from './components/FillInTheBlanks';
 import { useContentLoader } from './hooks/useContentLoader';
 import { MoonIcon, SunIcon } from './components/icons';
 
-type View = 'unit_selection' | 'activity_selection' | 'flashcards' | 'quiz' | 'category_sort' | 'matching_game' | 'listening_game' | 'sentence_scramble' | 'kanji_connect';
+type View = 'unit_selection' | 'activity_selection' | 'flashcards' | 'quiz' | 'category_sort' | 'matching_game' | 'listening_game' | 'sentence_scramble' | 'kanji_connect' | 'fill_in_the_blanks';
 type Theme = 'light' | 'dark';
 
 const App: React.FC = () => {
@@ -41,7 +42,7 @@ const App: React.FC = () => {
         }
     };
     
-    const handleActivitySelected = (activity: 'flashcards' | 'quiz' | 'category_sort' | 'matching_game' | 'listening_game' | 'sentence_scramble' | 'kanji_connect') => {
+    const handleActivitySelected = (activity: 'flashcards' | 'quiz' | 'category_sort' | 'matching_game' | 'listening_game' | 'sentence_scramble' | 'kanji_connect' | 'fill_in_the_blanks') => {
         setView(activity);
     };
 
@@ -95,6 +96,8 @@ const App: React.FC = () => {
                 return <SentenceScramble contentItems={content} onBack={handleBackToActivitySelection} />;
             case 'kanji_connect':
                 return <KanjiConnect contentItems={content} onBack={handleBackToActivitySelection} />;
+            case 'fill_in_the_blanks':
+                return <FillInTheBlanks contentItems={content} onBack={handleBackToActivitySelection} />;
             default:
                 return <UnitSelector onUnitsSelected={handleUnitsSelected} />;
         }
