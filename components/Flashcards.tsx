@@ -10,6 +10,7 @@ interface FlashcardsProps {
 const Flashcards: React.FC<FlashcardsProps> = ({ contentItems, onBack }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isFlipped, setIsFlipped] = useState(false);
+    const [isAnimating, setIsAnimating] = useState(false);
 
     if (contentItems.length === 0) {
         return (
@@ -25,17 +26,37 @@ const Flashcards: React.FC<FlashcardsProps> = ({ contentItems, onBack }) => {
     const currentItem = contentItems[currentIndex];
 
     const goToNext = () => {
-        // Reset flip state before changing the index to prevent the new card
-        // from briefly appearing in a flipped state.
-        setIsFlipped(false);
-        setCurrentIndex(prev => (prev + 1) % contentItems.length);
+        if (isAnimating) return;
+
+        if (isFlipped) {
+            setIsAnimating(true);
+            setIsFlipped(false);
+            // Wait for the flip-back animation (700ms) to complete
+            // before changing the card's content.
+            setTimeout(() => {
+                setCurrentIndex(prev => (prev + 1) % contentItems.length);
+                setIsAnimating(false);
+            }, 700);
+        } else {
+            setCurrentIndex(prev => (prev + 1) % contentItems.length);
+        }
     };
 
     const goToPrev = () => {
-        // Reset flip state before changing the index to prevent the new card
-        // from briefly appearing in a flipped state.
-        setIsFlipped(false);
-        setCurrentIndex(prev => (prev - 1 + contentItems.length) % contentItems.length);
+        if (isAnimating) return;
+
+        if (isFlipped) {
+            setIsAnimating(true);
+            setIsFlipped(false);
+            // Wait for the flip-back animation (700ms) to complete
+            // before changing the card's content.
+            setTimeout(() => {
+                setCurrentIndex(prev => (prev - 1 + contentItems.length) % contentItems.length);
+                setIsAnimating(false);
+            }, 700);
+        } else {
+            setCurrentIndex(prev => (prev - 1 + contentItems.length) % contentItems.length);
+        }
     };
 
     const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
@@ -93,11 +114,11 @@ const Flashcards: React.FC<FlashcardsProps> = ({ contentItems, onBack }) => {
             </div>
 
             <div className="flex items-center justify-between w-full max-w-xl mt-6">
-                <button onClick={goToPrev} className="p-3 bg-slate-200 dark:bg-slate-700 rounded-full hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors">
+                <button onClick={goToPrev} disabled={isAnimating} className="p-3 bg-slate-200 dark:bg-slate-700 rounded-full hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
                     <ChevronLeftIcon className="w-6 h-6" />
                 </button>
                 <p className="text-slate-500 dark:text-slate-400 font-medium">{currentIndex + 1} / {contentItems.length}</p>
-                <button onClick={goToNext} className="p-3 bg-slate-200 dark:bg-slate-700 rounded-full hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors">
+                <button onClick={goToNext} disabled={isAnimating} className="p-3 bg-slate-200 dark:bg-slate-700 rounded-full hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
                     <ChevronRightIcon className="w-6 h-6" />
                 </button>
             </div>
