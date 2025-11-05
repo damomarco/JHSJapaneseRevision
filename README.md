@@ -169,17 +169,25 @@ Based on the existing data structure, here are some potential new activities to 
 ### Production & Recall Activities
 
 *   **Fill-in-the-Blanks:** Focus on grammar by presenting sentences with missing particles, requiring students to select the correct ones. (✓ **Implemented!**)
+    *   **Enhancement Idea:** Expand this mode to blank out vocabulary words, not just particles.
 *   **Sentence Scramble:** Shuffle the words of a Japanese sentence and have students reorder them correctly to teach sentence structure. (✓ **Implemented!**)
-*   **Typing Practice:** Prompt students with an English word and have them type the corresponding Romaji or Hiragana, encouraging active recall and familiarity with a Japanese IME.
+*   **Typing Practice:** Prompt students with an English word and have them type the corresponding Romaji or Hiragana, encouraging active recall and familiarity with a Japanese IME. (✓ **Implemented!**)
+*   **Correct the Error:** Present a Japanese sentence with an English translation that is almost correct. The user must identify if the translation is correct or incorrect.
 
 ### Listening Comprehension Activities
 
 *   **Listen & Pick:** Play the audio of a Japanese word and have the student select the correct English translation from multiple choices. (✓ **Implemented!**)
 *   **Dictation Drill:** Play a word or phrase and require the student to type what they heard, combining listening and writing skills.
+*   **Pyramid Dictation:** An audio-based game where a sentence is built up one word at a time. The user must listen and type the growing sentence at each step.
+
+### Advanced AI & Conversational Activities
+
+*   **Sentence Stealer:** An interactive, turn-based game against the AI where each player adds a word to a growing sentence. A player loses if they make a grammatically incorrect move.
+*   **Chat Practice (Oral Ping Pong):** A simulated chat where the Gemini API provides prompts in English (e.g., "Ask me what I did yesterday"), and the user must respond by typing the correct Japanese sentence.
 
 ### Gamification
 
-*   **Timed Trials:** Add a countdown timer to quizzes and matching games to challenge speed and accuracy.
+*   **Quickfire Translation (Timed Trials):** Add a countdown timer to quizzes and matching games to challenge speed and accuracy.
 *   **Category Conquest:** Introduce a mastery system where students earn badges for achieving a high score in a specific sub-category.
 *   **Survival Mode:** A quiz mode where a single incorrect answer ends the game, encouraging a focus on precision.
 
@@ -196,15 +204,18 @@ Here is a ranked list of the proposed activities, from easiest to most complex, 
 
 3.  **Typing Practice:** Introduces a text input field and requires logic for real-time validation.
 4.  **Fill-in-the-Blanks (Particle Practice):** The main challenge is the data preparation—writing a function to parse sentences and identify particles.
-5.  **Sentence Scramble:** The most complex of this tier. It requires both the parsing logic from "Fill-in-the-Blanks" and a more complex drag-and-drop UI.
+5.  **Correct the Error:** A new quiz variation, but the logic is simple and reuses existing components.
+6.  **Sentence Scramble:** The most complex of this tier. It requires both the parsing logic from "Fill-in-the-Blanks" and a more complex drag-and-drop UI.
 
 #### Tier 3: High Complexity (Requires External API Integration)
 
-*This tier represents a major jump in complexity because it introduces an external dependency for Text-to-Speech (TTS).*
+*This tier represents a major jump in complexity because it introduces an external dependency for Text-to-Speech (TTS) or advanced text generation.*
 
-6.  **Listen & Pick:** The core challenge is the entire lifecycle of an API call to a TTS service and the subsequent audio playback in the browser.
-7.  **Dictation Drill:** Combines the complexity of both **Listen & Pick** (API calls, audio) and **Typing Practice** (text input validation).
+7.  **Listen & Pick:** The core challenge is the entire lifecycle of an API call to a TTS service and the subsequent audio playback in the browser.
+8.  **Dictation Drill:** Combines the complexity of both **Listen & Pick** (API calls, audio) and **Typing Practice** (text input validation).
+9.  **Pyramid Dictation:** Similar complexity to Dictation Drill, but with added state management for the growing sentence.
+10. **Sentence Stealer & Chat Practice:** These are the most advanced, requiring not just generation but contextual understanding and validation from the Gemini API.
 
 #### Tier 4: Architectural Complexity (Affects the Whole App)
 
-8.  **Gamification (Timed Trials, Badges, etc.):** This is the most complex as it's an architectural change, not just a new component. It would require new systems for timers, scoring, and **state persistence** (e.g., using `localStorage`) to track progress between sessions, which the app currently does not do.
+11. **Gamification (Timed Trials, Badges, etc.):** This is the most complex as it's an architectural change, not just a new component. It would require new systems for timers, scoring, and **state persistence** (e.g., using `localStorage`) to track progress between sessions, which the app currently does not do.
