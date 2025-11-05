@@ -27,6 +27,10 @@ const SentenceScramble: React.FC<SentenceScrambleProps> = ({ questions, isLoadin
     const [isCorrect, setIsCorrect] = useState(false);
     const [isFinished, setIsFinished] = useState(false);
 
+    // State for drag-and-drop functionality
+    const [draggedItemIndex, setDraggedItemIndex] = useState<number | null>(null);
+    const [dragOverItemIndex, setDragOverItemIndex] = useState<number | null>(null);
+
     const getRomajiForPart = useMemo(() => createRomajiConverter(contentItems), [contentItems]);
 
     const setupRound = useCallback((index: number, currentQuestions: ScrambleQuestion[]) => {
@@ -60,6 +64,44 @@ const SentenceScramble: React.FC<SentenceScrambleProps> = ({ questions, isLoadin
         setUserAnswer(prev => prev.filter(item => item.originalIndex !== option.originalIndex));
         setScrambledOptions(prev => [...prev, option]);
     };
+
+    // --- Drag and Drop Handlers ---
+    const handleDragStart = (e: React.DragEvent<HTMLButtonElement>, index: number) => {
+        setDraggedItemIndex(index);
+        e.dataTransfer.effectAllowed = 'move';
+    };
+
+    const handleDragEnter = (e: React.DragEvent<HTMLButtonElement>, index: number) => {
+        if (draggedItemIndex !== null && draggedItemIndex !== index) {
+            setDragOverItemIndex(index);
+        }
+    };
+
+    const handleDragOver = (e: React.DragEvent) => {
+        e.preventDefault(); // This is necessary to allow dropping
+    };
+    
+    const handleDrop = (e: React.DragEvent) => {
+        e.preventDefault();
+        if (draggedItemIndex !== null && dragOverItemIndex !== null && draggedItemIndex !== dragOverItemIndex) {
+            setUserAnswer(prevAnswer => {
+                const newAnswer = [...prevAnswer];
+                const [draggedItem] = newAnswer.splice(draggedItemIndex, 1);
+                newAnswer.splice(dragOverItemIndex, 0, draggedItem);
+                return newAnswer;
+            });
+        }
+        // Cleanup after drop
+        setDraggedItemIndex(null);
+        setDragOverItemIndex(null);
+    };
+
+    const handleDragEnd = () => {
+        // Cleanup in case drag is cancelled
+        setDraggedItemIndex(null);
+        setDragOverItemIndex(null);
+    };
+
 
     const handleCheck = () => {
         if (isAnswered || userAnswer.length === 0) return;
@@ -136,15 +178,32 @@ const SentenceScramble: React.FC<SentenceScrambleProps> = ({ questions, isLoadin
                 <p className="text-xl md:text-2xl font-semibold text-slate-900 dark:text-white">{currentQuestion.english}</p>
             </div>
 
-            <div className={`min-h-[120px] bg-slate-200 dark:bg-slate-800 rounded-lg p-3 flex flex-wrap items-center justify-center gap-2 transition-all duration-300
+            <div 
+                onDrop={handleDrop}
+                onDragOver={handleDragOver}
+                className={`min-h-[120px] bg-slate-200 dark:bg-slate-800 rounded-lg p-3 flex flex-wrap items-center justify-center gap-2 transition-all duration-300
                 ${isAnswered ? (isCorrect ? 'ring-2 ring-green-500' : 'ring-2 ring-red-500') : 'ring-2 ring-transparent'}`}>
                 {userAnswer.length === 0 && <span className="text-slate-400 dark:text-slate-500">Tap the words below to build the sentence...</span>}
-                {userAnswer.map((item) => (
-                    <button key={item.originalIndex} onClick={() => !isAnswered && handleAnswerClick(item)} className="px-3 py-2 bg-teal-500 text-white rounded-lg text-lg font-medium shadow-sm flex flex-col leading-tight">
-                        <span className="text-lg">{item.word}</span>
-                        <span className="text-xs opacity-80 mt-1">{getRomajiForPart(item.word)}</span>
-                    </button>
-                ))}
+                {userAnswer.map((item, index) => {
+                     const isBeingDragged = draggedItemIndex === index;
+                     const isDragOverTarget = dragOverItemIndex === index;
+                     return (
+                        <button 
+                            key={item.originalIndex} 
+                            onClick={() => !isAnswered && handleAnswerClick(item)} 
+                            draggable={!isAnswered}
+                            onDragStart={(e) => handleDragStart(e, index)}
+                            onDragEnter={(e) => handleDragEnter(e, index)}
+                            onDragEnd={handleDragEnd}
+                            className={`px-3 py-2 rounded-lg text-lg font-medium shadow-sm flex flex-col leading-tight transition-all duration-200 cursor-move
+                                ${isBeingDragged ? 'opacity-30 scale-95' : 'opacity-100'}
+                                ${isDragOverTarget ? 'bg-teal-700 text-white ring-2 ring-teal-400' : 'bg-teal-500 text-white'}
+                            `}>
+                            <span className="text-lg">{item.word}</span>
+                            <span className="text-xs opacity-80 mt-1">{getRomajiForPart(item.word)}</span>
+                        </button>
+                    )
+                })}
             </div>
 
              <div className="min-h-[120px] border-2 border-dashed border-slate-300 dark:border-slate-600 rounded-lg p-3 my-4 flex flex-wrap items-center justify-center gap-2">

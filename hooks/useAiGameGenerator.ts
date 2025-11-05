@@ -53,18 +53,22 @@ async function generateScramble(ai: GoogleGenAI, vocabList: string): Promise<AiS
 
 
 async function generateFillBlanks(ai: GoogleGenAI, vocabList: string): Promise<AiFillBlanksResponseItem[]> {
-     const prompt = `
-        You are a Japanese language teacher creating 'fill-in-the-blank' quizzes for beginner students. 
-        Your task is to generate up to ${MAX_QUESTIONS} simple, semantically plausible Japanese sentences.
+    const prompt = `
+        You are a Japanese language teacher creating 'fill-in-the-blank' quizzes for beginner students.
+        Your task is to generate up to ${MAX_QUESTIONS} simple, semantically plausible Japanese sentences, each with a single word blanked out.
 
         **CRITICAL INSTRUCTIONS:**
-        1.  **Strict Vocabulary Adherence:** You MUST ONLY use words from the provided vocabulary list below. Do NOT introduce any new words. Every single word in the generated sentences must be verifiable from the list.
-        2.  **Question Design:** For each sentence, choose ONE word to be the "blank". This word can be a NOUN, an ADJECTIVE, or a PARTICLE. Create a diverse mix of blank types.
-        3.  **Sentence Quality:** Sentences must be grammatically correct and make logical sense.
-        4.  **Quantity Flexibility:** If you cannot generate the full ${MAX_QUESTIONS} sentences while strictly following the vocabulary list, generate as many high-quality sentences as you can.
-        5.  **Output Format:** For each generated sentence, provide the full sentence, its English translation, and the word you chose to be the blank. Return a JSON array of objects.
+        1.  **Vocabulary Focus:** The sentences must be constructed primarily using words from the vocabulary list provided below. You may use common particles (は, が, を, に, etc.) and conjugate verbs as needed for grammatical correctness.
+        2.  **Blanked Word:** For each sentence, choose ONE word to remove. This can be a noun, adjective, verb, or particle.
+        3.  **Sentence Quality:** Sentences must be grammatically correct, simple for beginners, and make logical sense.
+        4.  **Output Format:** For each question, you will provide three pieces of information in a JSON object:
+            a.  \`japanese_sentence\`: The full, complete Japanese sentence.
+            b.  \`english_translation\`: The English translation of the sentence.
+            c.  \`blanked_word\`: The **exact** word that was removed from the Japanese sentence. This value **MUST** be a substring of \`japanese_sentence\`.
+        5.  **Quantity:** Generate ${MAX_QUESTIONS} unique questions.
+        6.  **Return Type:** Return a JSON array of these objects.
 
-        **Vocabulary List:**
+        **Vocabulary List (use these words to build your sentences):**
         ${vocabList}
     `;
     const schema = {

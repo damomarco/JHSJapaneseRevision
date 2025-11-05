@@ -144,6 +144,10 @@ This section logs the key milestones and fixes implemented during the developmen
     3.  Changes its entire background color to a light green or light red, providing an immediate and unmissable visual cue.
 - **Impact:** This change provides clear, instant, and unambiguous feedback, reinforcing learning and improving the overall usability of the activity.
 
+### 14. Sentence Scramble Drag-and-Drop Fix
+- **Issue:** The drag-and-drop functionality for reordering words in the Sentence Scramble game was unreliable. Words would often not drop into the correct position, and visual feedback was inconsistent, making it difficult for users to correct their sentences.
+- **Solution:** The component's drag-and-drop event handling was completely overhauled. State management for both the dragged item and the drop target is now handled with `useState` to ensure React re-renders correctly and provides consistent visual cues. A faulty `onDragLeave` event handler on the drop container, which was prematurely cancelling the drag operation, was removed. These changes make the word reordering feature robust, intuitive, and reliable.
+
 ## 📝 Content Guidelines
 
 ### Sentence Scramble Chunking
