@@ -106,7 +106,9 @@ const SentenceScramble: React.FC<SentenceScrambleProps> = ({ questions, isLoadin
     const handleCheck = () => {
         if (isAnswered || userAnswer.length === 0) return;
         const submittedAnswer = userAnswer.map(item => item.word).join('');
-        const correctAnswer = questions[currentIndex].japanese;
+        // The AI can sometimes add spaces. The tokenizer strips them when creating the words.
+        // We must compare against a similarly stripped version of the correct answer.
+        const correctAnswer = questions[currentIndex].japanese.replace(/\s+/g, '');
         const correct = submittedAnswer === correctAnswer;
         
         setIsCorrect(correct);
@@ -221,7 +223,7 @@ const SentenceScramble: React.FC<SentenceScrambleProps> = ({ questions, isLoadin
                         <p className={`text-xl font-bold ${isCorrect ? 'text-green-500' : 'text-red-500'}`}>
                             {isCorrect ? 'Correct!' : 'Not quite!'}
                         </p>
-                        {!isCorrect && <p className="text-slate-600 dark:text-slate-400 mt-1">Correct answer: {currentQuestion.japanese}</p>}
+                        {!isCorrect && <p className="text-slate-600 dark:text-slate-400 mt-1">Correct answer: {currentQuestion.words.join('')}</p>}
                         <button onClick={handleNext} className="mt-4 w-full py-3 bg-teal-600 text-white font-bold rounded-lg shadow-md hover:bg-teal-700 transition-colors">
                             {currentIndex < questions.length - 1 ? 'Next Sentence' : 'Finish Game'}
                         </button>
