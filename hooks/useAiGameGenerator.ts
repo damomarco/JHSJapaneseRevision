@@ -22,10 +22,11 @@ async function generateScramble(ai: GoogleGenAI, vocabList: string): Promise<AiS
         **Instructions:**
         1. You MUST ONLY use words from the following list. Each word is provided with its English meaning:
             ${vocabList}
-        2. Ensure the sentences are diverse. Avoid using the exact same sentence structure for every sentence. Create a mix of questions, statements, and descriptions.
-        3. Each sentence must be unique.
-        4. The sentences must be suitable for a beginner Japanese learner.
-        5. For each sentence you generate, provide its simple English translation.
+        2. In addition to the list, you can and should use the polite request ending "ください" (kudasai) after verbs that are in the te-form (like 'たって', 'すわって', etc.) to make polite commands. For example, "NAMEさん、たってください".
+        3. Ensure the sentences are diverse. Avoid using the exact same sentence structure for every sentence. Create a mix of questions, statements, and polite requests.
+        4. Each sentence must be unique and grammatically correct.
+        5. The sentences must be suitable for a beginner Japanese learner, using polite forms where appropriate.
+        6. For each sentence you generate, provide its simple English translation.
         
         Return the result as a JSON array of objects.
     `;
