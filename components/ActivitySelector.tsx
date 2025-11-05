@@ -1,13 +1,13 @@
 import React from 'react';
-import { BackArrowIcon, CardIcon, QuizIcon, SortIcon, GridIcon, SpeakerIcon, ScrambleIcon, KanjiConnectIcon, FillBlanksIcon, KeyboardIcon } from './icons';
+import { BackArrowIcon, CardIcon, QuizIcon, SortIcon, GridIcon, SpeakerIcon, ScrambleIcon, KanjiConnectIcon, FillBlanksIcon, KeyboardIcon, ProofreadIcon } from './icons';
 
 interface ActivitySelectorProps {
-    onActivitySelected: (activity: 'flashcards' | 'quiz' | 'category_sort' | 'matching_game' | 'listening_game' | 'sentence_scramble' | 'kanji_connect' | 'fill_in_the_blanks' | 'typing_practice') => void;
+    onActivitySelected: (activity: 'flashcards' | 'quiz' | 'category_sort' | 'matching_game' | 'listening_game' | 'sentence_scramble' | 'kanji_connect' | 'fill_in_the_blanks' | 'typing_practice' | 'correct_the_error') => void;
     onBack: () => void;
 }
 
 interface Activity {
-    id: 'flashcards' | 'quiz' | 'category_sort' | 'matching_game' | 'listening_game' | 'sentence_scramble' | 'kanji_connect' | 'fill_in_the_blanks' | 'typing_practice';
+    id: 'flashcards' | 'quiz' | 'category_sort' | 'matching_game' | 'listening_game' | 'sentence_scramble' | 'kanji_connect' | 'fill_in_the_blanks' | 'typing_practice' | 'correct_the_error';
     name: string;
     icon: React.FC<React.SVGProps<SVGSVGElement>>;
 }
@@ -22,6 +22,7 @@ const activities: Activity[] = [
     { id: 'listening_game', name: 'Listening Game', icon: SpeakerIcon },
     { id: 'sentence_scramble', name: 'Sentence Scramble', icon: ScrambleIcon },
     { id: 'fill_in_the_blanks', name: 'Fill in the Blanks', icon: FillBlanksIcon },
+    { id: 'correct_the_error', name: 'Correct the Error', icon: ProofreadIcon },
 ];
 
 

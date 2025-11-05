@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import { ContentItem, AiScrambleResponseItem, AiFillBlanksResponseItem } from '../types';
+import { ContentItem, AiScrambleResponseItem, AiFillBlanksResponseItem, AiCorrectTheErrorResponseItem } from '../types';
 import { ScrambleQuestion } from '../components/SentenceScramble';
 import { GameQuestion as FillBlanksQuestion } from '../components/FillInTheBlanks';
 import { GoogleGenAI, Type } from '@google/genai';
@@ -93,10 +93,55 @@ async function generateFillBlanks(ai: GoogleGenAI, vocabList: string): Promise<A
     return JSON.parse(response.text) as AiFillBlanksResponseItem[];
 }
 
+async function generateCorrectTheError(ai: GoogleGenAI, vocabList: string): Promise<AiCorrectTheErrorResponseItem[]> {
+    const prompt = `
+        You are a Japanese language teacher creating 'spot the error' quiz questions.
+        Your task is to generate ${MAX_QUESTIONS} simple Japanese sentences and an English translation for each.
+        Crucially, for about half of the sentences, the English translation should be **perfectly correct**. For the other half, the translation must contain **one subtle but clear error**.
+
+        **Instructions:**
+        1.  **Vocabulary:** You MUST ONLY use words from the provided list:
+            ${vocabList}
+        2.  **Sentence Quality:** The Japanese sentences must be simple, grammatically correct, and suitable for beginners.
+        3.  **Translation Quality:**
+            *   **Correct Translations:** Must be accurate and natural-sounding English translations.
+            *   **Incorrect Translations:** Must have a single, subtle mistake. Examples of good mistakes: wrong tense (e.g., 'ate' vs 'eat'), wrong particle meaning ('with' vs 'at'), slightly incorrect vocabulary ('house' vs 'home'), wrong subject/object. The mistake should be plausible, not nonsensical.
+        4.  **Output Format:** For each question, provide a JSON object with four fields:
+            a.  \`japanese_sentence\`: The original Japanese sentence.
+            b.  \`is_correct\`: A boolean. \`true\` if the \`english_translation\` is correct, \`false\` if it is flawed.
+            c.  \`english_translation\`: The English translation to show the student (which may be correct or incorrect).
+            d.  \`correct_english_translation\`: The **definitively correct** English translation. This must be provided for *all* items, whether \`is_correct\` is true or false.
+
+        **Return a JSON array of these objects.**
+    `;
+    const schema = {
+        type: Type.ARRAY,
+        items: {
+            type: Type.OBJECT,
+            properties: {
+                japanese_sentence: { type: Type.STRING },
+                is_correct: { type: Type.BOOLEAN },
+                english_translation: { type: Type.STRING },
+                correct_english_translation: { type: Type.STRING }
+            },
+            required: ['japanese_sentence', 'is_correct', 'english_translation', 'correct_english_translation']
+        }
+    };
+    
+    const response = await ai.models.generateContent({
+        model: 'gemini-2.5-pro',
+        contents: prompt,
+        config: { responseMimeType: "application/json", responseSchema: schema, temperature: 0.8 },
+    });
+
+    return JSON.parse(response.text) as AiCorrectTheErrorResponseItem[];
+}
+
 
 export const useAiGameGenerator = (contentItems: ContentItem[]) => {
     const [scrambleQuestions, setScrambleQuestions] = useState<ScrambleQuestion[]>([]);
     const [fillBlanksQuestions, setFillBlanksQuestions] = useState<FillBlanksQuestion[]>([]);
+    const [correctTheErrorQuestions, setCorrectTheErrorQuestions] = useState<AiCorrectTheErrorResponseItem[]>([]);
     const [isGenerating, setIsGenerating] = useState<boolean>(false);
     const [generationError, setGenerationError] = useState<string | null>(null);
     const [generationTrigger, setGenerationTrigger] = useState(0);
@@ -114,6 +159,7 @@ export const useAiGameGenerator = (contentItems: ContentItem[]) => {
         if (vocabularyItems.length < 15) {
             setScrambleQuestions([]);
             setFillBlanksQuestions([]);
+            setCorrectTheErrorQuestions([]);
             setIsGenerating(false);
             setGenerationError(contentItems.length > 0 ? "Not enough vocabulary for AI games." : null);
             return;
@@ -127,9 +173,10 @@ export const useAiGameGenerator = (contentItems: ContentItem[]) => {
                 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
                 const vocabList = shuffleArray(vocabularyItems).slice(0, 100).map((item: ContentItem) => `- ${item.Hiragana.split('/')[0].trim()} (${item.English})`).join('\n');
                 
-                const [scrambleResult, fillBlanksResult] = await Promise.all([
+                const [scrambleResult, fillBlanksResult, correctTheErrorResult] = await Promise.all([
                     generateScramble(ai, vocabList),
-                    generateFillBlanks(ai, vocabList)
+                    generateFillBlanks(ai, vocabList),
+                    generateCorrectTheError(ai, vocabList)
                 ]);
 
                 // Process Scramble questions
@@ -176,6 +223,9 @@ export const useAiGameGenerator = (contentItems: ContentItem[]) => {
                 if(processedFillBlanks.length === 0) throw new Error("AI failed to generate valid Fill-in-the-Blanks questions.");
                 setFillBlanksQuestions(processedFillBlanks);
 
+                // Process Correct the Error questions
+                if (correctTheErrorResult.length === 0) throw new Error("AI failed to generate valid Correct the Error questions.");
+                setCorrectTheErrorQuestions(correctTheErrorResult);
 
             } catch (err) {
                 console.error("Failed to generate AI games:", err);
@@ -183,6 +233,7 @@ export const useAiGameGenerator = (contentItems: ContentItem[]) => {
                 setGenerationError(`AI Generation Error: ${message}`);
                 setScrambleQuestions([]);
                 setFillBlanksQuestions([]);
+                setCorrectTheErrorQuestions([]);
             } finally {
                 setIsGenerating(false);
             }
@@ -192,5 +243,5 @@ export const useAiGameGenerator = (contentItems: ContentItem[]) => {
 
     }, [vocabularyItems, generationTrigger, tokenizer, getRomajiForPart, contentItems.length]);
 
-    return { scrambleQuestions, fillBlanksQuestions, isGenerating, generationError, regenerate };
+    return { scrambleQuestions, fillBlanksQuestions, correctTheErrorQuestions, isGenerating, generationError, regenerate };
 };

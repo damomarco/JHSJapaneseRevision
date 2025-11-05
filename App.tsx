@@ -11,11 +11,12 @@ import SentenceScramble from './components/SentenceScramble';
 import KanjiConnect from './components/KanjiConnect';
 import FillInTheBlanks from './components/FillInTheBlanks';
 import TypingPractice from './components/TypingPractice';
+import CorrectTheError from './components/CorrectTheError';
 import { useContentLoader } from './hooks/useContentLoader';
 import { useAiGameGenerator } from './hooks/useAiGameGenerator';
 import { MoonIcon, SunIcon } from './components/icons';
 
-type View = 'unit_selection' | 'activity_selection' | 'flashcards' | 'quiz' | 'category_sort' | 'matching_game' | 'listening_game' | 'sentence_scramble' | 'kanji_connect' | 'fill_in_the_blanks' | 'typing_practice';
+type View = 'unit_selection' | 'activity_selection' | 'flashcards' | 'quiz' | 'category_sort' | 'matching_game' | 'listening_game' | 'sentence_scramble' | 'kanji_connect' | 'fill_in_the_blanks' | 'typing_practice' | 'correct_the_error';
 type Theme = 'light' | 'dark';
 
 const App: React.FC = () => {
@@ -39,6 +40,7 @@ const App: React.FC = () => {
     const { 
         scrambleQuestions, 
         fillBlanksQuestions, 
+        correctTheErrorQuestions,
         isGenerating: isAiGenerating, 
         generationError: aiError, 
         regenerate: regenerateAiGames 
@@ -52,7 +54,7 @@ const App: React.FC = () => {
         }
     };
     
-    const handleActivitySelected = (activity: 'flashcards' | 'quiz' | 'category_sort' | 'matching_game' | 'listening_game' | 'sentence_scramble' | 'kanji_connect' | 'fill_in_the_blanks' | 'typing_practice') => {
+    const handleActivitySelected = (activity: 'flashcards' | 'quiz' | 'category_sort' | 'matching_game' | 'listening_game' | 'sentence_scramble' | 'kanji_connect' | 'fill_in_the_blanks' | 'typing_practice' | 'correct_the_error') => {
         setView(activity);
     };
 
@@ -123,6 +125,15 @@ const App: React.FC = () => {
                             onRestart={regenerateAiGames}
                             contentItems={content} 
                             onBack={handleBackToActivitySelection} 
+                        />;
+            case 'correct_the_error':
+                return <CorrectTheError
+                            questions={correctTheErrorQuestions}
+                            isLoading={isAiGenerating && correctTheErrorQuestions.length === 0}
+                            error={aiError}
+                            onRestart={regenerateAiGames}
+                            onBack={handleBackToActivitySelection} 
+                            contentItems={content}
                         />;
             default:
                 return <UnitSelector onUnitsSelected={handleUnitsSelected} />;

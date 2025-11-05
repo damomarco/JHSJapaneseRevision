@@ -23,3 +23,10 @@ export interface AiFillBlanksResponseItem {
   english_translation: string;
   blanked_word: string;
 }
+
+export interface AiCorrectTheErrorResponseItem {
+  japanese_sentence: string;
+  is_correct: boolean;
+  english_translation: string;
+  correct_english_translation: string;
+}
