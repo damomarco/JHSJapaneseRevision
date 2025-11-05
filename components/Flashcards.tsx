@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ContentItem } from '../types';
 import { BackArrowIcon, ChevronLeftIcon, ChevronRightIcon } from './icons';
 
@@ -10,10 +10,6 @@ interface FlashcardsProps {
 const Flashcards: React.FC<FlashcardsProps> = ({ contentItems, onBack }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isFlipped, setIsFlipped] = useState(false);
-
-    useEffect(() => {
-        setIsFlipped(false);
-    }, [currentIndex]);
 
     if (contentItems.length === 0) {
         return (
@@ -29,10 +25,16 @@ const Flashcards: React.FC<FlashcardsProps> = ({ contentItems, onBack }) => {
     const currentItem = contentItems[currentIndex];
 
     const goToNext = () => {
+        // Reset flip state before changing the index to prevent the new card
+        // from briefly appearing in a flipped state.
+        setIsFlipped(false);
         setCurrentIndex(prev => (prev + 1) % contentItems.length);
     };
 
     const goToPrev = () => {
+        // Reset flip state before changing the index to prevent the new card
+        // from briefly appearing in a flipped state.
+        setIsFlipped(false);
         setCurrentIndex(prev => (prev - 1 + contentItems.length) % contentItems.length);
     };
 
